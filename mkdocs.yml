@@ -4,10 +4,10 @@ site_author: Magnet Team
 
 # Repo link adds a nice GitHub icon and "Edit this page" links
 # Update this line to match your new repo name
-site_url: https://vlcmb.github.io/reasoning-core-demo/
+site_url: https://vlcmb.github.io/reasoning_core/
 
 # Optional: Link to the repo source code
-repo_url: https://github.com/vlcmb/reasoning-core-demo
+repo_url: https://github.com/vlcmb/reasoning_core
 repo_name: reasoning_core
 
 theme:

@@ -6644,7 +6644,7 @@ model.cpds
 
 
 <h4 id="reasoning_core.tasks.causal_reasoning.js_reward" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">js_reward</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">power</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">js_reward</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">power</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span></code>
 
 </h4>
 
@@ -6659,7 +6659,7 @@ model.cpds
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">596</span>
 <span class="normal">597</span>
 <span class="normal">598</span>
-<span class="normal">599</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">js_reward</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">power</span><span class="o">=</span><span class="mi">128</span><span class="p">):</span>
+<span class="normal">599</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">js_reward</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">power</span><span class="o">=</span><span class="mi">64</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;reward of guessing dg where the true distribution is dt&quot;&quot;&quot;</span>
     <span class="n">js</span> <span class="o">=</span> <span class="n">js_divergence</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">js</span> <span class="o">/</span> <span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="n">power</span>
