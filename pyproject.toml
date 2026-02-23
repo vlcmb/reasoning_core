@@ -1,0 +1,70 @@
+#[build-system]
+#requires = ["setuptools"]
+#build-backend = "setuptools.build_meta"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reasoning_core"
+dynamic = ["version"]
+readme = "README.md"
+description = "A RL env with procedurally generated symbolic reasoning data"
+
+dependencies = [
+    "faker",
+    "inflection",
+    "rapidfuzz",
+    "unified-planning[pyperplan]",
+    "tarski",
+    "reasoning_gym",
+    "tiktoken",
+    "prime",
+    "networkx",
+    "pooch",
+    "requests",
+    "beautifulsoup4",
+    "easydict",
+    "appdirs",
+    "regex",
+    "num2words",
+    "tqdm",
+    "timeout_decorator",
+    "timeoutcontext",
+    "pandas",
+    "pyyaml",
+    "tabulate",
+    "duckdb",
+    "funcy",
+    "multiprocess",
+    "xpflow",
+    "exrex",
+    "gramforge",
+    "nltk",
+    "pgmpy",
+    "numpy",
+    "sympy",
+    "verifiers",
+    "pyparsing",
+    "lazy_object_proxy",
+    "udocker"
+]
+
+[tool.setuptools.packages.find]
+include = ["reasoning_core*"]
+
+[tool.setuptools.package-data]
+"reasoning_core" = ["resources/**"]
+
+[tool.hatch.version]
+path = "reasoning_core/__init__.py"
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "mkdocs-jupyter",
+]

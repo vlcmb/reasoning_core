@@ -1,0 +1,85 @@
+site_name: Reasoning Core 
+site_description: Documentation for the Reasoning Core library
+site_author: Magnet Team
+
+# Repo link adds a nice GitHub icon and "Edit this page" links
+# Update this line to match your new repo name
+site_url: https://vlcmb.github.io/reasoning-core-demo/
+
+# Optional: Link to the repo source code
+repo_url: https://github.com/vlcmb/reasoning-core-demo
+repo_name: reasoning_core
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top        # Recommended addition
+    - navigation.tracking
+    - navigation.indexes
+    - content.code.copy
+  logo: assets/logo.svg    
+  favicon: assets/logo.svg 
+  palette: 
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Extensions for Math and fancy formatting
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+      
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            show_root_heading: true
+            show_category_heading: true
+  - mkdocs-jupyter:
+      include: ["*.ipynb"]
+      execute: false # specificy if you want docs build to run the notebooks or just display them
+
+nav:
+  - Home: index.md
+  - Template: template.md
+  - Notebooks:
+      - Arithmetics: notebooks/Arithmetics.ipynb
+      - Causal Reasoning: notebooks/Causal_reasoning.ipynb
+  - Tasks:
+      - Arithmetics: tasks/arithmetics.md
+      - Causal Reasoning: tasks/causal_reasoning.md
+      - Coding: tasks/coding.md
+      - Equation System: tasks/equation_system.md
+      - Formal Maths: tasks/formal_maths.md
+      - Grammar: tasks/grammar.md
+      - Graph Operations: tasks/graph_operations.md
+      - Logic: tasks/logic.md
+      - Planning: tasks/planning.md
+      - Regex Following: tasks/regex_following.md
+      - Rung3 Reasoning: tasks/rung3_reasoning.md
+      - Sequential Induction: tasks/sequential_induction.md
+      - Set Operations: tasks/set_operations.md
+      - Table QA: tasks/table_qa.md
