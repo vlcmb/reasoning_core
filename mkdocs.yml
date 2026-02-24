@@ -79,7 +79,6 @@ nav:
       - Logic: tasks/logic.md
       - Planning: tasks/planning.md
       - Regex Following: tasks/regex_following.md
-      - Rung3 Reasoning: tasks/rung3_reasoning.md
       - Sequential Induction: tasks/sequential_induction.md
       - Set Operations: tasks/set_operations.md
       - Table QA: tasks/table_qa.md
