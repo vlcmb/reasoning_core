@@ -472,10 +472,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-advanced-level-3-generation" class="md-nav__link">
+  <a href="#22-advanced-levels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Advanced Level 3 Generation
+        2.2 Advanced Levels
       
     </span>
   </a>
@@ -483,10 +483,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-score-mechanism" class="md-nav__link">
+  <a href="#23-chain-of-thought-cot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Score mechanism
+        2.3 Chain of Thought (CoT)
       
     </span>
   </a>
@@ -494,10 +494,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-chain-of-thought-cot" class="md-nav__link">
+  <a href="#24-score-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4 Chain of Thought (CoT)
+        2.4 Score mechanism
       
     </span>
   </a>
@@ -594,8 +594,6 @@
   
     
     
-      
-        
       
         
       
@@ -957,34 +955,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tasks/rung3_reasoning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Rung3 Reasoning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../tasks/sequential_induction/" class="md-nav__link">
         
   
@@ -1130,10 +1100,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-advanced-level-3-generation" class="md-nav__link">
+  <a href="#22-advanced-levels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Advanced Level 3 Generation
+        2.2 Advanced Levels
       
     </span>
   </a>
@@ -1141,10 +1111,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-score-mechanism" class="md-nav__link">
+  <a href="#23-chain-of-thought-cot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Score mechanism
+        2.3 Chain of Thought (CoT)
       
     </span>
   </a>
@@ -1152,10 +1122,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-chain-of-thought-cot" class="md-nav__link">
+  <a href="#24-score-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4 Chain of Thought (CoT)
+        2.4 Score mechanism
       
     </span>
   </a>
@@ -2117,7 +2087,7 @@ print("Task initialized:", task_sym.task_name)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -2133,7 +2103,7 @@ print("Task initialized:", task_sym.task_name)</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Set a seed and demonstrate Level 0</span>
 <span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Level 0 Config Depth: Min </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">min_depth</span><span class="si">}</span><span class="s2">, Max </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_depth</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Level 0 Config Depth: Min </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">min_depth</span><span class="si">}</span><span class="s2">, Max </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_depth</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="n">example_l0</span> <span class="o">=</span> <span class="n">task_arith</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Level 0 Prompt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">example_l0</span><span class="o">.</span><span class="n">prompt</span><span class="p">)</span>
@@ -2142,7 +2112,7 @@ print("Task initialized:", task_sym.task_name)</div>
 <div class="clipboard-copy-txt" id="cell-4"># Set a seed and demonstrate Level 0
 task_arith.config.set_level(0)
 
-print(f"Level 0 Config Depth: Min {task_arith.config.min_depth}, Max {task_arith.config.max_depth}\n")
+print(f"Level 0 Config Depth: Min {task_arith.config.min_depth}, Max {task_arith.config.max_depth}")
 
 example_l0 = task_arith.generate_example()
 print("Level 0 Prompt: \n", example_l0.prompt)
@@ -2159,12 +2129,13 @@ print("\nLevel 0 Answer: ", example_l0.answer)</div>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Level 0 Config Depth: Min 3, Max 5
+Level 0 Config: n_digits 6,  n_decimals 3
 
 Level 0 Prompt: 
- Evaluate 6.2 + -3.4 + -12 * -5.3.
+ Evaluate 7 + 3 + 9 + -5.
 Answer with only a number.
 
-Level 0 Answer:  66.4
+Level 0 Answer:  14
 </pre>
 </div>
 </div>
@@ -2178,7 +2149,7 @@ Level 0 Answer:  66.4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="22-advanced-level-3-generation">2.2 Advanced Level 3 Generation<a class="anchor-link" href="#22-advanced-level-3-generation">¶</a></h3><p>When we increase the level to 3, the depth of the abstract syntax tree for the expression expands significantly.</p>
+<h3 id="22-advanced-levels">2.2 Advanced Levels<a class="anchor-link" href="#22-advanced-levels">¶</a></h3><p>When we increase the level, the depth of the abstract syntax tree for the expression expands significantly.</p>
 </div>
 </div>
 </div>
@@ -2188,7 +2159,7 @@ Level 0 Answer:  66.4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
@@ -2202,14 +2173,14 @@ Level 0 Answer:  66.4
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Level 3 Config Depth: Min </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">min_depth</span><span class="si">}</span><span class="s2">, Max </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_depth</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Level 3 Config Depth: Min </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">min_depth</span><span class="si">}</span><span class="s2">, Max </span><span class="si">{</span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_depth</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="n">example_l3</span> <span class="o">=</span> <span class="n">task_arith</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Level 3 Prompt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">example_l3</span><span class="o">.</span><span class="n">prompt</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Level 3 Answer: "</span><span class="p">,</span> <span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-5">task_arith.config.set_level(3)
-print(f"Level 3 Config Depth: Min {task_arith.config.min_depth}, Max {task_arith.config.max_depth}\n")
+print(f"Level 3 Config Depth: Min {task_arith.config.min_depth}, Max {task_arith.config.max_depth}")
 
 example_l3 = task_arith.generate_example()
 print("Level 3 Prompt: \n", example_l3.prompt)
@@ -2226,12 +2197,11 @@ print("\nLevel 3 Answer: ", example_l3.answer)</div>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Level 3 Config Depth: Min 6, Max 8
-
 Level 3 Prompt: 
- Evaluate abs(-5 * -12 - -8 * 6) + -11 + 2 + -10 + -10.4 + -13.
+ Evaluate 8.00 + 12 - 12 + -0.900 * -13 + (-7 / 1) * 10 + -1 + -6 - 4 * -3.9 - 12 - (-11) + 11 * 14.
 Answer with only a number.
 
-Level 3 Answer:  65.6
+Level 3 Answer:  111.3
 </pre>
 </div>
 </div>
@@ -2239,23 +2209,23 @@ Level 3 Answer:  65.6
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0bd2f56f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=da1f2aec">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="23-score-mechanism">2.3 Score mechanism<a class="anchor-link" href="#23-score-mechanism">¶</a></h3><p>The library doesn't only provide (Prompt,Answer) couple, it also provides a normalized score mechanisme tailored to each task of the <code>reasoning_core</code> library. This feature has been designed for Reinforcement Learning training, such as GRPO.</p>
+<p>The levels are meant to scale well, at least to level 10</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=16caeaf2">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=243f0790">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
@@ -2268,9 +2238,17 @@ Level 3 Answer:  65.6
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">,</span> <span class="n">example_l3</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">example_l10</span> <span class="o">=</span> <span class="n">task_arith</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Level 10 Prompt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">example_l10</span><span class="o">.</span><span class="n">prompt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Level 10 Answer: "</span><span class="p">,</span> <span class="n">example_l10</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">rcr.score_answer(example_l3.answer, example_l3)</div>
+<div class="clipboard-copy-txt" id="cell-6">task_arith.config.set_level(10)
+
+example_l10 = task_arith.generate_example()
+print("Level 10 Prompt: \n", example_l10.prompt)
+print("\nLevel 10 Answer: ", example_l10.answer)</div>
 </div>
 </div>
 </div>
@@ -2279,88 +2257,15 @@ Level 3 Answer:  65.6
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>1.0</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2dd72df0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="n">example_l3</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7">rcr.score_answer(70,example_l3)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>0.5165099839184536</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c0079a3f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="n">example_l3</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">rcr.score_answer(60,example_l3)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>0.4313476761593399</pre>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Level 10 Prompt: 
+ Evaluate (min(-4, -6.600 * 8 + -1 / 6.7 + 6 + max((-13)**2 / -10 - -2, max(6 - 8.50, 2)) * 4 - -12 / (8.5) - 8 + -9.5 * -8.8 - -3.6 / 12 * (-15) / ((3.8 + -13 - -1))**2 + 11 - -12) - (1 + -7.1) - (abs(-5 * -1 * -4.3 + ((14)) * abs(6) + max(-0.1 + (-9.5 - 15)**2 / -1 + 6, -0.1 * -14)) + -6 + 3.9 / abs(min(-7, ((min(-5.9, -12)))**2) + 15) + min(6.8 + 12, -14) / 14 - -1 - -10 + -1.7)).
+Answer with only a number.
+
+Level 10 Answer:  -64.5875
+</pre>
 </div>
 </div>
 </div>
@@ -2373,7 +2278,7 @@ Level 3 Answer:  65.6
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="24-chain-of-thought-cot">2.4 Chain of Thought (CoT)<a class="anchor-link" href="#24-chain-of-thought-cot">¶</a></h3><p>The abstract syntax tree isn't just used for answer evaluation—it also generates step-by-step intermediate computations to guide Large Language Models through zero-shot reasoning.</p>
+<h3 id="23-chain-of-thought-cot">2.3 Chain of Thought (CoT)<a class="anchor-link" href="#23-chain-of-thought-cot">¶</a></h3><p>The library doesn't only provide (Prompt,Answer) couple, it also provides the algorithmic trace of the problem resolution. This feature can be leveraged for procedural pretraining.</p>
 </div>
 </div>
 </div>
@@ -2383,10 +2288,10 @@ Level 3 Answer:  65.6
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2401,12 +2306,18 @@ Level 3 Answer:  65.6
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">-&gt; Level 3 CoT:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">example_l3</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">-&gt; Level 3 CoT:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_l10</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">print("-&gt; Level 0 CoT:\n")
+<div class="clipboard-copy-txt" id="cell-7">print("-&gt; Level 0 CoT:\n")
 print(example_l0.metadata.cot)
 
 print("\n-&gt; Level 3 CoT:\n")
-print(example_l3.metadata.cot)</div>
+print(example_l3.metadata.cot)
+
+print("\n-&gt; Level 3 CoT:\n")
+print(example_l10.metadata.cot)</div>
 </div>
 </div>
 </div>
@@ -2420,22 +2331,218 @@ print(example_l3.metadata.cot)</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>-&gt; Level 0 CoT:
 
-6.2 + -3.4 = 2.8
--12 * -5.3 = 63.6
-2.8 + 63.6 = 66.4
+7 + 3 = 10
+10 + 9 = 19
+19 + -5 = 14
 
 -&gt; Level 3 CoT:
 
--5 * -12 = 60
--8 * 6 = -48
-60 - -48 = 108
-abs(108) = 108
-108 + -11 = 97
-97 + 2 = 99
-99 + -10 = 89
-89 + -10.4 = 78.6
-78.6 + -13 = 65.6
+8 + 12 = 20
+20 - 12 = 8
+-0.9 * -13 = 11.7
+8 + 11.7 = 19.7
+-7 / 1 = -7
+-7 * 10 = -70
+19.7 + -70 = -50.3
+-50.3 + -1 = -51.3
+-51.3 + -6 = -57.3
+4 * -3.9 = -15.6
+-57.3 - -15.6 = -41.7
+-41.7 - 12 = -53.7
+-53.7 - -11 = -42.7
+11 * 14 = 154
+-42.7 + 154 = 111.3
+
+-&gt; Level 3 CoT:
+
+-6.6 * 8 = -52.8
+-1 / 6.7 = -10/67
+-52.8 + -10/67 = -17738/335
+-17738/335 + 6 = -15728/335
+-13 ** 2 = 169
+169 / -10 = -16.9
+-16.9 - -2 = -14.9
+6 - 8.5 = -2.5
+max(-2.5, 2) = 2
+max(-14.9, 2) = 2
+2 * 4 = 8
+-15728/335 + 8 = -13048/335
+-12 / 8.5 = -24/17
+-13048/335 - -24/17 = -213776/5695
+-213776/5695 - 8 = -259336/5695
+-9.5 * -8.8 = 83.6
+-259336/5695 + 83.6 = 216766/5695
+-3.6 / 12 = -0.3
+-0.3 * -15 = 4.5
+3.8 + -13 = -9.2
+-9.2 - -1 = -8.2
+-8.2 ** 2 = 67.24
+4.5 / 67.24 = 225/3362
+216766/5695 - 225/3362 = 727485917/19146590
+727485917/19146590 + 11 = 938098407/19146590
+938098407/19146590 - -12 = 1167857487/19146590
+min(-4, 1167857487/19146590) = -4
+1 + -7.1 = -6.1
+-4 - -6.1 = 2.1
+-5 * -1 = 5
+5 * -4.3 = -21.5
+abs(6) = 6
+14 * 6 = 84
+-21.5 + 84 = 62.5
+-9.5 - 15 = -24.5
+-24.5 ** 2 = 600.25
+600.25 / -1 = -600.25
+-0.1 + -600.25 = -600.35
+-600.35 + 6 = -594.35
+-0.1 * -14 = 1.4
+max(-594.35, 1.4) = 1.4
+62.5 + 1.4 = 63.9
+abs(63.9) = 63.9
+63.9 + -6 = 57.9
+min(-5.9, -12) = -12
+-12 ** 2 = 144
+min(-7, 144) = -7
+-7 + 15 = 8
+abs(8) = 8
+3.9 / 8 = 0.4875
+57.9 + 0.4875 = 58.3875
+6.8 + 12 = 18.8
+min(18.8, -14) = -14
+-14 / 14 = -1
+58.3875 + -1 = 57.3875
+57.3875 - -1 = 58.3875
+58.3875 - -10 = 68.3875
+68.3875 + -1.7 = 66.6875
+2.1 - 66.6875 = -64.5875
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0bd2f56f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="24-score-mechanism">2.4 Score mechanism<a class="anchor-link" href="#24-score-mechanism">¶</a></h3><p>The library also provides a normalized score mechanisme tailored to each task of the <code>reasoning_core</code> library. This feature has been designed for Reinforcement Learning training, such as GRPO.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=16caeaf2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">,</span> <span class="n">example_l3</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">rcr.score_answer(example_l3.answer, example_l3)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>1.0</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2dd72df0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span><span class="n">example_l3</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-9">rcr.score_answer(110,example_l3)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>0.8906877574366407</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c0079a3f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="n">example_l3</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-10">rcr.score_answer(120,example_l3)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>0.4608371295269401</pre>
 </div>
 </div>
 </div>
@@ -2458,10 +2565,10 @@ abs(108) = 108
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2471,7 +2578,8 @@ abs(108) = 108
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Force the arithmetic task to always use floats and 4 decimal places</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#put it back to level 3</span>
+<span class="c1"># Force the arithmetic task to always use floats and 4 decimal places</span>
 <span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">float_prob</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">out_decimals</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">task_arith</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">in_decimals</span> <span class="o">=</span> <span class="mi">4</span>
@@ -2480,7 +2588,8 @@ abs(108) = 108
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Float-only Arithmetic:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">advanced_arith_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Answer:"</span><span class="p">,</span> <span class="n">advanced_arith_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10"># Force the arithmetic task to always use floats and 4 decimal places
+<div class="clipboard-copy-txt" id="cell-11">task_arith.config.set_level(3) #put it back to level 3
+# Force the arithmetic task to always use floats and 4 decimal places
 task_arith.config.float_prob = 1.0
 task_arith.config.out_decimals = 4
 task_arith.config.in_decimals = 4
@@ -2530,7 +2639,7 @@ Answer: 120.4898
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2548,7 +2657,7 @@ Answer: 120.4898
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Symbolic CoT:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">sym_example</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Score answer of </span><span class="si">{}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">sym_example</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">task_sym.config.set_level(1)
+<div class="clipboard-copy-txt" id="cell-12">task_sym.config.set_level(1)
 
 sym_example = task_sym.generate_example()
 print("Symbolic Prompt:\n", sym_example.prompt)
@@ -2593,7 +2702,7 @@ Symbolic CoT:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2606,7 +2715,7 @@ Symbolic CoT:
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score answer of "2y - x + 8":</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="s2">"2y - x + 8"</span><span class="p">,</span> <span class="n">sym_example</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score answer of "2y - x + 3":</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="s2">"2y - x + 3"</span><span class="p">,</span> <span class="n">sym_example</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12">print("""\nScore answer of "2y - x + 8":\n""", rcr.score_answer("2y - x + 8", sym_example))
+<div class="clipboard-copy-txt" id="cell-13">print("""\nScore answer of "2y - x + 8":\n""", rcr.score_answer("2y - x + 8", sym_example))
 print("""\nScore answer of "2y - x + 3":\n""", rcr.score_answer("2y - x + 3", sym_example))</div>
 </div>
 </div>
@@ -2651,7 +2760,7 @@ Score answer of "2y - x + 3":
 <div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2678,7 +2787,7 @@ Score answer of "2y - x + 3":
 <span class="n">dataset_dict</span> <span class="o">=</span> <span class="n">hf_dataset</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Dataset Structure:"</span><span class="p">,</span> <span class="n">dataset_dict</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">import datasets
+<div class="clipboard-copy-txt" id="cell-14">import datasets
 import pandas as pd
 
 # 1. Generate data, as a list of Problem
