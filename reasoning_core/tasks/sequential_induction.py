@@ -162,6 +162,18 @@ def filter_max_terms_len(S :Sequence, max_terms_len : int = 12, length_check : i
 
 @dataclass
 class SequenceConfig(Config):
+    """
+    Configuration for Mathematical Recurrence Relation induction.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `mode` | `str` | `"simple"` | Functional mode; if `'full'`, allows advanced non-linear unary operators like sign() and relu(). |
+    | `recurrence_depth` | `int` | `1` | Maximum recursive back-reference depth (e.g., `U[n-1]`) the generated integer sequence formula can reach. |
+    | `n_visible_terms` | `int` | `8` | Number of sequentially evaluated sequence terms dynamically provided to the model as a prompt context. |
+    | `max_terms_len` | `int` | `15` | Maximum string character length of any term output, used to explicitly filter unbounded sequence explosions. |
+    | `min_depth_grammar` | `int` | `2` | Minimum syntactic depth for generating the randomly structured algebraic recurrence formula tree. |
+    | `max_depth_grammar` | `int` | `3` | Maximum syntactic depth for generating the randomly structured algebraic recurrence formula tree. |
+    """
     mode= "simple" #can be 'full' as well
     recurrence_depth: int = 1
     n_visible_terms: int = 8
@@ -176,6 +188,11 @@ class SequenceConfig(Config):
 
 
 class SequentialInduction(Task):
+    """
+    Task responsible for numerical recursion pattern discovery.
+    
+    The model receives a finite consecutive list of integer evaluations (e.g. `[U_0, U_1, ..., U__n]`) representing a sequence. It must algebraically reverse-engineer the underlying generating recurrence relation formula.
+    """
     def __init__(self, config=SequenceConfig()):
         super().__init__(config=config)
         # Now, self.filters will contain references to picklable instance methods

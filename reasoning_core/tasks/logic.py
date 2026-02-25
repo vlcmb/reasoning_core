@@ -89,6 +89,16 @@ def valid(x):
 
 @dataclass
 class LogicConfig(Config):
+    """
+    Configuration for Natural Language Inference (NLI) logic tasks.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `n_formulas` | `int` | `6` | The target initial number of generated symbolic logic premises. |
+    | `generation_algorithm` | `str` | `"sequential"` | The algorithmic traversal approach for grammar procedural generation. |
+    | `n_names` | `int` | `2` | Number of distinct discrete entity names utilized (e.g., 'mary', 'paul'). |
+    | `n_adjectives` | `int` | `2` | Number of distinct adjectives utilized as abstract descriptive concepts. |
+    """
     n_formulas: int = 6
     generation_algorithm: str = "sequential"
     n_names: int = 2
@@ -127,6 +137,11 @@ def get_cot(text: str) -> str:
 
     
 class LogicNLI(Task):
+    """
+    Task responsible for generic logic entailment classification.
+    
+    The model receives a constructed Context/Premise along with a Hypothesis. It must logically deduce whether the Hypothesis is a direct `entailment`, a direct `contradiction`, or `neutral` based solely on the provided First-Order Logic premises.
+    """
 
     def __init__(self, config=LogicConfig()):
         super().__init__(config=config)
@@ -192,6 +207,11 @@ class LogicNLI(Task):
         return problem.answer
 
 class EvidenceRetrieval(Task):
+    """
+    Task responsible for subset supporting evidence selection.
+    
+    The model receives a fully constructed Context/Premise along with a Hypothesis. It must output the absolute minimal array of line integers from the premise that are strictly necessary to mathematically prove or contradict the hypothesis.
+    """
     def __init__(self, config=LogicConfig()):
         super().__init__(config=config)
         self.nli = LogicNLI(config=config)

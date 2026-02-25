@@ -102,6 +102,15 @@ def sample_regex(config, max_tries=100):
 
 @dataclass
 class RegexConfig(Config):
+    """
+    Configuration for Regular Expression reasoning challenges.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `n_ex` | `int` | `8` | Number of string instances drawn (e.g. 8 positive matches vs 8 negative matches) for induction. |
+    | `max_depth` | `int` | `5` | Maximum procedural tree generation depth utilized to construct the underlying regex pattern. |
+    | `min_depth` | `int` | `3` | Minimum procedural tree generation depth utilized to construct the underlying regex pattern. |
+    """
     n_ex: int = 8
     max_depth: int = 5
     min_depth: int = 3
@@ -129,6 +138,11 @@ def sample_instance(r_str, max_tries=100):
     raise ValueError(f"Could not generate a verified string for regex: {r_str}")
 
 class RegexFollowing(Task):
+    """
+    Task responsible for producing strings obeying defined Regex structures.
+    
+    The model receives a constructed Regular Expression and must creatively output a valid, full-matching exact string instance compliant with that specific pattern constraint.
+    """
     def __init__(self, config=RegexConfig()):
         super().__init__(config=config)
 
@@ -171,6 +185,11 @@ def strip_anchors_safe(text: str) -> str:
 
 
 class RegexInduction(Task):
+    """
+    Task responsible for generic string-pattern reverse engineering.
+    
+    The model is provided with an explicit list of POSITIVE string matches alongside NEGATIVE non-matches. It must reverse-engineer them and logically deduce the most parsimonious Regular Expression that strictly captures all positive examples while rejecting all negative ones.
+    """
     def __init__(self, config=RegexConfig()):
         super().__init__(config=config)
 

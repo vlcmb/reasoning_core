@@ -14,6 +14,14 @@ from rapidfuzz.distance import Levenshtein
 
 @dataclass
 class TableQAConfig(Config):
+    """
+    Configuration for procedural Table Query constraint tasks.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `num_rows` | `int` | `5` | Exact integer count defining the row depth initialization of the random relational tabular structure. |
+    | `num_columns` | `int` | `2` | Bound target width utilized to procedurally randomly initialize column header variables during table construction. |
+    """
     num_rows: int = 5
     num_columns: int = 2
     def update(self, c):
@@ -47,6 +55,11 @@ def get_renderers(dataframe):
     ]
 
 class TableQA(Task):
+    """
+    Task responsible for data-structure textual SQL querying.
+    
+    The model receives an explicitly rendered tabular schema (e.g. CSV, Markdown) alongside an operational SQL string. It must computationally parse the structure and return the correct evaluation/row results to answering the target SQL expression accurately.
+    """
     def __init__(self, config=TableQAConfig()):
         super().__init__(config=config)
     
@@ -138,6 +151,11 @@ class TableQA(Task):
             return 0.0
 
 class TableConversion(Task):
+    """
+    Task responsible for semantic tabular protocol alignment translation.
+    
+    The model receives a contextual semantic string structure (e.g. valid html representation). It must accurately parse and reconstruct exactly the initial topology within the target explicitly requested protocol rendering framework (e.g. valid json).
+    """
     def __init__(self, config=TableQAConfig()):
         super().__init__(config=config)
 

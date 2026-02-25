@@ -76,6 +76,17 @@ def intersection_metric(set1, set2):
 
 @dataclass
 class SetOpsConfig(Config):
+    """
+    Configuration for core Set Theory logical evaluation tasks.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `domain_size` | `int` | `1000` | Number of distinct elements available within the generated universe domain pool. |
+    | `set_size` | `int` | `8` | Target baseline subset length drawn from the base universe. |
+    | `n_max_perturbation` | `int` | `2` | Maximum structural edits applied to a subset to create dynamic sequence variations. |
+    | `prob_equal` | `float` | `0.5` | Probability threshold for intentionally generating structurally or semantically equal sets. |
+    | `n_domains` | `int` | `1` | Number of distinct thematic entity domains (numbers, names, dates, letters) utilized. |
+    """
     domain_size: int = 1000
     set_size: int = 8
     n_max_perturbation: int = 2
@@ -88,6 +99,11 @@ class SetOpsConfig(Config):
         self.n_domains += c
         
 class SetIntersection(Task):
+    """
+    Task responsible for calculating discrete subset intersections.
+    
+    The model receives two implicitly rendered string arrays (`Set1`, `Set2`). It must logically formulate and return pythonic notation ` {element1, element2} ` representing the exact intersection overlap values.
+    """
     def __init__(self, config=SetOpsConfig()):
         super().__init__(config=config)
         self.domains = make_domains(self.config.domain_size)
@@ -127,6 +143,14 @@ class SetIntersection(Task):
 
 @dataclass
 class SetMissingElementConfig(SetOpsConfig):
+    """
+    Configuration for subset deduction reasoning evaluation.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `set_size` | `int` | `10` | Specific subset length explicitly overridden for missing element induction reasoning tasks. |
+    | `prob_no_missing` | `float` | `0.1` | Statistical likelihood that the generated test set variation intentionally drops exactly zero underlying elements. |
+    """
     set_size: int = 10
     prob_no_missing: float = 0.1
     def update(self, c):
@@ -136,6 +160,11 @@ class SetMissingElementConfig(SetOpsConfig):
         self.n_domains += c
 
 class SetMissingElement(Task):
+    """
+    Task responsible for complementary subset identification.
+    
+    The model is provided an implicitly ordered sub-sequence spanning a distinct semantic context (like alphabetical dates or numbers). It must logically deduce elements arbitrarily missing/stripped from the underlying sequence format.
+    """
     def __init__(self, config=SetMissingElementConfig()):
         super().__init__(config=config)
         self.domains = make_domains(self.config.domain_size)
@@ -165,6 +194,15 @@ class SetMissingElement(Task):
 
 @dataclass
 class CountElementsConfig(Config):
+    """
+    Configuration for contextual list frequency evaluation.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `max_count` | `int` | `3` | Upper limit bounding the frequency occurrence of a single target element within a populated array. |
+    | `list_size` | `int` | `10` | The constrained length of the overall target discrete numerical/string array. |
+    | `domain_size` | `int` | `20` | Distinct items drawn upon to procedurally populate the random remainder of the target array logic. |
+    """
     max_count: int = 3
     list_size: int = 10
     domain_size: int = 20
@@ -174,6 +212,11 @@ class CountElementsConfig(Config):
         self.domain_size *= 1 + c
 
 class CountElements(Task):
+    """
+    Task responsible for discrete list element aggregation scoring.
+    
+    The model receives a flat sequence iteration and an explicit target subset query. It must mathematically output the correct integer occurrence count enumerating the number of times the target sequence strictly appears in the list.
+    """
     def __init__(self, config=CountElementsConfig()):
         super().__init__(config=config)
         self.domains = make_domains(self.config.domain_size)
@@ -197,6 +240,11 @@ class CountElements(Task):
 
 @dataclass
 class SetEquality(Task):
+    """
+    Task responsible for Boolean bipartite sequence equivalence deduction.
+    
+    The model receives two discretely sampled random sub-domains. It must mathematically and structurally deduce whether the two implicit configurations are strictly equivalent, outputting True or False.
+    """
     def __init__(self, config=SetOpsConfig()):
         super().__init__(config=config)
         self.domains = make_domains(self.config.domain_size)

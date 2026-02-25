@@ -453,6 +453,22 @@ def parse_jsonl_plan(jsonl_string: str) -> str:
 
 @dataclass
 class PlanningConfig(Config):
+    """
+    Configuration for symbolic PDDL Planning Generation.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `N` | `int` | `5` | The underlying scale factor bounding the number of types, fluents, and objects in generated planning domains. |
+    | `min_na` | `int` | `1` | Minimum acceptable length of the optimal sequential discrete action plan. |
+    | `max_na` | `int` | `3` | Maximum acceptable length of the optimal sequential discrete action plan. |
+    | `max_domain_seed` | `int` | `500` | The integer bound limit for randomly seeding the procedural deterministic PDDL domain generation tree. |
+    | `arity_weight` | `float` | `0.5` | Ratio favoring the generation of 2-arity relational fluents over simpler 1-arity properties. |
+    | `hint_proba` | `float` | `0.5` | Probability of appending a heuristic textual hint revealing the length of an unoptimized reference plan. |
+    | `planner` | `str` | `"pyperplan-opt"` | The classical backend automated planner utilized to definitively solve generated problem instances. |
+    | `language` | `str` | `"en"` | Language string encoding for parsed string environments. |
+    | `domain` | `str` | `None` | Manually override the generator to fetch a pre-built static reference domain instance. |
+    | `domains` | `list` | `[None]` | List of allowed reference domain targets. |
+    """
     N: int = 5
     min_na: int = 1
     max_na: int = 3
@@ -472,6 +488,11 @@ class PlanningConfig(Config):
         self.arity_weight += c
 
 class Planning(Task):
+    """
+    Task responsible for generating procedural sequential action plans.
+    
+    The model receives a fully parameterized logic-state domain (objects, actions, init, goals) and must sequentially output valid state-mutating actions (e.g. `action(obj1, obj2)`) to mathematically bridge the initial world state to the complete goal condition.
+    """
     task_name = "planning" 
 
     def __init__(self, config=PlanningConfig()):
