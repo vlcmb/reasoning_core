@@ -1068,6 +1068,44 @@
 
 
 
+        <p>Configuration for Natural Language Inference (NLI) logic tasks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>n_formulas</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>6</code></td>
+<td style="text-align: left;">The target initial number of generated symbolic logic premises.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>generation_algorithm</code></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;"><code>"sequential"</code></td>
+<td style="text-align: left;">The algorithmic traversal approach for grammar procedural generation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>n_names</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Number of distinct discrete entity names utilized (e.g., 'mary', 'paul').</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>n_adjectives</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Number of distinct adjectives utilized as abstract descriptive concepts.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -1112,6 +1150,9 @@
 
 
 
+        <p>Task responsible for generic logic entailment classification.</p>
+<p>The model receives a constructed Context/Premise along with a Hypothesis. It must logically deduce whether the Hypothesis is a direct <code>entailment</code>, a direct <code>contradiction</code>, or <code>neutral</code> based solely on the provided First-Order Logic premises.</p>
+
 
 
 
@@ -1155,6 +1196,9 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Task responsible for subset supporting evidence selection.</p>
+<p>The model receives a fully constructed Context/Premise along with a Hypothesis. It must output the absolute minimal array of line integers from the premise that are strictly necessary to mathematically prove or contradict the hypothesis.</p>
 
 
 
