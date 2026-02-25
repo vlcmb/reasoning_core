@@ -1202,6 +1202,56 @@
 
 
 
+        <p>Configuration for Mathematical Recurrence Relation induction.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>mode</code></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;"><code>"simple"</code></td>
+<td style="text-align: left;">Functional mode; if <code>'full'</code>, allows advanced non-linear unary operators like sign() and relu().</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>recurrence_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Maximum recursive back-reference depth (e.g., <code>U[n-1]</code>) the generated integer sequence formula can reach.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>n_visible_terms</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>8</code></td>
+<td style="text-align: left;">Number of sequentially evaluated sequence terms dynamically provided to the model as a prompt context.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_terms_len</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>15</code></td>
+<td style="text-align: left;">Maximum string character length of any term output, used to explicitly filter unbounded sequence explosions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>min_depth_grammar</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Minimum syntactic depth for generating the randomly structured algebraic recurrence formula tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_depth_grammar</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>3</code></td>
+<td style="text-align: left;">Maximum syntactic depth for generating the randomly structured algebraic recurrence formula tree.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -1245,6 +1295,9 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Task responsible for numerical recursion pattern discovery.</p>
+<p>The model receives a finite consecutive list of integer evaluations (e.g. <code>[U_0, U_1, ..., U__n]</code>) representing a sequence. It must algebraically reverse-engineer the underlying generating recurrence relation formula.</p>
 
 
 

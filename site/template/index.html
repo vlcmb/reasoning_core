@@ -479,6 +479,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reasoning_core.template.Task.generate_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generate_example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.template.Task.generate_balanced_batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generate_balanced_batch
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1334,6 +1356,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reasoning_core.template.Task.generate_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generate_example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.template.Task.generate_balanced_batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generate_balanced_batch
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1491,6 +1535,19 @@
 
 
 
+        <p>The central class for defining a reasoning task by inheriting from it.</p>
+<p>This is the main entry point for creating new tasks. A <code>Task</code> manages the generation
+of <code>Problem</code> instances based on a <code>Config</code>.</p>
+<p>The generative process flow is:<br />
+1. <code>Config</code> parameters (size, complexity, etc.) determine the generation constraints.<br />
+2. <code>generate()</code> produces the raw logic and data for a specific problem instance.<br />
+3. <code>prompt()</code> formats this data into a natural language question.<br />
+4. A <code>Problem</code> object is returned containing the prompt, answer, and metadata.  </p>
+<p>Subclasses must implement:<br />
+- <code>generate()</code>: To produce the logic data.<br />
+- <code>prompt()</code>: To format the question.<br />
+- <code>default_score_answer()</code>: To score the answer.</p>
+
 
 
 
@@ -1640,6 +1697,121 @@ This can prevent the generation of the same problem.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reasoning_core.template.Task.generate_example" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">generate_example</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Generate a single example</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="reasoning_core.template.Task.generate_balanced_batch" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">generate_balanced_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">deduplication</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Generate a batch of examples with a balanced distribution of examples per key.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>batch_size</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of examples to generate.  </p>
+              </div>
+            </td>
+            <td>
+                  <code>32</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>level</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The level of difficulty for the examples.  </p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>max_per_key_frac</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The maximum fraction of examples per key.  </p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>deduplication</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to deduplicate examples.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
 
 
   </div>
@@ -1668,10 +1840,13 @@ This can prevent the generation of the same problem.</p>
 
 
 
-        <p>Base config providing transparent stochastic rounding.</p>
-<p>A subclass only needs to define its attributes with <code>int</code> type hints
-and implement a natural <code>update()</code> method (e.g., <code>self.n_ex += self.c</code>).
-The base class handles all rounding logic automatically.</p>
+        <p>Configuration object for a Task.  </p>
+<p>Handles parameters that control generation, including <code>size</code>, <code>seed</code>, and <code>level</code> (difficulty).  </p>
+<p>Key Features:<br />
+- <strong>Stochastic Rounding</strong>: Integer fields are automatically rounded stochastically based on their
+  floating-point values. This allows for smooth curriculum learning where a parameter like
+  <code>num_items</code> can effectively be 1.5 (50% chance of 1, 50% chance of 2).<br />
+- <strong>Level Management</strong>: The <code>level</code> attribute can be used to scale difficulty dynamically.</p>
 
 
 
@@ -1736,6 +1911,13 @@ The base class handles all rounding logic automatically.</p>
 
 
 
+        <p>Represents a single generated instance of a task.</p>
+<p>Acts as a container for:<br />
+- <code>prompt</code>: The formatted question text presented to the model.<br />
+- <code>answer</code>: The ground truth solution.<br />
+- <code>metadata</code>: Generation details, parameters, and debug info.<br />
+- <code>data</code>: The raw structured data underlying the problem.</p>
+
 
 
 
@@ -1780,6 +1962,11 @@ The base class handles all rounding logic automatically.</p>
     <div class="doc doc-contents first">
 
 
+
+        <p>A wrapper for objects to attach reward-related metadata or tagging.</p>
+<p>Used to signal specific feedback or scoring properties for generated items,
+allowing fine-grained control over reinforcement learning limits or objectives
+associated with specific parts of the generated data.</p>
 
 
 
