@@ -1046,6 +1046,68 @@
 
 
 
+        <p>Configuration for the Equation System numeric challenge.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>num_vars</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Number of variables and base equations in the system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>obfuscation_steps</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: left;">Number of randomized linear composition operations to scramble the base equations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sol_magnitude</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>30</code></td>
+<td style="text-align: left;">The integer boundary range <code>[-x, x]</code> out of which ground truth solutions are drawn.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>coeff_magnitude</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>4</code></td>
+<td style="text-align: left;">The multiplier boundary range <code>[-x, x]</code> used during obfuscation scrambling.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_generation_attempts</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>200</code></td>
+<td style="text-align: left;">Maximum attempts internally to forge a valid solvable or explicitly inconsistent equation system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>p_inconsistent</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.10</code></td>
+<td style="text-align: left;">Exact probability to forge a system with no valid solution (inconsistent).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>p_underdetermined</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.10</code></td>
+<td style="text-align: left;">Exact probability to drop an equation yielding an unsolvable underdetermined system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>p_shortcut</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.10</code></td>
+<td style="text-align: left;">Probability to expose an un-obfuscated variable shortcut identity directly in the equations.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -1089,6 +1151,9 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Task responsible for producing Systems of Linear Equations.</p>
+<p>This task procedurally generates arrays of linear equations with specified variables. The model must isolate a targeted query variable and output its numerical integer solution, or explicitly return <code>No solution</code> / <code>Multiple solutions</code> if analytically appropriate.</p>
 
 
 

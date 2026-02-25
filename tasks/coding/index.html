@@ -1134,6 +1134,44 @@
 
 
 
+        <p>Configuration for the Python Code Execution task.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>difficulty</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.0</code></td>
+<td style="text-align: left;">Controls the complexity of the generated Python programs (0 to 6+).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>min_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>4</code></td>
+<td style="text-align: left;">Minimum depth of the generated syntactical Python AST.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>15</code></td>
+<td style="text-align: left;">Maximum depth of the generated syntactical Python AST.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_attempts</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>100</code></td>
+<td style="text-align: left;">Maximum generation attempts to form valid, non-crashing code.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -1177,6 +1215,9 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Task responsible for generic Python code tracing.</p>
+<p>This task procedurally generates syntactically valid subset-Python code (tinypy) through a CFG. The model is asked to mentally execute the code and strictly predict the exact resulting console print output.</p>
 
 
 
@@ -1225,6 +1266,44 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Configuration for Git Unified Diff formatting tasks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>min_versions</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Minimum number of sequential text versions to simulate a commit history.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_versions</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>5</code></td>
+<td style="text-align: left;">Maximum number of sequential text versions simulating a commit history.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>nb_lines</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>5</code></td>
+<td style="text-align: left;">Number of textual sentences/lines initialized at the root version.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mutation_rate</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.2</code></td>
+<td style="text-align: left;">The statistical probability of corrupting or substituting elements within the text list between commits.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1314,6 +1393,9 @@
 
 
 
+        <p>Task responsible for producing Git-diff chunks.</p>
+<p>Given a sequence of file histories and versions, the model must output the exact Unified Git Diff snippet to mathematically translate the src_id document into the tgt_id document.</p>
+
 
 
 
@@ -1357,6 +1439,9 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Task responsible for applying Git-diff chunks to existing text.</p>
+<p>Given an original structured text object and a generated Unified Git Diff patch, perform string-level integration to exactly re-create the final patched string target.</p>
 
 
 

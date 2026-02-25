@@ -1270,6 +1270,26 @@
 
 
 
+        <p>Configuration for discrete topology graph reasoning tasks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>num_nodes</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>5</code></td>
+<td style="text-align: left;">The target number of initialized nodes instantiated on the network layout.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -1360,6 +1380,9 @@
 
 
 
+        <p>Task responsible for calculating optimal shortest-paths.</p>
+<p>The model is provided an implicitly rendered graph structure and must output the shortest sequential array of node visits to travel from <code>start_node</code> to <code>end_node</code>.</p>
+
 
 
 
@@ -1404,7 +1427,8 @@
 
 
 
-        <p>Task to find all nodes with the highest centrality in a graph.</p>
+        <p>Task responsible for identifying nodes with highest degree centrality.</p>
+<p>The model is provided an implicitly rendered social network structure and must output an array of nodes possessing the highest raw connection counts.</p>
 
 
 
@@ -1468,7 +1492,8 @@
 
 
 
-        <p>Task to identify the specific nodes that form a cycle in a graph.</p>
+        <p>Task responsible for identifying closed circuit topologies in graphs.</p>
+<p>The model is provided a structure guaranteed to possess exactly one cycle. It must computationally deduce which node integers form that isolated subset circuit.</p>
 
 
 
@@ -1532,7 +1557,8 @@
 
 
 
-        <p>Task to determine if two graphs have the exact same structure.</p>
+        <p>Task responsible for analyzing bipartite structural equivalence mapping.</p>
+<p>The model is provided two separately rendered graphs with different node labelings. It must deduce whether the two graphs are structurally equivalent (isomorphic), returning <code>True</code> or <code>False</code>.</p>
 
 
 

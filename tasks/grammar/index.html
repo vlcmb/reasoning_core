@@ -1090,6 +1090,80 @@
 
 
 
+        <p>Configuration for Context-Free Grammar (CFG) string evaluation tasks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>n_types</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>4</code></td>
+<td style="text-align: left;">Number of distinct non-terminal symbolic types in the generated meta-grammar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>n_terminals</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>5</code></td>
+<td style="text-align: left;">Number of distinct terminal word tokens sampled from the library.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>perturbation_rate</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.5</code></td>
+<td style="text-align: left;">Probability of randomly mutating valid strings to create unparsable/ambiguous edge cases.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>min_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>5</code></td>
+<td style="text-align: left;">Minimum syntactic depth for randomly generating the base CFG rules.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>8</code></td>
+<td style="text-align: left;">Maximum syntactic depth for randomly generating the base CFG rules.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>min_prod_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>4</code></td>
+<td style="text-align: left;">Minimum derivation depth when drawing valid strings from the generated CFG.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>max_prod_depth</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>6</code></td>
+<td style="text-align: left;">Maximum derivation depth when drawing valid strings from the generated CFG.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>random_grammar_prob</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.3</code></td>
+<td style="text-align: left;">Probability of randomly selecting an existing deterministic grammar instead of generating one.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tagging_prob</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.5</code></td>
+<td style="text-align: left;">Probability of requiring pure POS-tagging instead of full syntactic tree parsing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>target_num_rules</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>10</code></td>
+<td style="text-align: left;">The ideal upper limit of rules maintained when strategically trimming massive grammars.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -1133,6 +1207,9 @@
     <div class="doc doc-contents first">
 
 
+
+        <p>Task responsible for generic string parsability analysis.</p>
+<p>The model receives a contextual CFG and a flat string of tokens, and must determine whether the string formulation is <code>unambiguous</code> (one valid parse tree), <code>ambiguous</code> (multiple valid parse trees), or completely <code>unparsable</code>.</p>
 
 
 
@@ -1178,6 +1255,9 @@
 
 
 
+        <p>Task responsible for full CFG structural parsing.</p>
+<p>The model receives a contextual CFG and a valid unambiguous string. It must either output the exact Lisp-style parse tree configuration <code>(S (NP (N token)))</code>, or the specific depths/Part-of-Speech tags <code>token&lt;POS:depth&gt;</code> depending on the generated config constraint.</p>
+
 
 
 
@@ -1222,7 +1302,8 @@
 
 
 
-        <p>Grammar continuation task using proper CFG parsing.</p>
+        <p>Task responsible for CFG prefix-continuation logic.</p>
+<p>The model receives a contextual CFG and an incomplete sentence prefix. It must deduce and output the exact set of valid tokens that could legally follow the prefix according to the EarleyChartParser state.</p>
 
 
 
