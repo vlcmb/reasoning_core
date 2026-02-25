@@ -1,0 +1,4 @@
+# Example requirements.txt
+# If you vendor reasoning_core in the repo, don't add it here.
+streamlit>=1.24.0      # optional pin
+reasoning-core==0.1.0   # only if your package is on PyPi

@@ -58,6 +58,10 @@ plugins:
           options:
             show_root_heading: true
             show_category_heading: true
+            members_order: source
+            show_bases: false
+            show_source: false
+            inherited_members: false
   - mkdocs-jupyter:
       include: ["*.ipynb"]
       execute: false # specificy if you want docs build to run the notebooks or just display them
