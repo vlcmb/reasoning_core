@@ -667,30 +667,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.equation_system" class="md-nav__link">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystemCfg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        equation_system
+        EquationSystemCfg
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="equation_system">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.equation_system-classes" class="md-nav__link">
-    <span class="md-ellipsis">
+</li>
       
-        Classes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+        <li class="md-nav__item">
   <a href="#reasoning_core.tasks.equation_system.EquationSystem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -698,16 +685,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1006,30 +983,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.equation_system" class="md-nav__link">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystemCfg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        equation_system
+        EquationSystemCfg
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="equation_system">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.equation_system-classes" class="md-nav__link">
-    <span class="md-ellipsis">
+</li>
       
-        Classes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+        <li class="md-nav__item">
   <a href="#reasoning_core.tasks.equation_system.EquationSystem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1037,16 +1001,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1073,15 +1027,20 @@
 <h1 id="equation-system">Equation System</h1>
 
 
-<div class="doc doc-object doc-module">
+<div class="doc doc-object doc-class">
 
 
 
-<h2 id="reasoning_core.tasks.equation_system" class="doc doc-heading">
-            <code>reasoning_core.tasks.equation_system</code>
+<h2 id="reasoning_core.tasks.equation_system.EquationSystemCfg" class="doc doc-heading">
+            <code>reasoning_core.tasks.equation_system.EquationSystemCfg</code>
 
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
 
 </h2>
+
 
     <div class="doc doc-contents first">
 
@@ -1094,337 +1053,6 @@
 
 
 
-<div class="doc doc-children">
-
-
-
-
-
-
-
-<h3 id="reasoning_core.tasks.equation_system-classes">Classes</h3>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h4 id="reasoning_core.tasks.equation_system.EquationSystem" class="doc doc-heading">
-            <code>EquationSystem</code>
-
-
-</h4>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="reasoning_core.template.Task" href="../../template/#reasoning_core.template.Task">Task</a></code></p>
-
-
-
-
-
-
-
-
-
-
-              <details class="mkdocstrings-source">
-                <summary>Source code in <code>reasoning_core/tasks/equation_system.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EquationSystem</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">EquationSystemCfg</span><span class="p">()):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">_generate_base_system</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generates a unique system by construction.&quot;&quot;&quot;</span>
-        <span class="n">cfg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span>
-        <span class="c1"># Capture dimension once to keep all arrays/loops in sync</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">num_vars</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">{}</span>
-
-        <span class="n">variables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;X1:</span><span class="si">{</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
-        <span class="n">sol_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">randint_nonzero</span><span class="p">(</span><span class="o">-</span><span class="n">cfg</span><span class="o">.</span><span class="n">sol_magnitude</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">sol_magnitude</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">}</span>
-        <span class="n">base_exprs</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="o">-</span> <span class="n">sol_map</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">]</span>
-
-        <span class="n">C</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">cfg</span><span class="o">.</span><span class="n">obfuscation_steps</span><span class="p">):</span>
-            <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
-            <span class="n">k</span> <span class="o">=</span> <span class="n">randint_nonzero</span><span class="p">(</span><span class="o">-</span><span class="n">cfg</span><span class="o">.</span><span class="n">coeff_magnitude</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">coeff_magnitude</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-                <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+=</span> <span class="n">k</span> <span class="o">*</span> <span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">col</span><span class="p">]</span>
-
-        <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">cfg</span><span class="o">.</span><span class="n">p_shortcut</span><span class="p">:</span>
-            <span class="n">row_to_simplify</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-            <span class="n">col_to_keep</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-            <span class="n">C</span><span class="p">[</span><span class="n">row_to_simplify</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">col_to_keep</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-
-        <span class="n">mixed_exprs</span> <span class="o">=</span> <span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">base_exprs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">mixed_exprs</span><span class="p">],</span> <span class="n">variables</span><span class="p">,</span> <span class="n">sol_map</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Problem</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_generation_attempts</span><span class="p">):</span>
-            <span class="n">eqs</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">sol_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_base_system</span><span class="p">()</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">eqs</span><span class="p">:</span> <span class="k">continue</span>
-
-            <span class="c1"># Probabilistically modify the base system</span>
-            <span class="n">rand_val</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-            <span class="n">was_modified</span> <span class="o">=</span> <span class="kc">False</span>
-            <span class="k">if</span> <span class="n">rand_val</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">p_inconsistent</span><span class="p">:</span>
-                <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">eqs</span><span class="p">)),</span> <span class="mi">2</span><span class="p">)</span>
-                <span class="n">eqs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">eqs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lhs</span><span class="p">,</span> <span class="n">eqs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">rhs</span> <span class="o">+</span> <span class="n">randint_nonzero</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-                <span class="n">was_modified</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="k">elif</span> <span class="n">rand_val</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">p_inconsistent</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">p_underdetermined</span><span class="p">:</span>
-                <span class="n">eqs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">eqs</span><span class="p">)))</span>
-                <span class="n">was_modified</span> <span class="o">=</span> <span class="kc">True</span>
-
-            <span class="n">verification</span> <span class="o">=</span> <span class="n">_verify_system</span><span class="p">(</span><span class="n">eqs</span><span class="p">,</span> <span class="n">variables</span><span class="p">)</span>
-            <span class="n">case</span> <span class="o">=</span> <span class="n">verification</span><span class="p">[</span><span class="s1">&#39;kind&#39;</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">case</span> <span class="o">==</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="k">continue</span>
-
-            <span class="n">query_var</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">variables</span><span class="p">)</span>
-            <span class="n">answer</span> <span class="o">=</span> <span class="kc">None</span>
-
-            <span class="k">if</span> <span class="n">case</span> <span class="o">==</span> <span class="s1">&#39;unique&#39;</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">was_modified</span><span class="p">:</span> <span class="k">continue</span>
-                <span class="n">answer</span> <span class="o">=</span> <span class="n">sol_map</span><span class="p">[</span><span class="n">query_var</span><span class="p">]</span>
-            <span class="k">elif</span> <span class="n">case</span> <span class="o">==</span> <span class="s1">&#39;inconsistent&#39;</span><span class="p">:</span>
-                <span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;No solution&quot;</span>
-            <span class="k">elif</span> <span class="n">case</span> <span class="o">==</span> <span class="s1">&#39;underdetermined&#39;</span><span class="p">:</span>
-                <span class="n">var_idx</span> <span class="o">=</span> <span class="n">variables</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">query_var</span><span class="p">)</span>
-                <span class="n">sol_expr</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">verification</span><span class="p">[</span><span class="s1">&#39;solutions&#39;</span><span class="p">]))[</span><span class="n">var_idx</span><span class="p">]</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="n">sol_expr</span><span class="o">.</span><span class="n">free_symbols</span><span class="p">:</span>
-                    <span class="n">answer</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">N</span><span class="p">(</span><span class="n">sol_expr</span><span class="p">)</span>
-                    <span class="n">case</span> <span class="o">=</span> <span class="s2">&quot;underdetermined_but_unique_var&quot;</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">answer</span> <span class="o">=</span> <span class="s2">&quot;Multiple solutions&quot;</span>
-
-            <span class="k">if</span> <span class="n">answer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">continue</span>
-
-            <span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s2">&quot;equations&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">eq</span><span class="o">.</span><span class="n">lhs</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">eq</span><span class="o">.</span><span class="n">rhs</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">eq</span> <span class="ow">in</span> <span class="n">eqs</span><span class="p">],</span>
-                <span class="s2">&quot;query_variable&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">query_var</span><span class="p">),</span>
-                <span class="s2">&quot;full_solution_map&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sol_map</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">was_modified</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
-                <span class="s2">&quot;case&quot;</span><span class="p">:</span> <span class="n">case</span><span class="p">,</span>
-                <span class="s2">&quot;cot&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cot</span><span class="p">(</span><span class="n">eqs</span><span class="p">,</span> <span class="n">variables</span><span class="p">)</span>
-            <span class="p">}</span>
-            <span class="n">a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-            <span class="k">if</span> <span class="s2">&quot;.&quot;</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-                <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">Problem</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span> <span class="n">answer</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
-
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to generate a valid problem. Config: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">prompt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="n">eq_block</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">eq_str</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">eq_str</span> <span class="ow">in</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;equations&#39;</span><span class="p">]])</span>
-        <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solve the following system of equations for the variable &#39;</span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;query_variable&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;System:</span><span class="se">\n</span><span class="si">{</span><span class="n">eq_block</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;Return the numerical value for </span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;query_variable&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">. If a unique numerical solution does not exist, &quot;</span>
-                <span class="s2">&quot;return either &#39;No solution&#39; or &#39;Multiple solutions&#39;.&quot;</span><span class="p">)</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">score_answer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="n">normalize</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s2">&quot;solution&quot;</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">normalize</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">answer</span><span class="p">))</span>
-        <span class="k">if</span> <span class="s2">&quot;solution&quot;</span> <span class="ow">in</span> <span class="n">entry</span><span class="o">.</span><span class="n">answer</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-            <span class="k">return</span> <span class="mf">0.0</span>
-        <span class="k">return</span> <span class="n">score_scalar</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span>
-
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">get_cot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eqs</span><span class="p">,</span> <span class="n">variables</span><span class="p">):</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linear_eq_to_matrix</span><span class="p">(</span><span class="n">eqs</span><span class="p">,</span> <span class="n">variables</span><span class="p">)</span>
-            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="k">return</span> <span class="kc">None</span>
-
-            <span class="n">M</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-            <span class="n">log</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1. Forward:&quot;</span><span class="p">]</span>
-            <span class="n">piv</span> <span class="o">=</span> <span class="mi">0</span>
-
-            <span class="c1"># Phase 1: Forward</span>
-            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variables</span><span class="p">)):</span>
-                <span class="k">if</span> <span class="n">piv</span> <span class="o">&gt;=</span> <span class="n">M</span><span class="o">.</span><span class="n">rows</span><span class="p">:</span> <span class="k">break</span>
-                <span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="n">piv</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">swap</span> <span class="o">:=</span> <span class="nb">next</span><span class="p">((</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">piv</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">M</span><span class="o">.</span><span class="n">rows</span><span class="p">)</span> <span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]),</span> <span class="kc">None</span><span class="p">))</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">continue</span>
-                    <span class="n">M</span><span class="o">.</span><span class="n">row_swap</span><span class="p">(</span><span class="n">piv</span><span class="p">,</span> <span class="n">swap</span><span class="p">);</span> <span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swap R</span><span class="si">{</span><span class="n">piv</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">, R</span><span class="si">{</span><span class="n">swap</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">piv</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">M</span><span class="o">.</span><span class="n">rows</span><span class="p">):</span>
-                    <span class="k">if</span> <span class="n">k</span> <span class="o">:=</span> <span class="n">M</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="n">piv</span><span class="p">,</span> <span class="n">c</span><span class="p">]:</span>
-                        <span class="n">M</span><span class="o">.</span><span class="n">row_op</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="n">M</span><span class="p">[</span><span class="n">piv</span><span class="p">,</span> <span class="n">i</span><span class="p">])</span>
-                        <span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R</span><span class="si">{</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> -= </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="si">:</span><span class="s2">g</span><span class="si">}</span><span class="s2">*R</span><span class="si">{</span><span class="n">piv</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-                <span class="n">piv</span> <span class="o">+=</span> <span class="mi">1</span>
-
-            <span class="c1"># Phase 2: Backward &amp; Check</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. Backward:&quot;</span><span class="p">)</span>
-            <span class="n">sol</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-                <span class="n">row</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-                <span class="c1"># Check 0=k contradiction</span>
-                <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
-                    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mf">1e-9</span><span class="p">:</span> <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Contradiction: 0 != </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="si">:</span><span class="s2">g</span><span class="si">}</span><span class="s2">&quot;</span>
-                    <span class="k">continue</span>
-
-                <span class="c1"># Identify pivot variable for this row</span>
-                <span class="n">p_idx</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">if</span> <span class="n">x</span><span class="p">)</span>
-                <span class="n">var</span> <span class="o">=</span> <span class="n">variables</span><span class="p">[</span><span class="n">p_idx</span><span class="p">]</span>
-
-                <span class="c1"># Check for skipped variables (free)</span>
-                <span class="c1"># (If the previous variable we solved was p_idx+2, then p_idx+1 is free)</span>
-                <span class="c1"># For simplicity in concise code, we just rely on &#39;sol&#39; defaults.</span>
-
-                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">sol</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">variables</span><span class="p">))))</span> <span class="o">/</span> <span class="n">row</span><span class="p">[</span><span class="n">p_idx</span><span class="p">]</span>
-                <span class="n">sol</span><span class="p">[</span><span class="n">var</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
-                <span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="si">:</span><span class="s2">g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-            <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-              </details>
 
 
 
@@ -1446,6 +1074,41 @@
     </div>
 
 </div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="reasoning_core.tasks.equation_system.EquationSystem" class="doc doc-heading">
+            <code>reasoning_core.tasks.equation_system.EquationSystem</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
 
 
 
