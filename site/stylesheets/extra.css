@@ -1,0 +1,5 @@
+/* Target the logo ONLY inside the header */
+.md-header .md-logo img {
+    /* Invert black to white */
+    filter: invert(100%) brightness(200%);
+}
