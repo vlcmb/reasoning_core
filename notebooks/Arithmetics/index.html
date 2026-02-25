@@ -2466,7 +2466,7 @@ min(29, 48791/180) = 29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
@@ -2482,24 +2482,18 @@ min(29, 48791/180) = 29
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="c1"># 1. Get the center value as a float</span>
+<span class="c1"># Get the center value as a float</span>
 <span class="n">center_ans</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 
-<span class="c1"># 2. Generate 500 points between answer-10 and answer+10 for a smooth line</span>
 <span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">center_ans</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">center_ans</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
-<span class="c1"># 3. Calculate scores for each point</span>
-<span class="c1"># Using a list comprehension to call your rcr function for every x</span>
 <span class="n">y_axis</span> <span class="o">=</span> <span class="p">[</span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">example_l3</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_axis</span><span class="p">]</span>
 
-<span class="c1"># 4. Create the plot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">y_axis</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Score'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#1f77b4'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Add a vertical dashed line to mark the exact answer</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">center_ans</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">'Target: </span><span class="si">{</span><span class="n">center_ans</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
-<span class="c1"># Labels and styling</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Score Distribution around the Target Answer'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Input Value'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Score'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
@@ -2511,24 +2505,18 @@ min(29, 48791/180) = 29
 <div class="clipboard-copy-txt" id="cell-9">import matplotlib.pyplot as plt
 import numpy as np
 
-# 1. Get the center value as a float
+# Get the center value as a float
 center_ans = float(example_l3.answer)
 
-# 2. Generate 500 points between answer-10 and answer+10 for a smooth line
 x_axis = np.linspace(center_ans - 10, center_ans + 10, 500)
 
-# 3. Calculate scores for each point
-# Using a list comprehension to call your rcr function for every x
 y_axis = [rcr.score_answer(x, example_l3) for x in x_axis]
 
-# 4. Create the plot
 plt.figure(figsize=(10, 6))
 plt.plot(x_axis, y_axis, label='Score', color='#1f77b4', linewidth=2)
 
-# Add a vertical dashed line to mark the exact answer
 plt.axvline(x=center_ans, color='red', linestyle='--', alpha=0.8, label=f'Target: {center_ans}')
 
-# Labels and styling
 plt.title('Score Distribution around the Target Answer', fontsize=14)
 plt.xlabel('Input Value', fontsize=12)
 plt.ylabel('Score', fontsize=12)
@@ -2759,7 +2747,7 @@ True score answer":
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
@@ -2782,7 +2770,7 @@ True score answer":
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 
-<span class="c1"># 3. Convert to Hugging Face Dataset (Corrected Syntax)</span>
+<span class="c1"># 3. Convert to Hugging Face Dataset</span>
 <span class="n">hf_dataset</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 <span class="c1"># 4. Split into train and test</span>
@@ -2799,7 +2787,7 @@ data = task_sym.generate_balanced_batch(5, level=1)
 df = pd.DataFrame(data)
 display(df.head())
 
-# 3. Convert to Hugging Face Dataset (Corrected Syntax)
+# 3. Convert to Hugging Face Dataset
 hf_dataset = datasets.Dataset.from_pandas(df)
 
 # 4. Split into train and test
