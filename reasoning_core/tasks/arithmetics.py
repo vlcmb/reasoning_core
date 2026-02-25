@@ -39,6 +39,22 @@ g=_grammar()
 
 @dataclass
 class ArithmeticsConfig(Config):
+    """
+    Configuration for the Arithmetics numeric evaluation task.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `min_depth` | `int` | `3` | Minimum depth of the generated abstract syntax tree. |
+    | `max_depth` | `int` | `5` | Maximum depth of the generated abstract syntax tree. |
+    | `generation_algorithm` | `str` | `"sequential"` | Mode for generating the grammar tree. |
+    | `float_prob` | `float` | `0.25` | Probability of sampling floating point numbers instead of integers. |
+    | `in_decimals` | `int` | `1` | Maximum decimal places for sampled input numbers. |
+    | `out_decimals` | `int` | `3` | Maximum decimal places permitted in the final evaluated answer. |
+    | `out_digits` | `int` | `6` | Maximum total number of digits permitted in the final evaluated answer. |
+    | `n_trials` | `int` | `50_000` | Maximum attempts to generate an expression that satisfies the constraints. |
+    | `trailing_zero_prob` | `float` | `0.2` | Probability of randomly appending trailing zeros to decimal inputs for robustness. |
+    | `trivial_prob` | `float` | `0.1` | Probability of generating trivial or zero-evaluation expressions. |
+    """
     min_depth: int = 3
     max_depth: int = 5
     generation_algorithm = "sequential"
@@ -102,6 +118,11 @@ def fill_num(expr, cfg=ArithmeticsConfig()):
     raise RuntimeError('No assignment found; increase n_trials or widen pool.')
 
 class Arithmetics(Task):
+    """
+    Task responsible for generic numeric arithmetic evaluation.
+    
+    This task procedurally generates a mathematical expression (including addition, subtraction, division, multiplication, absolute value, minimum, maximum, rounding, and powers) and requires evaluating it to a single numeric value. It also generates the step-by-step intermediate Chain of Thought (CoT).
+    """
     def __init__(self, config=ArithmeticsConfig()):
         super().__init__(config=config)
 
@@ -152,6 +173,14 @@ class Arithmetics(Task):
 
 @dataclass
 class SymbolicConfig(ArithmeticsConfig):
+    """
+    Configuration for the Symbolic algebra manipulation task.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `variables` | `tuple` | `('x', 'y')` | The pool of string variables to randomly insert into algebraic expressions. |
+    | `max_int` | `int` | `9` | The maximum integer value to sample for standard numeral assignments. |
+    """
     variables: tuple = ('x', 'y') # Start with just 2
     max_int: int = 9              # Start with single digits
 
@@ -164,6 +193,11 @@ def update(self, c):
         self.variables = tuple(pool[:min(len(pool), target_len)])
 
 class SymbolicArithmetics(Task):
+    """
+    Task responsible for symbolic algebraic simplification.
+    
+    This task procedurally generates an unsimplified algebraic equation containing defined string variables (e.g., x, y). The model must output the most strictly simplified version of the mathematical expression using symbolic reasoning.
+    """
     def __init__(self, config=SymbolicConfig()):
         super().__init__(config=config)
 

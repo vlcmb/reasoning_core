@@ -5,8 +5,14 @@ from dataclasses import dataclass
 from ast import literal_eval
 
 # --- Configuration for All Graph Tasks ---
-@dataclass
 class GraphReasoningConfig(Config):
+    """
+    Configuration for discrete topology graph reasoning tasks.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `num_nodes` | `int` | `5` | The target number of initialized nodes instantiated on the network layout. |
+    """
     num_nodes: int = 5  #needs 5 to avoid duplicates
     def update(self, c): 
         self.num_nodes *= (1+c)
@@ -94,6 +100,11 @@ class BaseGraphTask:
 
 
 class GraphPathfinding(BaseGraphTask, Task):
+    """
+    Task responsible for calculating optimal shortest-paths.
+    
+    The model is provided an implicitly rendered graph structure and must output the shortest sequential array of node visits to travel from `start_node` to `end_node`.
+    """
     def make_cot(self, G, start, end):
             # BFS State Initialization
             queue = [(start, [start])] # Tuple: (Current Node, Path History)
@@ -174,7 +185,11 @@ class GraphPathfinding(BaseGraphTask, Task):
 
 
 class GraphNodeCentrality(BaseGraphTask, Task):
-    """Task to find all nodes with the highest centrality in a graph."""
+    """
+    Task responsible for identifying nodes with highest degree centrality.
+    
+    The model is provided an implicitly rendered social network structure and must output an array of nodes possessing the highest raw connection counts.
+    """
 
     def generate(self):
         G = self._generate_graph()
@@ -216,7 +231,11 @@ class GraphNodeCentrality(BaseGraphTask, Task):
             return 0.0
 
 class GraphCycleDetection(BaseGraphTask, Task):
-    """Task to identify the specific nodes that form a cycle in a graph."""
+    """
+    Task responsible for identifying closed circuit topologies in graphs.
+    
+    The model is provided a structure guaranteed to possess exactly one cycle. It must computationally deduce which node integers form that isolated subset circuit.
+    """
 
     def generate(self):
         # Create a graph with exactly one cycle.
@@ -259,7 +278,11 @@ class GraphCycleDetection(BaseGraphTask, Task):
             return 0.0
 
 class GraphIsomorphism(BaseGraphTask, Task): 
-    """Task to determine if two graphs have the exact same structure."""
+    """
+    Task responsible for analyzing bipartite structural equivalence mapping.
+    
+    The model is provided two separately rendered graphs with different node labelings. It must deduce whether the two graphs are structurally equivalent (isomorphic), returning `True` or `False`.
+    """
 
     def generate(self):
         G1 = self._generate_graph()

@@ -263,8 +263,18 @@ def get_random_tptp_axioms(
 
     return temp_file.name, chosen_key
 
-@dataclass
 class EntailConfig(Config):
+    """
+    Configuration for TPTP Axiom Entailment proofs.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `proof_depth` | `int` | `1` | Graph search depth traversal used to accumulate derived hypotheses. |
+    | `perturbation` | `int` | `1` | Depth of cumulative perturbations applied to the hypotheses set when generating false proofs. |
+    | `min_interesting_score` | `float` | `0.6` | The minimal mathematical `interestingness` heuristic a theorem must posess to be considered. |
+    | `positive_problem_ratio` | `float` | `0.25` | The target ratio of provable (positive) queries vs unprovable queries. |
+    | `domains` | `list` | `['ALG', 'ANA', ...]` | Subset strings defining matching TPTP mathematical domains (Algebra, Topology, etc.). |
+    """
     proof_depth: int = 1
     perturbation: int = 1
     min_interesting_score: float = 0.6
@@ -277,8 +287,9 @@ class EntailConfig(Config):
 
 class ConjectureEntailment(Task):
     """
-    A task that generates problems to determine if a set of hypotheses
-    proves a given conjecture.
+    Task responsible for generic theorem provability analysis.
+    
+    Given a list of formal hypothesis formulas alongside domain axioms, the model must output either `True` or `False` determining if the targeted theorem is logically deducible from the dataset premises utilizing a prover system abstraction like Vampire.
     """
     def __init__(self, config=EntailConfig()):
         super().__init__(config)
@@ -364,8 +375,17 @@ class ConjectureEntailment(Task):
         return float(ref==pred)
 
 
-@dataclass
 class SelectionConfig(Config):
+    """
+    Configuration for the Theorem Premise Selection task.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `proof_depth` | `int` | `1` | Graph search depth traversal used to accumulate a baseline hypotheses superset. |
+    | `min_interesting_score` | `float` | `0.6` | The minimal mathematical `interestingness` heuristic a theorem must posess. |
+    | `num_distractors` | `int` | `2` | Number of unhelpful distractor premise formulas to weave into the final problem pool. |
+    | `domains` | `list` | `['ALG', 'ANA', ...]` | Subset strings defining matching TPTP mathematical domains. |
+    """
     proof_depth: int = 1
     min_interesting_score: float = 0.6
     num_distractors: int = 2
@@ -378,9 +398,9 @@ class SelectionConfig(Config):
 
 class TheoremPremiseSelection(DevTask):
     """
-    A task that generates problems where one must select the essential hypotheses
-    required to prove a given conjecture from a larger pool of axioms.
-    And a minimality check to ensure the ground truth is correct.
+    Task responsible for subset minimum necessary hypothesis retrieval.
+    
+    The model is provided a target Theorem along with a scrambled, numbered pool of formulas. It must logically deduce the absolute *minimal* subset of those discrete formula numbers necessary to analytically resolve the target theorem.
     """
     def __init__(self, config=SelectionConfig()):
         super().__init__(config, timeout=60)
@@ -568,8 +588,16 @@ class TheoremPremiseSelection(DevTask):
         return intersection / union
 
 
-@dataclass
 class ReconstructionConfig(Config):
+    """
+    Configuration for the underlying Proof Topology Graph reconstruction task.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `proof_depth` | `int` | `2` | Extent/depth of generated TPTP proof derivations to capture the logic graph topology. |
+    | `min_interesting_score` | `float` | `0` | The minimal mathematical `interestingness` heuristic threshold for considering a theorem constraint node. |
+    | `domains` | `list` | `['ALG', 'ANA', ...]` | Subset strings defining matching TPTP mathematical domains. |
+    """
     proof_depth: int = 2 #otherwise it's trivial
     min_interesting_score: float = 0
     domains = ['ALG', 'ANA', 'FLD', 'GEO', 'GRP', 'LCL', 'NUM', 'RNG', 'SET', 'TOP']
@@ -579,8 +607,9 @@ class ReconstructionConfig(Config):
 
 class ProofReconstruction(Task):
     """
-    A task that generates problems where one must reconstruct the derivation
-    graph from a numbered list of shuffled clauses.
+    Task responsible for generating deductive Proof network graphs.
+    
+    The model is tasked with receiving a flat, numbered, shuffled array of derived theorem clauses. It must manually reconstruct the derivation directed graph logic by outputting dependency mappings iteratively formatting exact parents of discrete children computations (e.g. `CHILD <- PARENT1, PARENT2`).
     """
     def __init__(self, config=ReconstructionConfig()):
         super().__init__(config)

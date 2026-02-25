@@ -34,8 +34,23 @@ wordlist = list(fake.words(nb=500,unique=True))
 
 from dataclasses import dataclass
 
-@dataclass
 class GrammarConfig(Config):
+    """
+    Configuration for Context-Free Grammar (CFG) string evaluation tasks.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `n_types` | `int` | `4` | Number of distinct non-terminal symbolic types in the generated meta-grammar. |
+    | `n_terminals` | `int` | `5` | Number of distinct terminal word tokens sampled from the library. |
+    | `perturbation_rate` | `float` | `0.5` | Probability of randomly mutating valid strings to create unparsable/ambiguous edge cases. |
+    | `min_depth` | `int` | `5` | Minimum syntactic depth for randomly generating the base CFG rules. |
+    | `max_depth` | `int` | `8` | Maximum syntactic depth for randomly generating the base CFG rules. |
+    | `min_prod_depth` | `int` | `4` | Minimum derivation depth when drawing valid strings from the generated CFG. |
+    | `max_prod_depth` | `int` | `6` | Maximum derivation depth when drawing valid strings from the generated CFG. |
+    | `random_grammar_prob` | `float` | `0.3` | Probability of randomly selecting an existing deterministic grammar instead of generating one. |
+    | `tagging_prob` | `float` | `0.5` | Probability of requiring pure POS-tagging instead of full syntactic tree parsing. |
+    | `target_num_rules` | `int` | `10` | The ideal upper limit of rules maintained when strategically trimming massive grammars. |
+    """
     n_types: int = 4
     n_terminals: int = 5
     perturbation_rate: float = 0.5
@@ -295,6 +310,11 @@ def generate_parse(config=GrammarConfig):
 
 
 class Parsability(Task):
+    """
+    Task responsible for generic string parsability analysis.
+    
+    The model receives a contextual CFG and a flat string of tokens, and must determine whether the string formulation is `unambiguous` (one valid parse tree), `ambiguous` (multiple valid parse trees), or completely `unparsable`.
+    """
     def __init__(self, config: GrammarConfig = GrammarConfig()):
         super().__init__(config=config)
         self.balancing_key_ratio=1/3
@@ -315,6 +335,11 @@ class Parsability(Task):
 
 
 class Parsing(Task):
+    """
+    Task responsible for full CFG structural parsing.
+    
+    The model receives a contextual CFG and a valid unambiguous string. It must either output the exact Lisp-style parse tree configuration `(S (NP (N token)))`, or the specific depths/Part-of-Speech tags `token<POS:depth>` depending on the generated config constraint.
+    """
     def __init__(self, config: GrammarConfig = GrammarConfig()):
         config.perturbation_rate = 0.0
         super().__init__(config=config)
@@ -465,7 +490,11 @@ def _build_cot(tokens, can_stop, justifications):
 
 
 class Continuation(Task):
-    """Grammar continuation task using proper CFG parsing."""
+    """
+    Task responsible for CFG prefix-continuation logic.
+    
+    The model receives a contextual CFG and an incomplete sentence prefix. It must deduce and output the exact set of valid tokens that could legally follow the prefix according to the EarleyChartParser state.
+    """
     
     def __init__(self, config: GrammarConfig = GrammarConfig()):
         super().__init__(config=config)

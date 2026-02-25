@@ -6,8 +6,21 @@ from typing import List, Dict, Any, Tuple
 from reasoning_core.template import Task, Problem, Config
 from reasoning_core.utils import score_scalar
 
-@dataclass
 class EquationSystemCfg(Config):
+    """
+    Configuration for the Equation System numeric challenge.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `num_vars` | `int` | `2` | Number of variables and base equations in the system. |
+    | `obfuscation_steps` | `int` | `0` | Number of randomized linear composition operations to scramble the base equations. |
+    | `sol_magnitude` | `int` | `30` | The integer boundary range `[-x, x]` out of which ground truth solutions are drawn. |
+    | `coeff_magnitude` | `int` | `4` | The multiplier boundary range `[-x, x]` used during obfuscation scrambling. |
+    | `max_generation_attempts` | `int` | `200` | Maximum attempts internally to forge a valid solvable or explicitly inconsistent equation system. |
+    | `p_inconsistent` | `float` | `0.10` | Exact probability to forge a system with no valid solution (inconsistent). |
+    | `p_underdetermined` | `float` | `0.10` | Exact probability to drop an equation yielding an unsolvable underdetermined system. |
+    | `p_shortcut` | `float` | `0.10` | Probability to expose an un-obfuscated variable shortcut identity directly in the equations. |
+    """
     num_vars: int = 2
     obfuscation_steps: int = 0
     sol_magnitude: int = 30
@@ -46,6 +59,11 @@ def _verify_system(equations: List[sp.Eq], variables: List[sp.Symbol]) -> Dict[s
         return {'kind': 'error'}
 
 class EquationSystem(Task):
+    """
+    Task responsible for producing Systems of Linear Equations.
+    
+    This task procedurally generates arrays of linear equations with specified variables. The model must isolate a targeted query variable and output its numerical integer solution, or explicitly return `No solution` / `Multiple solutions` if analytically appropriate.
+    """
     def __init__(self, config=EquationSystemCfg()):
         super().__init__(config=config)
 

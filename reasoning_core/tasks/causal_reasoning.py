@@ -287,29 +287,22 @@ class ReasoningGraph:
 class Rung12Config(Config):
     """
     Configuration for Rung 1 and Rung 2 tasks.
-
-    Parameters
-    ----------
-    n_nodes : int
-        Number of nodes in the graph.
-    max_domain_size : int
-        Maximum domain size for the variables.
-    edge_prob : float
-        Probability of an edge between two nodes.
-    graph_generation_mode : str
-        Method for generating the graph (e.g., "erdos").
-    n_round : int
-        Number of decimal places to round probabilities to.
-    Noisy_mode : bool
-        Whether to use the sparser Noisy interaction within the network.
-    cpt_relative_threshold : float
-        If Noisy_mode is True, set the conversion relative threshold in gain of parameter size (classical/Noisy), to converte a classical CDP interaction into a random Noisy one.
-    cot_scientific_notation : bool
-        Whether to use scientific notation for chain of thought.
-    generate_trivial : bool
-        Whether to accept problem where no computationn only retriavial skills are necessary (mainly usefull for law level problems).
-    is_verbose : bool
-        Whether to use a more humanlike description of the system, or a less verbose one that describe the Bayesian Network by listing all the conditional probabilities.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `n_nodes` | `int` | `3` | Number of nodes in the generated Bayesian Network graph. |
+    | `max_domain_size` | `int` | `2` | Maximum domain size (states) for categorical variables. |
+    | `edge_prob` | `float` | `0.5` | Probability of an edge existing between two nodes in the causal graph. |
+    | `graph_generation_mode` | `str` | `"erdos"` | Underlying mathematical method for generating the graph structure. |
+    | `n_round` | `int` | `1` | Number of decimal places to round evaluating probabilities to. |
+    | `Noisy_mode` | `bool` | `True` | Whether to use the sparser Noisy interaction within the network to simplify distributions. |
+    | `cpt_relative_threshold` | `float` | `0` | Specifies the relative size threshold metric to convert classical CPTs into Noisy ones. |
+    | `cot_scientific_notation` | `bool` | `False` | Whether to output the step-by-step chain of thought intermediate math in scientific e-notation. |
+    | `graph_seed` | `int` | `None` | Structural graph generation seed for exact replication. |
+    | `conditionning_seed` | `int` | `None` | Scenario query generator seed for asking dynamic questions on the exact same graph. |
+    | `seed` | `int` | `None` | Standard seed passed globally to generators. |
+    | `is_verbose` | `bool` | `False` | Whether to construct natural language system prompts using verbose descriptions or concise math tables. |
+    | `concise_cot` | `bool` | `True` | Whether to generate the Chain of Thought using simpler abstractions. |
     """
     n_nodes: int = 3
     max_domain_size: int = 2
@@ -460,6 +453,11 @@ class Rung(ABC):
 
 
 class BayesianAssociation(Rung, Task):
+    """
+    Task responsible for Rung 1 Bayesian Association queries.
+    
+    This task procedurally generates observational scenarios (e.g., purely observational probability given conditions) across a generated Bayesian Network.
+    """
     def __init__(self, config=Rung12Config()):
         super().__init__(config=config)
 
@@ -491,6 +489,11 @@ class BayesianAssociation(Rung, Task):
 
 
 class BayesianIntervention(Rung, Task):
+    """
+    Task responsible for Rung 2 Bayesian Intervention causal queries.
+    
+    This task procedurally generates interventional scenarios where specific variables in the graph are forcefully modified (a 'do' operation) and models the resulting distribution.
+    """
     def __init__(self, config=Rung12Config()):
         super().__init__(config=config)
 

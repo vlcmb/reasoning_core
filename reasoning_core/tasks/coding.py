@@ -15,6 +15,16 @@ from typing import List
 
 @dataclass
 class CodeExecutionCfg(Config):
+    """
+    Configuration for the Python Code Execution task.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `difficulty` | `float` | `0.0` | Controls the complexity of the generated Python programs (0 to 6+). |
+    | `min_depth` | `int` | `4` | Minimum depth of the generated syntactical Python AST. |
+    | `max_depth` | `int` | `15` | Maximum depth of the generated syntactical Python AST. |
+    | `max_attempts` | `int` | `100` | Maximum generation attempts to form valid, non-crashing code. |
+    """
     difficulty: float = 0.0  # Scales from 0 (mostly 1.1) to 6+ (mostly 4.1)
     min_depth: int = 4
     max_depth: int = 15
@@ -25,6 +35,11 @@ class CodeExecutionCfg(Config):
         self.max_depth += int(c)
 
 class CodeExecution(Task):
+    """
+    Task responsible for generic Python code tracing.
+    
+    This task procedurally generates syntactically valid subset-Python code (tinypy) through a CFG. The model is asked to mentally execute the code and strictly predict the exact resulting console print output.
+    """
     VALID_LEVELS = ["1.1", "1.2", "2.1", "2.2", "3.1", "3.2", "4.1"]
 
     def __init__(self, config=CodeExecutionCfg()):
@@ -107,6 +122,16 @@ def get_short_hash():
 
 @dataclass
 class DiffConfig(Config):
+    """
+    Configuration for Git Unified Diff formatting tasks.
+    
+    | Parameter | Type | Default | Utility |
+    | :--- | :--- | :--- | :--- |
+    | `min_versions` | `int` | `2` | Minimum number of sequential text versions to simulate a commit history. |
+    | `max_versions` | `int` | `5` | Maximum number of sequential text versions simulating a commit history. |
+    | `nb_lines` | `int` | `5` | Number of textual sentences/lines initialized at the root version. |
+    | `mutation_rate` | `float` | `0.2` | The statistical probability of corrupting or substituting elements within the text list between commits. |
+    """
     min_versions: int = 2
     max_versions: int = 5
     nb_lines: int = 5
@@ -194,6 +219,11 @@ class VersionedTask:
         return chain[i], chain[j]
 
 class DiffPrediction(VersionedTask, Task):
+    """
+    Task responsible for producing Git-diff chunks.
+    
+    Given a sequence of file histories and versions, the model must output the exact Unified Git Diff snippet to mathematically translate the src_id document into the tgt_id document.
+    """
     def generate(self):
         chain = self.generate_version_chain()
         src, tgt = self.select_pair(chain)
@@ -223,6 +253,11 @@ class DiffPrediction(VersionedTask, Task):
         return Levenshtein.normalized_similarity(answer.strip(), entry['answer'].strip())
 
 class DiffPatching(VersionedTask, Task):
+    """
+    Task responsible for applying Git-diff chunks to existing text.
+    
+    Given an original structured text object and a generated Unified Git Diff patch, perform string-level integration to exactly re-create the final patched string target.
+    """
     def generate(self):
             chain = self.generate_version_chain()
             src, tgt = self.select_pair(chain)
