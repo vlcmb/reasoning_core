@@ -92,6 +92,15 @@ def timeout_retry(seconds=15, attempts=10):
 
 
 class Problem(Mapping):
+    """
+    Represents a single generated instance of a task.
+    
+    Acts as a container for:  
+    - `prompt`: The formatted question text presented to the model.  
+    - `answer`: The ground truth solution.  
+    - `metadata`: Generation details, parameters, and debug info.  
+    - `data`: The raw structured data underlying the problem.  
+    """
     def __init__(self, metadata, answer=None, cot=None):
         self.metadata = edict(metadata)
         self.answer = answer
@@ -139,6 +148,23 @@ def prepr_task_name(name):
     
 
 class Task(ProceduralDataset):
+    """
+    The central class for defining a reasoning task by inheriting from it.
+    
+    This is the main entry point for creating new tasks. A `Task` manages the generation
+    of `Problem` instances based on a `Config`.
+    
+    The generative process flow is:  
+    1. `Config` parameters (size, complexity, etc.) determine the generation constraints.  
+    2. `generate()` produces the raw logic and data for a specific problem instance.  
+    3. `prompt()` formats this data into a natural language question.  
+    4. A `Problem` object is returned containing the prompt, answer, and metadata.  
+    
+    Subclasses must implement:  
+    - `generate()`: To produce the logic data.  
+    - `prompt()`: To format the question.  
+    - `default_score_answer()`: To score the answer.  
+    """
     def __init_subclass__(cls):
         cls.task_name = getattr(cls, 'task_name', prepr_task_name(cls.__name__))
         register_dataset(cls.task_name, cls)
@@ -227,6 +253,7 @@ class Task(ProceduralDataset):
 
 
     def generate_example(self, level=None, max_tokens=8192, **kwargs):
+        """Generate a single example"""
         self.timeout = int(self.base_timeout * (1+level)) if level else int(self.base_timeout)
         @timeout_retry(self.timeout)
         def inner():
@@ -263,6 +290,15 @@ class Task(ProceduralDataset):
         return inner()
 
     def generate_balanced_batch(self, batch_size=32, deduplication = False, **kwargs):
+        """
+        Generate a batch of examples with a balanced distribution of examples per key.
+        
+        Args:
+            batch_size (int): The number of examples to generate.  
+            level (int): The level of difficulty for the examples.  
+            max_per_key_frac (float): The maximum fraction of examples per key.  
+            deduplication (bool): Whether to deduplicate examples.  
+        """
         max_per_key = math.ceil(batch_size * self.balancing_key_ratio)
         counts = Counter()
         if deduplication:
@@ -307,11 +343,15 @@ class DevTask(Task):
 @dataclass
 class Config:
     """
-    Base config providing transparent stochastic rounding.
-
-    A subclass only needs to define its attributes with `int` type hints
-    and implement a natural `update()` method (e.g., `self.n_ex += self.c`).
-    The base class handles all rounding logic automatically.
+    Configuration object for a Task.  
+    
+    Handles parameters that control generation, including `size`, `seed`, and `level` (difficulty).  
+    
+    Key Features:  
+    - **Stochastic Rounding**: Integer fields are automatically rounded stochastically based on their
+      floating-point values. This allows for smooth curriculum learning where a parameter like
+      `num_items` can effectively be 1.5 (50% chance of 1, 50% chance of 2).  
+    - **Level Management**: The `level` attribute can be used to scale difficulty dynamically.  
     """
     c: float = 1.0
     level: int = 0
@@ -416,6 +456,13 @@ class Config:
         return f"{self.__class__.__name__}({', '.join(field_strings)})"
 
 class Reward(wrapt.ObjectProxy):
+    """
+    A wrapper for objects to attach reward-related metadata or tagging.
+    
+    Used to signal specific feedback or scoring properties for generated items,
+    allowing fine-grained control over reinforcement learning limits or objectives
+    associated with specific parts of the generated data.
+    """
     def __init__(self, wrapped, tag=None, **kwargs):
         super().__init__(wrapped)
         self._self_annotations = {'tag':tag, **kwargs}
