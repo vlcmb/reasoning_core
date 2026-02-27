@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -2161,7 +2161,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -2201,7 +2201,7 @@ import reasoning_core as rcr</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -2254,7 +2254,7 @@ print("Task initialized:", task_r1.task_name)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -2318,7 +2318,7 @@ print("Task initialized:", task_r2.task_name)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -2356,25 +2356,20 @@ print("Level 0 Question excerpt: \n", example_l0.prompt,"\n\nAnswer: ", example_
 <pre>Level 0 Config:
  Rung12Config(c=1.0, level=0, seed=None, size=None, n_nodes=3, max_domain_size=2, edge_prob=0.5, graph_generation_mode='erdos', n_round=1, cpt_relative_threshold=0, cot_scientific_notation=False)
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Level 0 Question excerpt: 
+Level 0 Question excerpt: 
  System:
-P(X_0) = {'0': 0.9, '1': 0.1} 
-X_2 ~ Noisy-OR(leak=0.0, weights={'X_0': 0.8, 'X_1': 0.7}) 
-P(X_1) = {'0': 0.3, '1': 0.7}
+P(X_0) = {'0': 0.5, '1': 0.5} 
+P(X_2|X_0=0) = {'0': 0.6, '1': 0.4} 
+P(X_2|X_0=1) = {'0': 0.5, '1': 0.5} 
+P(X_1) = {'0': 0.5, '1': 0.5}
 Observed conditions:
 Without further Observation/Knowledge of other variable.
-Task: Compute probability distribution for X_1 (possible values: [0, 1]).
+Task: Compute probability distribution for X_2 (possible values: [0, 1]).
 
 Output: Python dict mapping each value to its probability, rounded to 1 decimals.
 Example: {0: 0.1, 1: 0.9} 
 
-Answer:  {0: 0.3, 1: 0.7}
+Answer:  {0: 0.6, 1: 0.4}
 </pre>
 </div>
 </div>
@@ -2387,7 +2382,7 @@ Answer:  {0: 0.3, 1: 0.7}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
@@ -2424,33 +2419,27 @@ print("Level 3 Question excerpt: \n", example_l3.prompt,"\n\nAnswer: ", example_
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
 Level 3 Config:
- Rung12Config(c=1.0, level=3, seed=None, size=None, n_nodes=4, max_domain_size=4, edge_prob=0.5, graph_generation_mode='erdos', n_round=2, cpt_relative_threshold=1.5, cot_scientific_notation=False)
+ Rung12Config(c=1.0, level=3, seed=None, size=None, n_nodes=5, max_domain_size=4, edge_prob=0.5, graph_generation_mode='erdos', n_round=3, cpt_relative_threshold=1.5, cot_scientific_notation=False)
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Level 3 Question excerpt: 
+Level 3 Question excerpt: 
  System:
-P(X_0) = {'0': 0.478, '1': 0.158, '2': 0.364} 
-P(X_3|X_0=0, X_2=0) = {'0': 0.357, '1': 0.643} 
-P(X_3|X_0=0, X_2=1) = {'0': 0.755, '1': 0.245} 
-P(X_3|X_0=1, X_2=0) = {'0': 0.239, '1': 0.761} 
-P(X_3|X_0=1, X_2=1) = {'0': 0.495, '1': 0.505} 
-P(X_3|X_0=2, X_2=0) = {'0': 0.566, '1': 0.434} 
-P(X_3|X_0=2, X_2=1) = {'0': 0.367, '1': 0.633} 
-P(X_2) = {'0': 0.728, '1': 0.272} 
-P(X_1) = {'0': 0.156, '1': 0.044, '2': 0.8}
+P(X_0) = {'0': 0.49, '1': 0.51} 
+P(X_3|X_0=0, X_1=0) = {'0': 0.24, '1': 0.76} 
+P(X_3|X_0=0, X_1=1) = {'0': 0.58, '1': 0.42} 
+P(X_3|X_0=0, X_1=2) = {'0': 0.78, '1': 0.22} 
+P(X_3|X_0=1, X_1=0) = {'0': 0.56, '1': 0.44} 
+P(X_3|X_0=1, X_1=1) = {'0': 0.64, '1': 0.36} 
+P(X_3|X_0=1, X_1=2) = {'0': 0.42, '1': 0.58} 
+P(X_1) = {'0': 0.47, '1': 0.12, '2': 0.41} 
+P(X_2) = {'0': 0.25, '1': 0.75}
 Observed conditions:
-Observing/Knowing that the state X_1 is equal to 0, and the state X_2 is equal to 0
-Task: Compute probability distribution for X_0 (possible values: [0, 1, 2]).
+Observing/Knowing that the state X_2 is equal to 1, and the state X_3 is equal to 0, and the state X_0 is equal to 1
+Task: Compute probability distribution for X_1 (possible values: [0, 1, 2]).
 
-Output: Python dict mapping each value to its probability, rounded to 3 decimals.
-Example: {0: 0.123, 1: 0.877} 
+Output: Python dict mapping each value to its probability, rounded to 2 decimals.
+Example: {0: 0.12, 1: 0.88} 
 
-Answer:  {0: 0.478, 1: 0.158, 2: 0.364}
+Answer:  {0: 0.51, 1: 0.15, 2: 0.34}
 </pre>
 </div>
 </div>
@@ -2474,7 +2463,7 @@ Answer:  {0: 0.478, 1: 0.158, 2: 0.364}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
@@ -2506,12 +2495,16 @@ print(f"Level 3 Cot example: \n{example_l3.metadata.cot}\n")</div>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Level 0 Cot example: 
-Result: P(X_1) = {0: 0.3, 1: 0.7}
-Result: P(X_1) = {0: 0.3, 1: 0.7}
+Elim order: ['X_0']
+Sum out X_0 -&gt; P(X_2) = {0: 0.6, 1: 0.4}
+Result: P(X_2) = {0: 0.6, 1: 0.4}
+Elim order: ['X_0']
+Sum out X_0 -&gt; P(X_2) = {0: 0.6, 1: 0.4}
+Result: P(X_2) = {0: 0.6, 1: 0.4}
 
 Level 3 Cot example: 
-Result: P(X_0) = {0: 0.478, 1: 0.158, 2: 0.364}
-Result: P(X_0) = {0: 0.478, 1: 0.158, 2: 0.364}
+Normalize (sum=0.51) -&gt; P(X_1 | X_0=1, X_3=0) = {0: 0.51, 1: 0.15, 2: 0.34}
+Normalize (sum=0.51) -&gt; P(X_1 | X_0=1, X_3=0) = {0: 0.51, 1: 0.15, 2: 0.34}
 
 </pre>
 </div>
@@ -2536,7 +2529,7 @@ Result: P(X_0) = {0: 0.478, 1: 0.158, 2: 0.364}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
@@ -2549,9 +2542,9 @@ Result: P(X_0) = {0: 0.478, 1: 0.158, 2: 0.364}
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of the ground truth:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">,</span> <span class="n">example_l3</span><span class="p">))</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of the ground truth:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="n">example_l0</span><span class="o">.</span><span class="n">answer</span><span class="p">,</span> <span class="n">example_l0</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">print("""\nScore of the ground truth:\n""", rcr.score_answer(example_l3.answer, example_l3))</div>
+<div class="clipboard-copy-txt" id="cell-7">print("""\nScore of the ground truth:\n""", rcr.score_answer(example_l0.answer, example_l0))</div>
 </div>
 </div>
 </div>
@@ -2573,12 +2566,12 @@ Score of the ground truth:
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=37fc87f9">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6762760a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
@@ -2591,9 +2584,51 @@ Score of the ground truth:
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of a close distribution:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">},</span> <span class="n">example_l3</span><span class="p">))</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Get the center value as a float</span>
+<span class="n">center_ans</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="n">example_l0</span><span class="o">.</span><span class="n">answer</span><span class="p">))[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="n">y_axis</span> <span class="o">=</span> <span class="p">[</span><span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="s1">'0'</span><span class="p">:</span><span class="n">x</span><span class="p">,</span><span class="s1">'1'</span><span class="p">:</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">},</span> <span class="n">example_l0</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_axis</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">y_axis</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Score'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#1f77b4'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">center_ans</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">'Target: </span><span class="si">{</span><span class="n">center_ans</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Score Distribution around the Target Answer'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Input Value'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Score'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">':'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">print("""\nScore of a close distribution:\n""", rcr.score_answer({0: 0.35, 1: 0.4, 2: 0.25}, example_l3))</div>
+<div class="clipboard-copy-txt" id="cell-8">import matplotlib.pyplot as plt
+import numpy as np
+
+# Get the center value as a float
+center_ans = float(dict(eval(example_l0.answer))[0])
+
+x_axis = np.linspace(0, 1, 500)
+
+y_axis = [rcr.score_answer({'0':x,'1':1-x}, example_l0) for x in x_axis]
+
+plt.figure(figsize=(10, 6))
+plt.plot(x_axis, y_axis, label='Score', color='#1f77b4', linewidth=2)
+
+plt.axvline(x=center_ans, color='red', linestyle='--', alpha=0.8, label=f'Target: {center_ans}')
+
+plt.title('Score Distribution around the Target Answer', fontsize=14)
+plt.xlabel('Input Value', fontsize=12)
+plt.ylabel('Score', fontsize=12)
+plt.legend()
+plt.grid(True, linestyle=':', alpha=0.6)
+
+plt.show()</div>
 </div>
 </div>
 </div>
@@ -2604,95 +2639,8 @@ Score of the ground truth:
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-Score of a close distribution:
- 9.666472921759194e-10
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8d2047c9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of a middly shifted distribution:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">},</span> <span class="n">example_l3</span><span class="p">))</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-9">print("""\nScore of a middly shifted distribution:\n""", rcr.score_answer({0: 0.3, 1: 0.4, 2: 0.3}, example_l3))</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-Score of a middly shifted distribution:
- 3.9929972989703943e-10
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3cd9acb9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of a shifted distribution:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">},</span> <span class="n">example_l3</span><span class="p">))</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-10">print("""\nScore of a shifted distribution:\n""", rcr.score_answer({0: 0.5, 1: 0.1, 2: 0.4}, example_l3))</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-Score of a shifted distribution:
- 0.12848099158049142
-</pre>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1IAAAIoCAYAAABj6NoUAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjcsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvTLEjVAAAAAlwSFlzAAAPYQAAD2EBqD+naQAAvz1JREFUeJzs3Xl8VNXdP/DPvTfJZE/YlxAIBGRRBEFFRFQUpWpxqbu1IK37vtXWuqB19xHqz1ar1SLap7X6WHfcESyiuCEagSAQQkhCyEI2ktnv+f0xmWGGJJCTTObeM/N5v16+vExmOSfz4TDfOeeeqwkhBIiIiIiIiKjLdKsbQEREREREpBoWUkRERERERJJYSBEREREREUliIUVERERERCSJhRQREREREZEkFlJERERERESSWEgRERERERFJYiFFREREREQkiYUUERERERGRJBZSRBT3SktLoWkaLrnkEkte//jjj4emaRG3LV26FJqmYenSpZa0CQA0TcPxxx9v2evTXgUFBSgoKIjKc3WUNyIiij4WUkSKamlpwYMPPogpU6YgMzMTDocDw4YNw8yZM3H77bdj69atVjcx6jRNi/gvLS0NgwcPxjHHHINbb70V33//fa+87iWXXAJN01BaWtorz99b+IE6PtmhCN/Xvn83D/SfKu655x5omoaVK1d2+zlaWlqQnZ0NTdNwzTXXRK9xRGS5JKsbQETympubccwxx+CHH37A6NGjcfHFF6Nfv36ora3FV199hYcffhiFhYUoLCy0uqlR169fP1x77bUAAK/Xi9raWnz33XdYtGgRFi1ahF//+td46qmn4HA4Qo/Jy8vDxo0bkZOTY0mbX3zxRbS2tlry2vuzceNGpKenW90MigMLFy5sd9vjjz+OxsbGDn+WSF555RU0NzdD0zT861//wqJFi5Cammp1s4goClhIESno8ccfxw8//IBLL70Uf/vb39p9w7tt2za43W6LWte7+vfvj3vuuafd7T/++CN+9atfYcmSJfB4PPjHP/4R+llycjLGjRsXw1ZGGj58uGWvvT9W/k4ovnT0d3Lp0qVobGzs8GeJ5O9//zuSkpJw7bXX4vHHH8drr72Giy66yOpmEVEUcGkfkYK++OILAMA111zT4TKZkSNHdvghubq6GrfccgvGjh2LtLQ09O3bF9OmTcNjjz3W7r5vv/02Zs2ahZycHKSlpWHSpElYvHgxfD5fxP3Czz/auHEjzjrrLPTr16/dUrg333wTJ554Ivr06YPU1FQccsgheOyxx+D3+3v42wg45JBD8OGHH2LAgAH43//9X3z11VcdtjHczp07ccMNN2DMmDFIS0tDbm4uxo8fjyuvvBKNjY0AAueuvPDCCwACv9fg0qTwc4uCf66oqMC8efMwePBg6LoeWg50oCV2b775Jo488kikp6djwIAB+PWvf41du3ZF3OdA53l11KZPP/00dBz8L/zxnZ0jVVtbixtvvBEjR46Ew+HAwIEDcd555+HHH39sd9/gssdt27bhiSeewLhx4+BwODBixAjce++9ME2z037va8mSJTjjjDNQUFCA1NRU9O3bF3PmzMGKFSva3XflypXQNA333HMPPv/8c5x88snIzc2N+D23tLRg4cKFGDduXOj5TjvtNKxevbrTfnS0fLOj5V3hr//NN9/gpJNOQlZWFnJycnDWWWd1ugz0zTffxBFHHIG0tDQMGjQIl112Gerr67v8O7rkkkuwYMECAMCCBQv2u1zO6/XinnvuQUFBARwOBw466CA89dRTHT6vEAJLlizBjBkzkJ2djfT0dBx++OFYsmRJl9vWFZWVlVi4cCGOOuooDBw4EA6HAwUFBbj66qtRXV3dYX81TUNJSQkWLVqECRMmwOFwROT4008/xbHHHouMjAz069cP559/Pnbs2NHp37uu9vX444/HvffeCwCYNWtW6Pcscy7bpk2bsHr1avzsZz/DTTfdBE3T8Pe//73D+3YnU2vXrsU555yD4cOHw+FwYMCAATjiiCPwwAMPhO5z1llnQdd11NTURDx28uTJ0DQNd955Z8TtwaWjwXEvqLq6GjfddBNGjx4Nh8OB/v374+yzz+5wXAie89fQ0IBrr70W+fn5SEpKstVyVKJo4IwUkYL69esHAPjpp58wefLkLj1m06ZNmDVrFnbu3IljjjkGZ555JlpaWrB+/Xo8+OCDuPXWW0P3Xbx4MW655Rb07dsXF110ETIyMvDWW2/hlltuwapVq/Daa6+1+4CyZcsWHHXUUZg4cSIuueQS1NXVISUlBQBw++234+GHH0ZeXh5+8YtfICcnB6tWrcJvf/tbfPnll/i///u/qPxeBgwYgCuvvBL33XcfXn75ZRx55JGd3re1tRUzZsxAaWkpTj75ZJx11lnweDzYtm0b/vGPf+DWW29FTk4ObrzxRixduhTff/89brjhBuTm5gJAuw9TdXV1mD59Ovr27YsLLrgALpcL2dnZB2zzf/7zH3zwwQc455xzMHv2bKxZswbPP/88Vq1aha+++gp9+vTp1u9i4cKFWLp0KbZv3x6xtOpAeampqcH06dOxdetWHH/88bjggguwbds2vPrqq1i2bBk++OADHHPMMe0e99vf/haffvopfv7zn2POnDl44403cM8998Dj8UR8qNufa665BpMmTcLs2bMxYMAAVFRU4I033sDs2bPx2muv4Ywzzmj3mM8//xwPPvggZs2ahcsvvxxlZWUAAJfLhRNOOAFfffUVpkyZghtvvBG7du3Cyy+/jA8++AAvvfQSzj333C61a3++/vprPProo5g1axauuOIKfPfdd3jjjTdQVFSEH3/8MWIJ14svvoj58+cjOzsbv/rVr5Cbm4t33nkHs2fPhsfjCf192Z8zzzwTDQ0NePPNN3HGGWfs9/288MIL8dVXX+GUU06BYRh45ZVXcM011yA5ORmXXXZZ6H5CCPzyl7/ESy+9hDFjxuCiiy5CSkoKPvroI/zmN7/Bhg0bOvyypTv++9//YtGiRTjxxBMxbdo0JCcn47vvvsNf//pXfPDBB1i7dm2HS3Cvu+46rFmzBqeddhrmzp2LgQMHAgA+/PBDnHbaaTAMA+effz6GDh2KFStW4Jhjjunw745MX4PF2qeffor58+eH/s4Hx4CuCBZN8+bNw/Dhw3H88cdjxYoV2LZtG0aOHNnhY7qaqXXr1uHoo4+GYRg444wzMGLECDQ0NGDDhg3429/+hjvuuANAoAh84403sHLlylDm6+rq8MMPPwBAuy8qgn+eNWtW6LbgeFBeXo6TTz4ZZ555Jqqrq0Pj1/LlyzFt2rSI53G73TjhhBOwZ88enH766UhKSsKgQYO6/LsjUoIgIuW8+eabAoDIysoSt9xyi/jggw9EbW3tfh9z+OGHCwDib3/7W7uf7dixI3S8ZcsWkZSUJAYOHCjKyspCt7tcLnHMMccIAOLFF18M3b5t2zYBQAAQd999d7vn/vDDDwUAMWfOHLFnz57Q7aZpiiuvvFIAEK+++mqX+g1AjB07dr/3Wb58uQAgZs6c2a6N8+fPD9321ltvCQDixhtvbPcczc3NwuVyhf48f/58AUBs27at03YBEAsWLBA+n6/dz4877jix73D7/PPPhx73/vvvR/zs97//vQAgrr322v32Yd82HHfccQd83QM9ZsGCBQKAuP322yNuX7ZsmQAgRo8eLfx+f+j24O9m5MiRorKyMnR7TU2NyM3NFVlZWcLtdnfahnAlJSXtbqusrBRDhw4VY8aMibh9xYoVod/fkiVL2j3u3nvvFQDEL3/5S2GaZuj2tWvXipSUFJGbmyuampra9aOj93jhwoUCgFixYkWHr//vf/874v6/+tWvBADx0ksvhW5rbGwU2dnZIiMjQ2zatCl0u8fjEccee6wAIEaMGNHp7yZcMDvPP/98hz8Pvu/Tpk0TjY2NoduLi4tFUlJSu79Df/vb30L59Xg8odvdbreYO3euACC++eabLrUt3IgRI9rlb9euXaK5ubndfV944QUBQNx///0Rtwffl2HDhont27dH/Mzn84kRI0YITdPEqlWrIn42b9680PvTk7529N53ldfrFYMGDRK5ubnC6XQKIYRYsmSJACDuvPPOdveXzdTNN98sAIg33nij3XOF/3vwww8/CADiqquuCt32n//8RwAQJ554okhOTo4Ym/Pz88WoUaMinu/oo48WhmG0G6s2bdoksrKyxMSJEyNuD773c+bMEa2trZ3+johUx0KKSFGLFi0SmZmZoX94AYjCwkJxzTXXiJ9++inivl9++aUAII499tgDPu8f//hHAUA88sgj7X62evVqAUCccMIJoduCH/AHDx7c4Qfm008/XQBo9yFICCEaGhqEpmni7LPP7kqXu1RIbdy4UQAQ48ePb9fGjgqpfQuGjnSlkEpJSRE1NTUd/nx/hdTs2bPb3b+5uVnk5uaK7OzsUNESi0LK7XaL1NRU0a9fP9HS0tLu/ieddJIAIP773/+Gbgv+bjoqZoI/++GHHzptQ1dcd911AoAoLS0N3Rb80DllypQOHzNq1CiRnJwc8SVB0GWXXdbuC4HuFlId/Z0K/uzmm28O3RYsFK677rp291+1alWvFFKffPJJpz8LLyIPPfRQkZGR0eEH3uCH8FtuuaVLbQvXUSHVGdM0RXZ2tjj++OMjbg++L//v//2/do9ZuXKlACBOP/30dj8rKysThmG0e33ZvvakkHr99dcFAHHZZZeFbmtqahLp6eli2LBhEV9ICCGfqWAh9cEHH+y3HaZpiv79+0eMnddee63IzMwUH3zwgQAg3nvvPSFE4Is0AOLXv/516L5r165td1u4YDuKiopCtwXf+++//36/bSNSHZf2ESnq5ptvxmWXXYb3338fn3/+Ob755ht8+eWXePLJJ/H3v/8dL7/8Mk4//XQACJ0vdPLJJx/web/77jsA6PDcmenTpyM1NRXr1q1r97NJkyZ1uDRpzZo1yMjI6PRci7S0NBQXFx+wXdF27LHHYsiQIXj44Yfx/fff4+c//zmOO+44jB8/vlvbM48cORL9+/eXftzMmTPb3ZaZmYnJkydj5cqVKCkpwejRo6WftzuKi4vhcrkwa9asDnfzmzVrFj766COsW7euXbunTp3a7v7Dhg0DADQ0NHTp9UtKSvDQQw/hk08+QUVFRbsNUyorKzFixIiI24444oh2z9PU1ISSkhKMHz8+1IZ9+/Hss89i3bp1+NWvftWltnWmq/0Obs3f0fs9ffp0JCVF/5/jA7UtKysLra2tKCoqwtChQ/HII4+0u7/X6wWAqP4dfe211/DMM89g7dq1qK+vjzhPsrKyssPHdLRMN/g77WipaX5+PoYPH45t27aFbot1X5977jkAgWV9QVlZWTjzzDPxr3/9Cx988AFOOeWUdo/raqbOO+88PP744zjrrLNw/vnn46STTsKxxx6LvLy8iMcGz4V89dVXsXPnTgwZMgQrVqzAzJkzceyxx8LhcGDFihX42c9+1uGyvjVr1gAAdu3a1eHGIcHfV3FxMQ455JDQ7ampqZg4ceJ+f0dEqmMhRaSwrKwsnHvuuaF1742NjfjDH/6Ap556Cr/5zW9QUVGBlJSU0MYJ+/4D25GmpiYA6HAtu6ZpGDRoECoqKtr9rLO177t374bP5wudtN2RlpaWA7arq4IfxAYMGLDf++Xk5GDNmjW4++678fbbb+Pdd98FEPgA9vvf/x5XX3211Ot2d+1/Z48L3h5872Jhf+89AAwZMiTifuE6Oh8sWBx0ZUORLVu24Mgjj0RTUxNmzZqFuXPnIjs7O7Rpx6efftrhTpQdtbUn/ZDV1X4H38fguT3hDMMInfcYTV1pW319PYQQqKioiMnf0UWLFuHWW2/FgAEDcPLJJ2PYsGFIS0sDENiNtLPdRvf3Pnf0Ow0+JryQimVfKysr8f7772PUqFHtCr158+bhX//6F5YsWdJhIdXVTE2bNg0rV67Egw8+iH/96194/vnnAQS+XHjkkUciiqFZs2bh1VdfxYoVK3DSSSdh/fr1uOSSS5Camorp06eHCqiOCqndu3cDAJYtW4Zly5Z12ud9f28DBw5U6pphRN3BQooojuTk5OAvf/kLli1bhu3bt6OoqAhTp04NnRzdUQG0r+A/4rt27Wr37b8QArt27erwH/rO/sEMXoiytrZWsjfdE9xZraOZin0NHz4cS5cuhWma+OGHH/Dhhx/iiSeewDXXXIM+ffrgwgsv7PLrdvcDw7678+17e/DEe10PbLK6766JQPSKrfD3viNVVVUR94umP/3pT6ivr8c//vEPXHzxxRE/u/LKK0M7EO6ro997d/rR27/f4PvY0c50fr8fdXV1XfqiI9qCv4OpU6fim2++6dXX8vl8uO+++zBkyBCsW7cuogASQuDRRx/t9LH7e587+p0C7d//WPZ16dKl8Pv9KCkp6XRseOutt1BbW9utmeygmTNn4r333oPT6cSXX36Jt99+G0899RROO+00/Pjjjxg1ahSAvYXRihUrkJycHHHbrFmz8Mc//hGNjY1YuXIlxowZE5HF4O/tz3/+c+gafl3BIooSAbc/J4ozmqYhIyMj4rbgspgPP/zwgI8/7LDDACBiq+egL7/8Ei6Xq8s7BQKBb03r6uqwefPmLj+mu2pqavDMM88AAC644IIuP07XdUyePBm33XYbXnrpJQCBDzlBhmEA6NrMiqxVq1a1u23Pnj1Yt24dsrOzQx+E9lcMB5dj7ku23cFtwr/++usOLyAczITM+99VW7duBYB2O/MJITrcrnx/gr+3LVu2dPj76qgfwR3eZH6/MiZNmgSg4/f7iy++6LCA60w085iVlYXx48dj48aNXV6C2V21tbVobGzE9OnT280iffPNN3A6nVLPF/yddpSP8vLy0A6OQd3pa3d+16Jte3UgsPPfb37zm3b/HX300e2ud9cTaWlpOP7447Fo0SL84Q9/gNPpxEcffRT6+fjx4zF48GB88sknWLFiBfr06RMa60844QT4/X4899xzqKysbLesO7gbX/CyG0S0FwspIgU988wz+Prrrzv82RtvvIGNGzciNzc3tF79iCOOwBFHHIH//ve/ePbZZ9s9JvzD40UXXYSkpCQsXrw44nwFj8eD3/3udwDQ6bWMOnL99dcDAH7961+jrq6u3c+rqqqwcePGLj9fZ9avX4+TTz4Z1dXVmD9/Pg4//PAD3r+jGYvgbeHbVvft2xcAsGPHjh63c18ff/wxPvjgg4jbHnjgATQ0NGDevHmhmZLs7GyMHTsWn332GbZs2RK6b3NzM26//fYOn1u23SkpKbjwwgtRW1uLhx56KOJn77//Pj744AOMHj0aM2bM6HL/uio4+/nZZ59F3P7www93eJ2aA5k/fz68Xi9uv/12CCFCt//www9YunQpcnJycOaZZ4ZuD85g7nudm1dffbXT2TAZZ5xxBrKzs7FkyRL89NNPodu9Xm+76/gcSLTzeP3116O1tRWXXXZZh8vatm3b1ul1sWQMHDgQaWlpWLt2bUShXl9fj+uuu076+Y455hgMHz4cb7/9drsP+XfddVeHxY9sX7vzu/7000+xdetWHHvssXj++efx3HPPtfsvWGh1dk2prvjiiy/gcrna3d7RGAYEznstKSnBq6++iuOOOy40tgSvYRc8byx8WV/w59OmTcNLL72El19+ud3rmaYZlb8jRCri0j4iBb333nu48sorQx9qhw4dipaWFnz33XdYtWoVdF3HU089BYfDEXrMP//5Txx//PG4/PLL8Y9//APTp0+Hy+XC+vXr8d1334WKnMLCQjzyyCO45ZZbcOihh+K8885DRkYG3n77bWzatAlnnHFGu6VX+/Ozn/0Md911F+677z6MHj0aP/vZzzBixAjU1dVhy5YtWLVqFe6//36MHz++S89XW1sbOuHZ5/Ohrq4Oa9euDW2ocemll+LJJ5884PN89NFH+O1vf4sZM2bgoIMOQr9+/VBSUoK33noLqampuOaaa0L3PeGEE/DYY4/h8ssvx9lnn42MjAyMGDGixxsVAMDPf/5zzJ07F+eccw4KCgqwZs0arFixAoWFhfjjH/8Ycd9bbrkFl19+OaZPn45zzz0Xpmnivffe63QZ4wknnIBXX30VZ599Nk455RSkpqZi0qRJmDt3bqfteeSRR/Dpp5/i/vvvx+eff45p06ahtLQU//d//4f09HQ8//zzoQ9g0XTllVfi+eefx9lnn43zzjsP/fr1w5o1a7B27Vqcdtpp+z03oyO33XYbli1bhn/84x/YuHEjTjzxRFRXV+Pll1+Gz+fDs88+i6ysrND9zzjjDBQWFmLp0qXYsWMHDjvsMGzcuBGffPIJTj311NA5dN2Vk5ODJ554ApdccgmOOOIIXHDBBcjJycE777yDtLS00HlbXTF9+nSkpaXh8ccfR319feh8QNmCLOiKK67AmjVr8MILL2D16tWYPXs2hg4dil27dqG4uBhffvkl/vWvf0ldiLYjuq7j6quvxqJFi0I5bGpqwnvvvYcRI0Zg6NChUs9nGAaefvppnH766TjhhBNw/vnnY8iQIfj0009RUVGBSZMmha6V1N2+Bi/E+4c//AHr169HTk4OcnNz97vELVgcBS+c3JGxY8fi6KOPxueff44vv/yy3TWYuuKRRx7BihUrcOyxx2LkyJFITU3F2rVrsXz5cowaNQpnnXVWxP1nzZqFf//736ipqYkollJSUjBjxozQDFZHGw299NJLmDVrFi644AI8/vjjmDJlCtLS0lBWVoYvvvgCNTU1HRZ1RHHPwh0DiaibiouLxaOPPipOOukkMXLkSJGamipSU1NFYWGhmD9/fqfXfKmqqhI33HCDGDVqlEhJSRF9+/YV06ZNE4sXL2533zfffFMcd9xxIisrSzgcDjFx4kSxaNEi4fV6I+53oG25gz766CMxd+5cMWDAAJGcnCwGDx4spk+fLu67776I61XtD8K2egcgHA6HGDhwoJgxY4a49dZbO91qt6M2btiwQdxwww3isMMOE/369RMOh0OMGjVKzJ8/X6xfv77dczz66KNizJgxIjk5ud224fv+eV/72/78+eefF2+88YY44ogjRFpamujXr5+45JJLxM6dOzt8rieffDLUjuHDh4u7775beDyeDtvg9XrFbbfdJoYPHy6SkpLa/Q46a3dNTY24/vrrxYgRI0RycrLo37+/OOeccyK2Nw6S3TZ8f1asWCFmzJghsrKyRG5urjj11FPFt99+u9/txxcuXNjp8+3Zs0fcdddd4qCDDgpdO+qUU05pd82hoG3btokzzzxTZGVliYyMDHHiiSeKr7/+Wvr19/d34vXXXxdTp04NZffSSy8Vu3fvFiNGjOjy9udCBK7rFcxM8O9D0P62vd/f+/Xyyy+L2bNniz59+ojk5GSRl5cnjj/+eLFo0aJOt/bfn462P/d4POKBBx4QY8aMEQ6HQwwfPlzccsstorm5ucPfwYEuPSCEEJ988ok45phjRFpamujbt68499xzRVlZmTjkkENETk5Oh4+R6evSpUvFxIkThcPhOOA29Q0NDSItLU1kZGR0eL2scM8+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fhUUFOh1CuRispm5HFftcz+ymTl+/Ljw9fUVTz75pDh48KD44osvREhIiJg5c6Zep0AuJpuZ5ORk4evrKz788EORnp4u/vOf/4ioqChx33336XUK5GIFBQVi9+7dYvfu3QKAmD9/vti9e7c4duyYEEKIKVOmiNGjRzuPT09PF97e3uL5558XBw4cEAsXLhQWi0Vs2rRJr1OoFTtSLvbmm2+K9u3bC6vVKmJjY8WPP/7o/L9BgwaJsWPHVjv+o48+EjExMcJqtYru3buLDRs2uLhi0ptMZjp06CAA1PhKTk52feGkG9l2pip2pNyTbGa2b98u4uLihM1mE5GRkeLVV18V5eXlLq6a9CSTmbKyMjFt2jQRFRUl7Ha7iIiIEE888YQ4f/686wsnXWzZsqXW1yeVORk7dqwYNGhQjfv06dNHWK1WERkZKd577z2X110fRQiOqRIREREREcnge6SIiIiIiIgksSNFREREREQkiR0pIiIiIiIiSexIERERERERSWJHioiIiIiISBI7UkRERERERJLYkSIiIiIiIpLEjhQREREREZEkdqSIiIhcQFEUTJs2Te8yiIioibAjRURETe7999+Hoij4+eef9S4FAFBYWIhp06Zh69at9R779NNPQ1EUHD58+IrHvPTSS1AUBXv37m3CKomIyEzYkSIiohavsLAQ06dPb1BHatSoUQCAlStXXvGYDz/8ED179kSvXr2aqkQiIjIZdqSIiIiqiIuLQ+fOnfHhhx/W+v8pKSk4evSos8NFRETuiR0pIiJyiXHjxqFVq1bIzMxEYmIiWrVqheDgYEyaNAkOh8N5XEZGBhRFwbx58/DPf/4THTp0gJeXFwYNGoRffvml2mMOHjwYgwcPrvV7dezY0fl4wcHBAIDp06dDUZR63680atQopKWlYdeuXTX+b+XKlVAUBUlJSSgtLcUrr7yCvn37wt/fHz4+PoiPj8eWLVsa9POorLGqadOmQVGUGvtXrFiBvn37wsvLC61bt8b999+PEydO1Pt9iIioebAjRURELuNwOJCQkICgoCDMmzcPgwYNwhtvvIG33367xrEffPAB/v3vf2PChAmYOnUqfvnlFwwZMgSnT5+W+p7BwcFYvHgxAODuu+/G8uXLsXz5cowYMeKK97nS9D6Hw4GPPvoI8fHxaN++PfLz8/Huu+9i8ODBmDNnDqZNm4YzZ84gISEBqampUnXW5dVXX8WYMWMQHR2N+fPn49lnn8XmzZtx44034sKFC032fYiIqOE89C6AiIjcR3FxMUaOHImXX34ZAPD444/j2muvxdKlSzF+/Phqxx4+fBiHDh1CeHg4AODWW29FXFwc5syZg/nz5zf4e/r4+OCee+7B+PHj0atXLzz44IP13ic6OhrXXXcdVq9ejddffx2qWnHd8ZtvvkFOTg5mzJgBAAgMDERGRgasVqvzvo8++ii6dOmCN998E0uXLm1wnVdy7NgxJCcnY+bMmXjxxRed+0eMGIFrrrkGixYtqrafiIhcgyNSRETkUo8//ni12/Hx8UhPT69xXGJiorMTBQCxsbGIi4vDxo0bm71GAHjwwQdx8uRJfP/99859K1euhNVqxb333gsAsFgszk6Upmk4d+4cysvL0a9fv1qnBTbG2rVroWka7rvvPuTm5jq/2rVrh+jo6AZNIyQioqbHjhQREbmM3W53vl+pUmBgIM6fP1/j2Ojo6Br7YmJikJGR0VzlVXP//ffDYrE4p/cVFxdj3bp1uO222xAYGOg8btmyZejVqxfsdjuCgoIQHByMDRs2IC8vr0nqOHToEIQQiI6ORnBwcLWvAwcOICcnp0m+DxERyeHUPiIichmLxdKkj6coCoQQNfZXXbyisUJCQnDzzTfjk08+wcKFC/H555+joKCg2mp9K1aswLhx45CYmIjnn38eISEhsFgsmD17No4cOVJv7bW5vHZN06AoCr788staf36tWrVqxNkREdGfxY4UEREZ0qFDh2rs++2336qtdBcYGFjrtMBjx45Vu32lTkt9Ro0ahU2bNuHLL7/EypUr4efnh+HDhzv/f82aNYiMjMTatWurfY/k5OR6HzswMLDWhSIurz0qKgpCCHTq1AkxMTGNOg8iImp6nNpHRESGtH79emRmZjpv//TTT9ixYwduu+02576oqCikpaXhzJkzzn179uzBtm3bqj2Wt7c3AEivcJeYmAhvb28sWrQIX375JUaMGAG73e78/8oRoqqjYjt27EBKSkq9jx0VFYW8vDzs3bvXuS8rKwvr1q2rdtyIESNgsVgwffr0GqNvQgicPXtW6pyIiKhpcESKiIgMqXPnzrjhhhswfvx4lJSUYMGCBQgKCsLkyZOdxzz00EOYP38+EhIS8PDDDyMnJwdLlixB9+7dkZ+f7zzOy8sL3bp1w+rVqxETE4PWrVujR48e6NGjR501tGrVComJic73SV3+Ibx33HEH1q5di7vvvhvDhg3D0aNHsWTJEnTr1g2///57nY99//3344UXXsDdd9+Np59+GoWFhVi8eDFiYmKqLVQRFRWFmTNnYurUqcjIyEBiYiJ8fX1x9OhRrFu3Do899hgmTZrU4J8rERE1DY5IERGRIY0ZMwZPPfUU3nrrLbz66qvo3r07vv32W4SGhjqP6dq1Kz744APk5eVh4sSJ+Oyzz7B8+XJce+21NR7v3XffRXh4OJ577jkkJSVhzZo1DaqjsvMUGhqKIUOGVPu/cePGYdasWdizZw+efvppfPXVV1ixYgX69etX7+MGBQVh3bp18Pb2xuTJk7Fs2TLMnj272tTBSlOmTMEnn3wCVVUxffp0TJo0CZ999hluueUW3HnnnQ06DyIialqKqO1dukRERDrJyMhAp06dMHfuXI60EBGRYXFEioiIiIiISBI7UkRERERERJLYkSIiIiIiIpLE90gRERERERFJ4ogUERERERGRJHakiIiIiIiIJLEjRUREREREJIkdKSIiIiIiIknsSBEREREREUliR4qIiIiIiEgSO1JERERERESS2JEiIiIiIiKS9L/89qVFzEpuYwAAAABJRU5ErkJggg=="/>
 </div>
 </div>
 </div>
@@ -2726,10 +2674,10 @@ Score of a shifted distribution:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2754,7 +2702,7 @@ Score of a shifted distribution:
 <span class="n">twin_r2_example</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Rung2 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">#set tasks to level 2
+<div class="clipboard-copy-txt" id="cell-9">#set tasks to level 2
 task_r1.config.set_level(2)
 task_r2.config.set_level(2)
 
@@ -2796,13 +2744,7 @@ Answer:  {0: 0.0, 1: 0.2, 2: 0.8}
 
  ------------------------------ 
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Rung2 Question excerpt: 
+Rung2 Question excerpt: 
  System:
 P(X_0) = {'0': 0.64, '1': 0.36} 
 X_2 ~ Noisy-MAX(leak=None, influences={'X_0': {'1': [0.61, 0.38, 0.01]}, 'X_1': {'1': [0.79, 0.17, 0.04], '2': [0.56, 0.34, 0.1]}}) 
@@ -2861,10 +2803,10 @@ Answer:  {0: 0.42424242424242425, 1: 0.22222222222222224, 2: 0.35353535353535354
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2884,7 +2826,7 @@ Answer:  {0: 0.42424242424242425, 1: 0.22222222222222224, 2: 0.35353535353535354
 <span class="n">twin_r2_example</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Rung2 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12">task_r1.config.Noisy_mode, task_r2.config.Noisy_mode = False , False #disable Noisy interaction
+<div class="clipboard-copy-txt" id="cell-10">task_r1.config.Noisy_mode, task_r2.config.Noisy_mode = False , False #disable Noisy interaction
 
 twin_r1_example = task_r1.generate_example()
 print("Rung1 Question excerpt: \n", twin_r1_example.prompt,"\n\nAnswer: ", twin_r1_example.answer)
@@ -2943,13 +2885,7 @@ Answer:  {0: 0.45, 1: 0.33, 2: 0.22}
 
  ------------------------------ 
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Rung2 Question excerpt: 
+Rung2 Question excerpt: 
  System:
 P(X_0) = {'0': 0.64, '1': 0.36} 
 P(X_2|X_0=0, X_1=0) = {'0': 0.35, '1': 0.35, '2': 0.3} 
@@ -3008,10 +2944,10 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3031,7 +2967,7 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <span class="n">twin_r2_example</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Rung2 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">task_r1.config.edge_prob, task_r2.config.edge_prob = 0.25 , 0.25 #reduce the connectivity of the graph
+<div class="clipboard-copy-txt" id="cell-11">task_r1.config.edge_prob, task_r2.config.edge_prob = 0.25 , 0.25 #reduce the connectivity of the graph
 
 twin_r1_example = task_r1.generate_example()
 print("Rung1 Question excerpt: \n", twin_r1_example.prompt,"\n\nAnswer: ", twin_r1_example.answer)
@@ -3090,13 +3026,7 @@ Answer:  {0: 0.45, 1: 0.33, 2: 0.22}
 
  ------------------------------ 
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Rung2 Question excerpt: 
+Rung2 Question excerpt: 
  System:
 P(X_0) = {'0': 0.64, '1': 0.36} 
 P(X_2|X_0=0, X_1=0) = {'0': 0.35, '1': 0.35, '2': 0.3} 
@@ -3177,10 +3107,10 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3193,7 +3123,7 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_seed</span><span class="p">(),</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_seed</span><span class="p">()</span>
 <span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14">task_r1.config.set_seed(), task_r2.config.set_seed()
+<div class="clipboard-copy-txt" id="cell-12">task_r1.config.set_seed(), task_r2.config.set_seed()
 task_r1.config.set_level(1), task_r2.config.set_level(1)
 </div>
 </div>
@@ -3205,10 +3135,10 @@ task_r1.config.set_level(1), task_r2.config.set_level(1)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>(Rung12Config(c=1.0, level=1, seed=None, size=None, n_nodes=3, max_domain_size=3, edge_prob=0.5, graph_generation_mode='erdos', n_round=1, cpt_relative_threshold=0.5, cot_scientific_notation=False),
- Rung12Config(c=1.0, level=1, seed=None, size=None, n_nodes=3, max_domain_size=2, edge_prob=0.5, graph_generation_mode='erdos', n_round=2, cpt_relative_threshold=0.5, cot_scientific_notation=False))</pre>
+<pre>(Rung12Config(c=1.0, level=1, seed=None, size=None, n_nodes=3, max_domain_size=2, edge_prob=0.5, graph_generation_mode='erdos', n_round=2, cpt_relative_threshold=0.5, cot_scientific_notation=False),
+ Rung12Config(c=1.0, level=1, seed=None, size=None, n_nodes=3, max_domain_size=3, edge_prob=0.5, graph_generation_mode='erdos', n_round=2, cpt_relative_threshold=0.5, cot_scientific_notation=False))</pre>
 </div>
 </div>
 </div>
@@ -3231,10 +3161,10 @@ task_r1.config.set_level(1), task_r2.config.set_level(1)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3247,7 +3177,7 @@ task_r1.config.set_level(1), task_r2.config.set_level(1)
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">is_verbose</span><span class="p">,</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">is_verbose</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span><span class="kc">True</span>
 <span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">concise_cot</span><span class="p">,</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">concise_cot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15">task_r1.config.is_verbose, task_r2.config.is_verbose = True,True
+<div class="clipboard-copy-txt" id="cell-13">task_r1.config.is_verbose, task_r2.config.is_verbose = True,True
 task_r1.config.concise_cot, task_r2.config.concise_cot = False, False</div>
 </div>
 </div>
@@ -3271,10 +3201,10 @@ task_r1.config.concise_cot, task_r2.config.concise_cot = False, False</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3290,7 +3220,7 @@ task_r1.config.concise_cot, task_r2.config.concise_cot = False, False</div>
 <span class="n">verbose_example_2</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Verbose rung2 example: </span><span class="se">\n</span><span class="si">{</span><span class="n">verbose_example_2</span><span class="o">.</span><span class="n">prompt</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-16">verbose_example_1 = task_r1.generate_example()
+<div class="clipboard-copy-txt" id="cell-14">verbose_example_1 = task_r1.generate_example()
 print(f"Verbose rung1 example: \n{verbose_example_1.prompt} \n")
 
 verbose_example_2 = task_r2.generate_example()
@@ -3308,38 +3238,32 @@ print(f"Verbose rung2 example: \n{verbose_example_2.prompt} \n")</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Verbose rung1 example: 
 System:
-The probability of X_0 = 0 is 0.3 and The probability of X_0 = 1 is 0.7. 
-If X_0 = 0 and X_1 = 0, then The probability of X_2 = 0 is 0.8 and The probability of X_2 = 1 is 0.2. 
-If X_0 = 0 and X_1 = 1, then The probability of X_2 = 0 is 0.6 and The probability of X_2 = 1 is 0.4. 
-If X_0 = 1 and X_1 = 0, then The probability of X_2 = 0 is 0.8 and The probability of X_2 = 1 is 0.2. 
-If X_0 = 1 and X_1 = 1, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.6. 
-The probability of X_1 = 0 is 0.7 and The probability of X_1 = 1 is 0.3.
+The probability of X_1 = 0 is 0.5 and The probability of X_1 = 1 is 0.5. 
+If X_1 = 0, then The probability of X_3 = 0 is 0.2 and The probability of X_3 = 1 is 0.8. 
+If X_1 = 1, then The probability of X_3 = 0 is 0.2 and The probability of X_3 = 1 is 0.8. 
+The probability of X_0 = 0 is 0.2 and The probability of X_0 = 1 is 0.6 and The probability of X_0 = 2 is 0.2. 
+The probability of X_2 = 0 is 1.0 and The probability of X_2 = 1 is 0.0.
 Observed conditions:
-Observing/Knowing that the state X_2 is equal to 0
-Task: Compute probability distribution for X_0 (possible values: [0, 1]).
+Observing/Knowing that the state X_1 is equal to 1
+Task: Compute probability distribution for X_3 (possible values: [0, 1]).
 
 Output: Python dict mapping each value to its probability, rounded to 1 decimals.
 Example: {0: 0.1, 1: 0.9} 
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Verbose rung2 example: 
+Verbose rung2 example: 
 System:
-The probability of X_0 = 0 is 0.01 and The probability of X_0 = 1 is 0.99. 
-If X_0 = 0 and X_1 = 0, then The probability of X_2 = 0 is 0.54 and The probability of X_2 = 1 is 0.18 and The probability of X_2 = 2 is 0.28. 
-If X_0 = 0 and X_1 = 1, then The probability of X_2 = 0 is 0.25 and The probability of X_2 = 1 is 0.29 and The probability of X_2 = 2 is 0.46. 
-If X_0 = 0 and X_1 = 2, then The probability of X_2 = 0 is 0.69 and The probability of X_2 = 1 is 0.27 and The probability of X_2 = 2 is 0.04. 
-If X_0 = 1 and X_1 = 0, then The probability of X_2 = 0 is 0.37 and The probability of X_2 = 1 is 0.34 and The probability of X_2 = 2 is 0.29. 
-If X_0 = 1 and X_1 = 1, then The probability of X_2 = 0 is 0.54 and The probability of X_2 = 1 is 0.11 and The probability of X_2 = 2 is 0.35. 
-If X_0 = 1 and X_1 = 2, then The probability of X_2 = 0 is 0.32 and The probability of X_2 = 1 is 0.38 and The probability of X_2 = 2 is 0.3. 
-The probability of X_1 = 0 is 0.32 and The probability of X_1 = 1 is 0.35 and The probability of X_1 = 2 is 0.33.
+The probability of X_0 = 0 is 0.1 and The probability of X_0 = 1 is 0.45 and The probability of X_0 = 2 is 0.45. 
+If X_0 = 0 and X_1 = 0, then The probability of X_2 = 0 is 0.21 and The probability of X_2 = 1 is 0.79. 
+If X_0 = 0 and X_1 = 1, then The probability of X_2 = 0 is 0.82 and The probability of X_2 = 1 is 0.18. 
+If X_0 = 1 and X_1 = 0, then The probability of X_2 = 0 is 0.38 and The probability of X_2 = 1 is 0.62. 
+If X_0 = 1 and X_1 = 1, then The probability of X_2 = 0 is 0.75 and The probability of X_2 = 1 is 0.25. 
+If X_0 = 2 and X_1 = 0, then The probability of X_2 = 0 is 0.7 and The probability of X_2 = 1 is 0.3. 
+If X_0 = 2 and X_1 = 1, then The probability of X_2 = 0 is 0.2 and The probability of X_2 = 1 is 0.8. 
+The probability of X_1 = 0 is 0.31 and The probability of X_1 = 1 is 0.69. 
+The probability of X_3 = 0 is 0.43 and The probability of X_3 = 1 is 0.03 and The probability of X_3 = 2 is 0.54.
 Observed conditions:
-Doing/Imposing that the state X_0 is equal to 1. Observing/Knowing that the state X_2 is equal to 0
-Task: Compute probability distribution for X_1 (possible values: [0, 1, 2]).
+Doing/Imposing that the state X_2 is equal to 0. Observing/Knowing that the state X_1 is equal to 0, and the state X_0 is equal to 2
+Task: Compute probability distribution for X_3 (possible values: [0, 1, 2]).
 
 Output: Python dict mapping each value to its probability, rounded to 2 decimals.
 Example: {0: 0.12, 1: 0.88} 
@@ -3367,10 +3291,10 @@ Example: {0: 0.12, 1: 0.88}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3384,7 +3308,7 @@ Example: {0: 0.12, 1: 0.88}
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Verbose rung2 example: </span><span class="se">\n</span><span class="si">{</span><span class="n">verbose_example_2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-17">print(f"Verbose rung1 example: \n{verbose_example_1.metadata.cot} \n")
+<div class="clipboard-copy-txt" id="cell-15">print(f"Verbose rung1 example: \n{verbose_example_1.metadata.cot} \n")
 
 print(f"Verbose rung2 example: \n{verbose_example_2.metadata.cot} \n")</div>
 </div>
@@ -3399,161 +3323,68 @@ print(f"Verbose rung2 example: \n{verbose_example_2.metadata.cot} \n")</div>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Verbose rung1 example: 
-Initialization: Selected Elimination Order = ['X_1']
-
---- Step: Eliminate Variable 'X_1' ---
-1. Retrieve relevant factors containing 'X_1':
-   Table for P(X_2=0 | X_0, X_1):
-     [X_0=0, X_1=0] = 0.8
-     [X_0=0, X_1=1] = 0.6
-     [X_0=1, X_1=0] = 0.8
-     [X_0=1, X_1=1] = 0.4
-   Table for P(X_1):
-     [X_1=0] = 0.7
-     [X_1=1] = 0.3
-
-2. Compute the Intermediate Joint (Product):
-   Formula: P(X_1, X_2=0 | X_0) = P(X_2=0 | X_0, X_1) * P(X_1)
-   Table for P(X_1, X_2=0 | X_0):
-     [X_0=0, X_1=0] = 0.6
-     [X_0=0, X_1=1] = 0.2
-     [X_0=1, X_1=0] = 0.6
-     [X_0=1, X_1=1] = 0.1
-
-3. Marginalize (Sum) out variable 'X_1':
-   Formula: P(X_2=0 | X_0) = ∑_{X_1} P(X_1, X_2=0 | X_0)
-   Table for P(X_2=0 | X_0):
-     [X_0=0] = 0.7
-     [X_0=1] = 0.7
-
+Initialization: Selected Elimination Order = []
 
 --- Final Step: Normalization ---
 1. Gather all remaining factors (Query Variables + Priors):
-   Table for P(X_0):
-     [X_0=0] = 0.3
-     [X_0=1] = 0.7
-   Table for P(X_2=0 | X_0):
-     [X_0=0] = 0.7
-     [X_0=1] = 0.7
+   Table for P(X_3 | X_1=1):
+     [X_3=0] = 0.2
+     [X_3=1] = 0.8
 
-2. Compute Unnormalized Joint Distribution (P(X_0 | X_2=0)):
-   Table for P(X_0 | X_2=0):
-     [X_0=0] = 0.2
-     [X_0=1] = 0.5
+2. Compute Unnormalized Joint Distribution (P(X_3 | X_1=1)):
+   Table for P(X_3 | X_1=1):
+     [X_3=0] = 0.2
+     [X_3=1] = 0.8
 
 3. Normalize to obtain Probability Distribution:
-   Table for P(X_0 | X_2=0):
-     [X_0=0] = 0.3
-     [X_0=1] = 0.7
-Initialization: Selected Elimination Order = ['X_1']
-
---- Step: Eliminate Variable 'X_1' ---
-1. Retrieve relevant factors containing 'X_1':
-   Table for P(X_2=0 | X_0, X_1):
-     [X_0=0, X_1=0] = 0.8
-     [X_0=0, X_1=1] = 0.6
-     [X_0=1, X_1=0] = 0.8
-     [X_0=1, X_1=1] = 0.4
-   Table for P(X_1):
-     [X_1=0] = 0.7
-     [X_1=1] = 0.3
-
-2. Compute the Intermediate Joint (Product):
-   Formula: P(X_1, X_2=0 | X_0) = P(X_2=0 | X_0, X_1) * P(X_1)
-   Table for P(X_1, X_2=0 | X_0):
-     [X_0=0, X_1=0] = 0.6
-     [X_0=0, X_1=1] = 0.2
-     [X_0=1, X_1=0] = 0.6
-     [X_0=1, X_1=1] = 0.1
-
-3. Marginalize (Sum) out variable 'X_1':
-   Formula: P(X_2=0 | X_0) = ∑_{X_1} P(X_1, X_2=0 | X_0)
-   Table for P(X_2=0 | X_0):
-     [X_0=0] = 0.7
-     [X_0=1] = 0.7
-
+   Table for P(X_3 | X_1=1):
+     [X_3=0] = 0.2
+     [X_3=1] = 0.8
+Initialization: Selected Elimination Order = []
 
 --- Final Step: Normalization ---
 1. Gather all remaining factors (Query Variables + Priors):
-   Table for P(X_0):
-     [X_0=0] = 0.3
-     [X_0=1] = 0.7
-   Table for P(X_2=0 | X_0):
-     [X_0=0] = 0.7
-     [X_0=1] = 0.7
+   Table for P(X_3 | X_1=1):
+     [X_3=0] = 0.2
+     [X_3=1] = 0.8
 
-2. Compute Unnormalized Joint Distribution (P(X_0 | X_2=0)):
-   Table for P(X_0 | X_2=0):
-     [X_0=0] = 0.2
-     [X_0=1] = 0.5
+2. Compute Unnormalized Joint Distribution (P(X_3 | X_1=1)):
+   Table for P(X_3 | X_1=1):
+     [X_3=0] = 0.2
+     [X_3=1] = 0.8
 
 3. Normalize to obtain Probability Distribution:
-   Table for P(X_0 | X_2=0):
-     [X_0=0] = 0.3
-     [X_0=1] = 0.7 
+   Table for P(X_3 | X_1=1):
+     [X_3=0] = 0.2
+     [X_3=1] = 0.8 
 
 Verbose rung2 example: 
-Goal: Compute Causal Effect: P(X_1 | do(X_0=1), X_2=0)
+Goal: Compute Causal Effect: P(X_3 | do(X_2=0), X_1=0, X_0=2)
 
 --- Causal Graph Surgery ---
-  - Node 'X_0' has no parents to cut.
-  - Set P(X_0) := Point Mass at X_0=1.
+  - Cut incoming edges to intervened node 'X_2': ['X_0', 'X_1'] -&gt; X_2
+  - Set P(X_2) := Point Mass at X_2=0.
 
-Initialization: Selected Elimination Order = ['X_0']
-
---- Step: Eliminate Variable 'X_0' ---
-1. Retrieve relevant factors containing 'X_0':
-   Table for P(do(X_0=1)):
-     [X_0=0] = 0
-     [X_0=1] = 1
-   Table for P(X_2=0 | X_1, do(X_0=1)):
-     [X_0=0, X_1=0] = 0.54
-     [X_0=0, X_1=1] = 0.25
-     [X_0=0, X_1=2] = 0.69
-     [X_0=1, X_1=0] = 0.37
-     [X_0=1, X_1=1] = 0.54
-     [X_0=1, X_1=2] = 0.32
-
-2. Compute the Intermediate Joint (Product):
-   Formula: P(do(X_0=1), X_2=0 | X_1) = P(do(X_0=1)) * P(X_2=0 | X_1, do(X_0=1))
-   Table for P(do(X_0=1), X_2=0 | X_1):
-     [X_0=0, X_1=0] = 0
-     [X_0=0, X_1=1] = 0
-     [X_0=0, X_1=2] = 0
-     [X_0=1, X_1=0] = 0.37
-     [X_0=1, X_1=1] = 0.54
-     [X_0=1, X_1=2] = 0.32
-
-3. Marginalize (Sum) out variable 'X_0':
-   Formula: P(X_2=0 | X_1, do(X_0=1)) = ∑_{X_0} P(do(X_0=1), X_2=0 | X_1)
-   Table for P(X_2=0 | X_1, do(X_0=1)):
-     [X_1=0] = 0.37
-     [X_1=1] = 0.54
-     [X_1=2] = 0.32
-
+Initialization: Selected Elimination Order = []
 
 --- Final Step: Normalization ---
 1. Gather all remaining factors (Query Variables + Priors):
-   Table for P(X_1):
-     [X_1=0] = 0.32
-     [X_1=1] = 0.35
-     [X_1=2] = 0.33
-   Table for P(X_2=0 | X_1, do(X_0=1)):
-     [X_1=0] = 0.37
-     [X_1=1] = 0.54
-     [X_1=2] = 0.32
+   Table for P(X_3):
+     [X_3=0] = 0.43
+     [X_3=1] = 0.03
+     [X_3=2] = 0.54
 
-2. Compute Unnormalized Joint Distribution (P(X_1 | X_2=0, do(X_0=1))):
-   Table for P(X_1 | X_2=0, do(X_0=1)):
-     [X_1=0] = 0.12
-     [X_1=1] = 0.19
-     [X_1=2] = 0.11
+2. Compute Unnormalized Joint Distribution (P(X_3)):
+   Table for P(X_3):
+     [X_3=0] = 0.43
+     [X_3=1] = 0.03
+     [X_3=2] = 0.54
 
 3. Normalize to obtain Probability Distribution:
-   Table for P(X_1 | X_2=0, do(X_0=1)):
-     [X_1=0] = 0.29
-     [X_1=1] = 0.46
-     [X_1=2] = 0.26 
+   Table for P(X_3):
+     [X_3=0] = 0.43
+     [X_3=1] = 0.03
+     [X_3=2] = 0.54 
 
 </pre>
 </div>
@@ -3589,10 +3420,10 @@ Initialization: Selected Elimination Order = ['X_0']
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3604,7 +3435,7 @@ Initialization: Selected Elimination Order = ['X_0']
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">generate_balanced_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-18">task_r1.generate_balanced_batch(batch_size=2)</div>
+<div class="clipboard-copy-txt" id="cell-16">task_r1.generate_balanced_batch(batch_size=2)</div>
 </div>
 </div>
 </div>
@@ -3614,42 +3445,38 @@ Initialization: Selected Elimination Order = ['X_0']
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>[---Prompt:System:
- The probability of X_0 = 0 is 0.5 and The probability of X_0 = 1 is 0.3 and The probability of X_0 = 2 is 0.2. 
- If X_0 = 0, then The probability of X_2 = 0 is 0.9 and The probability of X_2 = 1 is 0.1. 
- If X_0 = 1, then The probability of X_2 = 0 is 0.3 and The probability of X_2 = 1 is 0.7. 
- If X_0 = 2, then The probability of X_2 = 0 is 0.1 and The probability of X_2 = 1 is 0.9. 
- The probability of X_1 = 0 is 0.5 and The probability of X_1 = 1 is 0.5. 
- If X_1 = 0 and X_2 = 0, then The probability of X_3 = 0 is 0.5 and The probability of X_3 = 1 is 0.5 and The probability of X_3 = 2 is 0.0. 
- If X_1 = 0 and X_2 = 1, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.4 and The probability of X_3 = 2 is 0.3. 
- If X_1 = 1 and X_2 = 0, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.2 and The probability of X_3 = 2 is 0.5. 
- If X_1 = 1 and X_2 = 1, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.2 and The probability of X_3 = 2 is 0.5.
+ The probability of X_0 = 0 is 0.19 and The probability of X_0 = 1 is 0.57 and The probability of X_0 = 2 is 0.24. 
+ If X_0 = 0, then The probability of X_1 = 0 is 0.28 and The probability of X_1 = 1 is 0.41 and The probability of X_1 = 2 is 0.31. 
+ If X_0 = 1, then The probability of X_1 = 0 is 0.48 and The probability of X_1 = 1 is 0.27 and The probability of X_1 = 2 is 0.25. 
+ If X_0 = 2, then The probability of X_1 = 0 is 0.68 and The probability of X_1 = 1 is 0.09 and The probability of X_1 = 2 is 0.23. 
+ If X_1 = 0, then The probability of X_2 = 0 is 0.38 and The probability of X_2 = 1 is 0.62. 
+ If X_1 = 1, then The probability of X_2 = 0 is 0.28 and The probability of X_2 = 1 is 0.72. 
+ If X_1 = 2, then The probability of X_2 = 0 is 0.35 and The probability of X_2 = 1 is 0.65.
  Observed conditions:
  Without further Observation/Knowledge of other variable.
- Task: Compute probability distribution for X_3 (possible values: [0, 1, 2]).
+ Task: Compute probability distribution for X_0 (possible values: [0, 1, 2]).
  
- Output: Python dict mapping each value to its probability, rounded to 1 decimals.
- Example: {0: 0.1, 1: 0.9}
- ---Answer:{0: 0.4, 1: 0.3, 2: 0.3}
- ---Metadata:{'target_var_values': [0, 1, 2], 'bif_description': "// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1], 'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_3\n// state_names: {'X_3': [0, 1, 2], 'X_1': [0, 1], 'X_2': [0, 1]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_1 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_2 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_3 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nprobability ( X_0 ) {\n    table 0.5, 0.3, 0.2 ;\n}\nprobability ( X_1 ) {\n    table 0.5, 0.5 ;\n}\nprobability ( X_2 | X_0 ) {\n    ( 0 ) 0.9, 0.1;\n    ( 1 ) 0.3, 0.7;\n    ( 2 ) 0.1, 0.9;\n\n}\nprobability ( X_3 | X_1, X_2 ) {\n    ( 0, 0 ) 0.5, 0.5, 0.0;\n    ( 0, 1 ) 0.3, 0.4, 0.3;\n    ( 1, 0 ) 0.3, 0.2, 0.5;\n    ( 1, 1 ) 0.3, 0.2, 0.5;\n\n}\n", 'scenario': 'Without further Observation/Knowledge of other variable.', 'target': 'X_3', 'variables': ['X_0', 'X_2', 'X_1', 'X_3'], 'n_round': 1, 'cot': "Initialization: Selected Elimination Order = ['X_0', 'X_2', 'X_1']\n\n--- Step: Eliminate Variable 'X_0' ---\n1. Retrieve relevant factors containing 'X_0':\n   Table for P(X_2 | X_0):\n     [X_2=0, X_0=0] = 0.9\n     [X_2=0, X_0=1] = 0.3\n     [X_2=0, X_0=2] = 0.1\n     [X_2=1, X_0=0] = 0.1\n     [X_2=1, X_0=1] = 0.7\n     [X_2=1, X_0=2] = 0.9\n   Table for P(X_0):\n     [X_0=0] = 0.5\n     [X_0=1] = 0.3\n     [X_0=2] = 0.2\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_0, X_2) = P(X_2 | X_0) * P(X_0)\n   Table for P(X_0, X_2):\n     [X_0=0, X_2=0] = 0.5\n     [X_0=0, X_2=1] = 0.1\n     [X_0=1, X_2=0] = 0.1\n     [X_0=1, X_2=1] = 0.2\n     [X_0=2, X_2=0] = 0\n     [X_0=2, X_2=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_0':\n   Formula: P(X_2) = ∑_{X_0} P(X_0, X_2)\n   Table for P(X_2):\n     [X_2=0] = 0.6\n     [X_2=1] = 0.4\n\n\n--- Step: Eliminate Variable 'X_2' ---\n1. Retrieve relevant factors containing 'X_2':\n   Table for P(X_3 | X_1, X_2):\n     [X_3=0, X_1=0, X_2=0] = 0.5\n     [X_3=0, X_1=0, X_2=1] = 0.3\n     [X_3=0, X_1=1, X_2=0] = 0.3\n     [X_3=0, X_1=1, X_2=1] = 0.3\n     [X_3=1, X_1=0, X_2=0] = 0.5\n     [X_3=1, X_1=0, X_2=1] = 0.4\n     [X_3=1, X_1=1, X_2=0] = 0.2\n     [X_3=1, X_1=1, X_2=1] = 0.2\n     [X_3=2, X_1=0, X_2=0] = 0\n     [X_3=2, X_1=0, X_2=1] = 0.3\n     [X_3=2, X_1=1, X_2=0] = 0.5\n     [X_3=2, X_1=1, X_2=1] = 0.5\n   Table for P(X_2):\n     [X_2=0] = 0.6\n     [X_2=1] = 0.4\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_2, X_3 | X_1) = P(X_3 | X_1, X_2) * P(X_2)\n   Table for P(X_2, X_3 | X_1):\n     [X_2=0, X_3=0, X_1=0] = 0.3\n     [X_2=0, X_3=0, X_1=1] = 0.2\n     [X_2=0, X_3=1, X_1=0] = 0.3\n     [X_2=0, X_3=1, X_1=1] = 0.1\n     [X_2=0, X_3=2, X_1=0] = 0\n     [X_2=0, X_3=2, X_1=1] = 0.3\n     [X_2=1, X_3=0, X_1=0] = 0.1\n     [X_2=1, X_3=0, X_1=1] = 0.1\n     [X_2=1, X_3=1, X_1=0] = 0.2\n     [X_2=1, X_3=1, X_1=1] = 0.1\n     [X_2=1, X_3=2, X_1=0] = 0.1\n     [X_2=1, X_3=2, X_1=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_2':\n   Formula: P(X_3 | X_1) = ∑_{X_2} P(X_2, X_3 | X_1)\n   Table for P(X_3 | X_1):\n     [X_3=0, X_1=0] = 0.4\n     [X_3=0, X_1=1] = 0.3\n     [X_3=1, X_1=0] = 0.5\n     [X_3=1, X_1=1] = 0.2\n     [X_3=2, X_1=0] = 0.1\n     [X_3=2, X_1=1] = 0.5\n\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1):\n     [X_1=0] = 0.5\n     [X_1=1] = 0.5\n   Table for P(X_3 | X_1):\n     [X_3=0, X_1=0] = 0.4\n     [X_3=0, X_1=1] = 0.3\n     [X_3=1, X_1=0] = 0.5\n     [X_3=1, X_1=1] = 0.2\n     [X_3=2, X_1=0] = 0.1\n     [X_3=2, X_1=1] = 0.5\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_3) = P(X_1) * P(X_3 | X_1)\n   Table for P(X_1, X_3):\n     [X_3=0, X_1=0] = 0.2\n     [X_3=0, X_1=1] = 0.2\n     [X_3=1, X_1=0] = 0.2\n     [X_3=1, X_1=1] = 0.1\n     [X_3=2, X_1=0] = 0.1\n     [X_3=2, X_1=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_3) = ∑_{X_1} P(X_1, X_3)\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_3)):\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\nInitialization: Selected Elimination Order = ['X_0', 'X_2', 'X_1']\n\n--- Step: Eliminate Variable 'X_0' ---\n1. Retrieve relevant factors containing 'X_0':\n   Table for P(X_2 | X_0):\n     [X_2=0, X_0=0] = 0.9\n     [X_2=0, X_0=1] = 0.3\n     [X_2=0, X_0=2] = 0.1\n     [X_2=1, X_0=0] = 0.1\n     [X_2=1, X_0=1] = 0.7\n     [X_2=1, X_0=2] = 0.9\n   Table for P(X_0):\n     [X_0=0] = 0.5\n     [X_0=1] = 0.3\n     [X_0=2] = 0.2\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_0, X_2) = P(X_2 | X_0) * P(X_0)\n   Table for P(X_0, X_2):\n     [X_0=0, X_2=0] = 0.5\n     [X_0=0, X_2=1] = 0.1\n     [X_0=1, X_2=0] = 0.1\n     [X_0=1, X_2=1] = 0.2\n     [X_0=2, X_2=0] = 0\n     [X_0=2, X_2=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_0':\n   Formula: P(X_2) = ∑_{X_0} P(X_0, X_2)\n   Table for P(X_2):\n     [X_2=0] = 0.6\n     [X_2=1] = 0.4\n\n\n--- Step: Eliminate Variable 'X_2' ---\n1. Retrieve relevant factors containing 'X_2':\n   Table for P(X_3 | X_1, X_2):\n     [X_3=0, X_1=0, X_2=0] = 0.5\n     [X_3=0, X_1=0, X_2=1] = 0.3\n     [X_3=0, X_1=1, X_2=0] = 0.3\n     [X_3=0, X_1=1, X_2=1] = 0.3\n     [X_3=1, X_1=0, X_2=0] = 0.5\n     [X_3=1, X_1=0, X_2=1] = 0.4\n     [X_3=1, X_1=1, X_2=0] = 0.2\n     [X_3=1, X_1=1, X_2=1] = 0.2\n     [X_3=2, X_1=0, X_2=0] = 0\n     [X_3=2, X_1=0, X_2=1] = 0.3\n     [X_3=2, X_1=1, X_2=0] = 0.5\n     [X_3=2, X_1=1, X_2=1] = 0.5\n   Table for P(X_2):\n     [X_2=0] = 0.6\n     [X_2=1] = 0.4\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_2, X_3 | X_1) = P(X_3 | X_1, X_2) * P(X_2)\n   Table for P(X_2, X_3 | X_1):\n     [X_2=0, X_3=0, X_1=0] = 0.3\n     [X_2=0, X_3=0, X_1=1] = 0.2\n     [X_2=0, X_3=1, X_1=0] = 0.3\n     [X_2=0, X_3=1, X_1=1] = 0.1\n     [X_2=0, X_3=2, X_1=0] = 0\n     [X_2=0, X_3=2, X_1=1] = 0.3\n     [X_2=1, X_3=0, X_1=0] = 0.1\n     [X_2=1, X_3=0, X_1=1] = 0.1\n     [X_2=1, X_3=1, X_1=0] = 0.2\n     [X_2=1, X_3=1, X_1=1] = 0.1\n     [X_2=1, X_3=2, X_1=0] = 0.1\n     [X_2=1, X_3=2, X_1=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_2':\n   Formula: P(X_3 | X_1) = ∑_{X_2} P(X_2, X_3 | X_1)\n   Table for P(X_3 | X_1):\n     [X_3=0, X_1=0] = 0.4\n     [X_3=0, X_1=1] = 0.3\n     [X_3=1, X_1=0] = 0.5\n     [X_3=1, X_1=1] = 0.2\n     [X_3=2, X_1=0] = 0.1\n     [X_3=2, X_1=1] = 0.5\n\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1):\n     [X_1=0] = 0.5\n     [X_1=1] = 0.5\n   Table for P(X_3 | X_1):\n     [X_3=0, X_1=0] = 0.4\n     [X_3=0, X_1=1] = 0.3\n     [X_3=1, X_1=0] = 0.5\n     [X_3=1, X_1=1] = 0.2\n     [X_3=2, X_1=0] = 0.1\n     [X_3=2, X_1=1] = 0.5\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_3) = P(X_1) * P(X_3 | X_1)\n   Table for P(X_1, X_3):\n     [X_3=0, X_1=0] = 0.2\n     [X_3=0, X_1=1] = 0.2\n     [X_3=1, X_1=0] = 0.2\n     [X_3=1, X_1=1] = 0.1\n     [X_3=2, X_1=0] = 0.1\n     [X_3=2, X_1=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_3) = ∑_{X_1} P(X_1, X_3)\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_3)):\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_3):\n     [X_3=0] = 0.4\n     [X_3=1] = 0.3\n     [X_3=2] = 0.3", '_time': 0.7238788604736328, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 3, 'max_domain_size': 3, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 1, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 516, '_cot_tokens': 4117}
+ Output: Python dict mapping each value to its probability, rounded to 2 decimals.
+ Example: {0: 0.12, 1: 0.88}
+ ---Answer:{0: 0.19, 1: 0.57, 2: 0.24}
+ ---Metadata:{'target_var_values': [0, 1, 2], 'bif_description': "// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1, 2], 'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1], 'X_1': [0, 1, 2]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_1 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_2 {\n    type discrete [ 2 ] { 0, 1 };\n}\nprobability ( X_0 ) {\n    table 0.19, 0.57, 0.24 ;\n}\nprobability ( X_1 | X_0 ) {\n    ( 0 ) 0.28, 0.41, 0.31;\n    ( 1 ) 0.48, 0.27, 0.25;\n    ( 2 ) 0.68, 0.09, 0.23;\n\n}\nprobability ( X_2 | X_1 ) {\n    ( 0 ) 0.38, 0.62;\n    ( 1 ) 0.28, 0.72;\n    ( 2 ) 0.35, 0.65;\n\n}\n", 'scenario': 'Without further Observation/Knowledge of other variable.', 'target': 'X_0', 'variables': ['X_0', 'X_1', 'X_2'], 'n_round': 2, 'cot': 'Initialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_0):\n     [X_0=0] = 0.19\n     [X_0=1] = 0.57\n     [X_0=2] = 0.24\n\n2. Compute Unnormalized Joint Distribution (P(X_0)):\n   Table for P(X_0):\n     [X_0=0] = 0.19\n     [X_0=1] = 0.57\n     [X_0=2] = 0.24\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0):\n     [X_0=0] = 0.19\n     [X_0=1] = 0.57\n     [X_0=2] = 0.24\nInitialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_0):\n     [X_0=0] = 0.19\n     [X_0=1] = 0.57\n     [X_0=2] = 0.24\n\n2. Compute Unnormalized Joint Distribution (P(X_0)):\n   Table for P(X_0):\n     [X_0=0] = 0.19\n     [X_0=1] = 0.57\n     [X_0=2] = 0.24\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0):\n     [X_0=0] = 0.19\n     [X_0=1] = 0.57\n     [X_0=2] = 0.24', '_time': 0.6726675033569336, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 4, 'max_domain_size': 3, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 1, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 402, '_cot_tokens': 421}
  ---Task:bayesian_association,
  ---Prompt:System:
- The probability of X_1 = 0 is 0.6 and The probability of X_1 = 1 is 0.4. 
- If X_1 = 0, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.6. 
- If X_1 = 1, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.6. 
- If X_2 = 0, then The probability of X_3 = 0 is 0.1 and The probability of X_3 = 1 is 0.9. 
- If X_2 = 1, then The probability of X_3 = 0 is 0.6 and The probability of X_3 = 1 is 0.4. 
- The probability of X_0 = 0 is 0.1 and The probability of X_0 = 1 is 0.9.
+ The probability of X_1 = 0 is 0.67 and The probability of X_1 = 1 is 0.33. 
+ If X_1 = 0, then The probability of X_2 = 0 is 0.44 and The probability of X_2 = 1 is 0.56. 
+ If X_1 = 1, then The probability of X_2 = 0 is 0.57 and The probability of X_2 = 1 is 0.43. 
+ The probability of X_0 = 0 is 0.37 and The probability of X_0 = 1 is 0.33 and The probability of X_0 = 2 is 0.3.
  Observed conditions:
- Observing/Knowing that the state X_0 is equal to 0
- Task: Compute probability distribution for X_2 (possible values: [0, 1]).
+ Without further Observation/Knowledge of other variable.
+ Task: Compute probability distribution for X_0 (possible values: [0, 1, 2]).
  
- Output: Python dict mapping each value to its probability, rounded to 1 decimals.
- Example: {0: 0.1, 1: 0.9}
- ---Answer:{0: 0.4, 1: 0.6}
- ---Metadata:{'target_var_values': [0, 1], 'bif_description': "// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1], 'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_3\n// state_names: {'X_3': [0, 1], 'X_2': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_1 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_2 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_3 {\n    type discrete [ 2 ] { 0, 1 };\n}\nprobability ( X_0 ) {\n    table 0.1, 0.9 ;\n}\nprobability ( X_1 ) {\n    table 0.6, 0.4 ;\n}\nprobability ( X_2 | X_1 ) {\n    ( 0 ) 0.4, 0.6;\n    ( 1 ) 0.4, 0.6;\n\n}\nprobability ( X_3 | X_2 ) {\n    ( 0 ) 0.1, 0.9;\n    ( 1 ) 0.6, 0.4;\n\n}\n", 'scenario': 'Observing/Knowing that the state X_0 is equal to 0', 'target': 'X_2', 'variables': ['X_1', 'X_2', 'X_3', 'X_0'], 'n_round': 1, 'cot': "Initialization: Selected Elimination Order = ['X_1']\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1):\n     [X_1=0] = 0.6\n     [X_1=1] = 0.4\n   Table for P(X_2 | X_1):\n     [X_2=0, X_1=0] = 0.4\n     [X_2=0, X_1=1] = 0.4\n     [X_2=1, X_1=0] = 0.6\n     [X_2=1, X_1=1] = 0.6\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_2) = P(X_1) * P(X_2 | X_1)\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.2\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.4\n     [X_2=1, X_1=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_2) = ∑_{X_1} P(X_1, X_2)\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\n\n2. Compute Unnormalized Joint Distribution (P(X_2)):\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\nInitialization: Selected Elimination Order = ['X_1']\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1):\n     [X_1=0] = 0.6\n     [X_1=1] = 0.4\n   Table for P(X_2 | X_1):\n     [X_2=0, X_1=0] = 0.4\n     [X_2=0, X_1=1] = 0.4\n     [X_2=1, X_1=0] = 0.6\n     [X_2=1, X_1=1] = 0.6\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_2) = P(X_1) * P(X_2 | X_1)\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.2\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.4\n     [X_2=1, X_1=1] = 0.2\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_2) = ∑_{X_1} P(X_1, X_2)\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\n\n2. Compute Unnormalized Joint Distribution (P(X_2)):\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_2):\n     [X_2=0] = 0.4\n     [X_2=1] = 0.6", '_time': 0.8572382926940918, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 4, 'max_domain_size': 2, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 1, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 297, '_cot_tokens': 1049}
+ Output: Python dict mapping each value to its probability, rounded to 2 decimals.
+ Example: {0: 0.12, 1: 0.88}
+ ---Answer:{0: 0.37, 1: 0.33, 2: 0.3}
+ ---Metadata:{'target_var_values': [0, 1, 2], 'bif_description': "// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1], 'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1, 2]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_1 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_2 {\n    type discrete [ 2 ] { 0, 1 };\n}\nprobability ( X_0 ) {\n    table 0.37, 0.33, 0.3 ;\n}\nprobability ( X_1 ) {\n    table 0.67, 0.33 ;\n}\nprobability ( X_2 | X_1 ) {\n    ( 0 ) 0.44, 0.56;\n    ( 1 ) 0.57, 0.43;\n\n}\n", 'scenario': 'Without further Observation/Knowledge of other variable.', 'target': 'X_0', 'variables': ['X_1', 'X_2', 'X_0'], 'n_round': 2, 'cot': 'Initialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_0):\n     [X_0=0] = 0.37\n     [X_0=1] = 0.33\n     [X_0=2] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_0)):\n   Table for P(X_0):\n     [X_0=0] = 0.37\n     [X_0=1] = 0.33\n     [X_0=2] = 0.3\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0):\n     [X_0=0] = 0.37\n     [X_0=1] = 0.33\n     [X_0=2] = 0.3\nInitialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_0):\n     [X_0=0] = 0.37\n     [X_0=1] = 0.33\n     [X_0=2] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_0)):\n   Table for P(X_0):\n     [X_0=0] = 0.37\n     [X_0=1] = 0.33\n     [X_0=2] = 0.3\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0):\n     [X_0=0] = 0.37\n     [X_0=1] = 0.33\n     [X_0=2] = 0.3', '_time': 0.6227383613586426, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 3, 'max_domain_size': 2, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 2, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 228, '_cot_tokens': 421}
  ---Task:bayesian_association]</pre>
 </div>
 </div>
@@ -3684,10 +3511,10 @@ Initialization: Selected Elimination Order = ['X_0']
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3699,7 +3526,7 @@ Initialization: Selected Elimination Order = ['X_0']
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">generate_balanced_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-19">task_r1.generate_balanced_batch(batch_size=2, level=1)</div>
+<div class="clipboard-copy-txt" id="cell-17">task_r1.generate_balanced_batch(batch_size=2, level=1)</div>
 </div>
 </div>
 </div>
@@ -3709,56 +3536,42 @@ Initialization: Selected Elimination Order = ['X_0']
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>[---Prompt:System:
- The probability of X_0 = 0 is 0.8 and The probability of X_0 = 1 is 0.1 and The probability of X_0 = 2 is 0.1. 
- If X_0 = 0, then The probability of X_1 = 0 is 0.7 and The probability of X_1 = 1 is 0.3. 
- If X_0 = 1, then The probability of X_1 = 0 is 0.5 and The probability of X_1 = 1 is 0.5. 
- If X_0 = 2, then The probability of X_1 = 0 is 0.8 and The probability of X_1 = 1 is 0.2. 
- If X_0 = 0 and X_1 = 0, then The probability of X_2 = 0 is 0.7 and The probability of X_2 = 1 is 0.3. 
- If X_0 = 0 and X_1 = 1, then The probability of X_2 = 0 is 0.6 and The probability of X_2 = 1 is 0.4. 
- If X_0 = 1 and X_1 = 0, then The probability of X_2 = 0 is 0.6 and The probability of X_2 = 1 is 0.4. 
- If X_0 = 1 and X_1 = 1, then The probability of X_2 = 0 is 0.6 and The probability of X_2 = 1 is 0.4. 
- If X_0 = 2 and X_1 = 0, then The probability of X_2 = 0 is 0.6 and The probability of X_2 = 1 is 0.4. 
- If X_0 = 2 and X_1 = 1, then The probability of X_2 = 0 is 0.5 and The probability of X_2 = 1 is 0.5. 
- If X_1 = 0 and X_2 = 0, then The probability of X_3 = 0 is 0.5 and The probability of X_3 = 1 is 0.5 and The probability of X_3 = 2 is 0.0. 
- If X_1 = 0 and X_2 = 1, then The probability of X_3 = 0 is 0.4 and The probability of X_3 = 1 is 0.4 and The probability of X_3 = 2 is 0.2. 
- If X_1 = 1 and X_2 = 0, then The probability of X_3 = 0 is 0.7 and The probability of X_3 = 1 is 0.1 and The probability of X_3 = 2 is 0.2. 
- If X_1 = 1 and X_2 = 1, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.6 and The probability of X_3 = 2 is 0.1.
+ The probability of X_0 = 0 is 0.3 and The probability of X_0 = 1 is 0.4 and The probability of X_0 = 2 is 0.3. 
+ If X_0 = 0, then The probability of X_2 = 0 is 0.0 and The probability of X_2 = 1 is 0.5 and The probability of X_2 = 2 is 0.5. 
+ If X_0 = 1, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.3 and The probability of X_2 = 2 is 0.3. 
+ If X_0 = 2, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.2 and The probability of X_2 = 2 is 0.4. 
+ The probability of X_1 = 0 is 0.7 and The probability of X_1 = 1 is 0.3. 
+ If X_1 = 0 and X_2 = 0, then The probability of X_3 = 0 is 0.4 and The probability of X_3 = 1 is 0.6. 
+ If X_1 = 0 and X_2 = 1, then The probability of X_3 = 0 is 0.6 and The probability of X_3 = 1 is 0.4. 
+ If X_1 = 0 and X_2 = 2, then The probability of X_3 = 0 is 0.2 and The probability of X_3 = 1 is 0.8. 
+ If X_1 = 1 and X_2 = 0, then The probability of X_3 = 0 is 0.4 and The probability of X_3 = 1 is 0.6. 
+ If X_1 = 1 and X_2 = 1, then The probability of X_3 = 0 is 0.4 and The probability of X_3 = 1 is 0.6. 
+ If X_1 = 1 and X_2 = 2, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.7.
  Observed conditions:
- Without further Observation/Knowledge of other variable.
- Task: Compute probability distribution for X_2 (possible values: [0, 1]).
+ Observing/Knowing that the state X_2 is equal to 2, and the state X_3 is equal to 0
+ Task: Compute probability distribution for X_0 (possible values: [0, 1, 2]).
  
  Output: Python dict mapping each value to its probability, rounded to 1 decimals.
  Example: {0: 0.1, 1: 0.9}
- ---Answer:{0: 0.7, 1: 0.3}
- ---Metadata:{'target_var_values': [0, 1], 'bif_description': "// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1], 'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1], 'X_0': [0, 1, 2], 'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_3\n// state_names: {'X_3': [0, 1, 2], 'X_1': [0, 1], 'X_2': [0, 1]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_1 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_2 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_3 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nprobability ( X_0 ) {\n    table 0.8, 0.1, 0.1 ;\n}\nprobability ( X_1 | X_0 ) {\n    ( 0 ) 0.7, 0.3;\n    ( 1 ) 0.5, 0.5;\n    ( 2 ) 0.8, 0.2;\n\n}\nprobability ( X_2 | X_0, X_1 ) {\n    ( 0, 0 ) 0.7, 0.3;\n    ( 0, 1 ) 0.6, 0.4;\n    ( 1, 0 ) 0.6, 0.4;\n    ( 1, 1 ) 0.6, 0.4;\n    ( 2, 0 ) 0.6, 0.4;\n    ( 2, 1 ) 0.5, 0.5;\n\n}\nprobability ( X_3 | X_1, X_2 ) {\n    ( 0, 0 ) 0.5, 0.5, 0.0;\n    ( 0, 1 ) 0.4, 0.4, 0.2;\n    ( 1, 0 ) 0.7, 0.1, 0.2;\n    ( 1, 1 ) 0.3, 0.6, 0.1;\n\n}\n", 'scenario': 'Without further Observation/Knowledge of other variable.', 'target': 'X_2', 'variables': ['X_0', 'X_1', 'X_2', 'X_3'], 'n_round': 1, 'cot': "Initialization: Selected Elimination Order = ['X_0', 'X_1']\n\n--- Step: Eliminate Variable 'X_0' ---\n1. Retrieve relevant factors containing 'X_0':\n   Table for P(X_2 | X_0, X_1):\n     [X_2=0, X_0=0, X_1=0] = 0.7\n     [X_2=0, X_0=0, X_1=1] = 0.6\n     [X_2=0, X_0=1, X_1=0] = 0.6\n     [X_2=0, X_0=1, X_1=1] = 0.6\n     [X_2=0, X_0=2, X_1=0] = 0.6\n     [X_2=0, X_0=2, X_1=1] = 0.5\n     [X_2=1, X_0=0, X_1=0] = 0.3\n     [X_2=1, X_0=0, X_1=1] = 0.4\n     [X_2=1, X_0=1, X_1=0] = 0.4\n     [X_2=1, X_0=1, X_1=1] = 0.4\n     [X_2=1, X_0=2, X_1=0] = 0.4\n     [X_2=1, X_0=2, X_1=1] = 0.5\n   Table for P(X_1 | X_0):\n     [X_1=0, X_0=0] = 0.7\n     [X_1=0, X_0=1] = 0.5\n     [X_1=0, X_0=2] = 0.8\n     [X_1=1, X_0=0] = 0.3\n     [X_1=1, X_0=1] = 0.5\n     [X_1=1, X_0=2] = 0.2\n   Table for P(X_0):\n     [X_0=0] = 0.8\n     [X_0=1] = 0.1\n     [X_0=2] = 0.1\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_0, X_1, X_2) = P(X_2 | X_0, X_1) * P(X_1 | X_0) * P(X_0)\n   Table for P(X_0, X_1, X_2):\n     [X_2=0, X_0=0, X_1=0] = 0.4\n     [X_2=0, X_0=0, X_1=1] = 0.1\n     [X_2=0, X_0=1, X_1=0] = 0\n     [X_2=0, X_0=1, X_1=1] = 0\n     [X_2=0, X_0=2, X_1=0] = 0\n     [X_2=0, X_0=2, X_1=1] = 0\n     [X_2=1, X_0=0, X_1=0] = 0.2\n     [X_2=1, X_0=0, X_1=1] = 0.1\n     [X_2=1, X_0=1, X_1=0] = 0\n     [X_2=1, X_0=1, X_1=1] = 0\n     [X_2=1, X_0=2, X_1=0] = 0\n     [X_2=1, X_0=2, X_1=1] = 0\n\n3. Marginalize (Sum) out variable 'X_0':\n   Formula: P(X_1, X_2) = ∑_{X_0} P(X_0, X_1, X_2)\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.5\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.2\n     [X_2=1, X_1=1] = 0.1\n\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.5\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.2\n     [X_2=1, X_1=1] = 0.1\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_2) = P(X_1, X_2)\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.5\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.2\n     [X_2=1, X_1=1] = 0.1\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_2) = ∑_{X_1} P(X_1, X_2)\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_2)):\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\nInitialization: Selected Elimination Order = ['X_0', 'X_1']\n\n--- Step: Eliminate Variable 'X_0' ---\n1. Retrieve relevant factors containing 'X_0':\n   Table for P(X_2 | X_0, X_1):\n     [X_2=0, X_0=0, X_1=0] = 0.7\n     [X_2=0, X_0=0, X_1=1] = 0.6\n     [X_2=0, X_0=1, X_1=0] = 0.6\n     [X_2=0, X_0=1, X_1=1] = 0.6\n     [X_2=0, X_0=2, X_1=0] = 0.6\n     [X_2=0, X_0=2, X_1=1] = 0.5\n     [X_2=1, X_0=0, X_1=0] = 0.3\n     [X_2=1, X_0=0, X_1=1] = 0.4\n     [X_2=1, X_0=1, X_1=0] = 0.4\n     [X_2=1, X_0=1, X_1=1] = 0.4\n     [X_2=1, X_0=2, X_1=0] = 0.4\n     [X_2=1, X_0=2, X_1=1] = 0.5\n   Table for P(X_1 | X_0):\n     [X_1=0, X_0=0] = 0.7\n     [X_1=0, X_0=1] = 0.5\n     [X_1=0, X_0=2] = 0.8\n     [X_1=1, X_0=0] = 0.3\n     [X_1=1, X_0=1] = 0.5\n     [X_1=1, X_0=2] = 0.2\n   Table for P(X_0):\n     [X_0=0] = 0.8\n     [X_0=1] = 0.1\n     [X_0=2] = 0.1\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_0, X_1, X_2) = P(X_2 | X_0, X_1) * P(X_1 | X_0) * P(X_0)\n   Table for P(X_0, X_1, X_2):\n     [X_2=0, X_0=0, X_1=0] = 0.4\n     [X_2=0, X_0=0, X_1=1] = 0.1\n     [X_2=0, X_0=1, X_1=0] = 0\n     [X_2=0, X_0=1, X_1=1] = 0\n     [X_2=0, X_0=2, X_1=0] = 0\n     [X_2=0, X_0=2, X_1=1] = 0\n     [X_2=1, X_0=0, X_1=0] = 0.2\n     [X_2=1, X_0=0, X_1=1] = 0.1\n     [X_2=1, X_0=1, X_1=0] = 0\n     [X_2=1, X_0=1, X_1=1] = 0\n     [X_2=1, X_0=2, X_1=0] = 0\n     [X_2=1, X_0=2, X_1=1] = 0\n\n3. Marginalize (Sum) out variable 'X_0':\n   Formula: P(X_1, X_2) = ∑_{X_0} P(X_0, X_1, X_2)\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.5\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.2\n     [X_2=1, X_1=1] = 0.1\n\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.5\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.2\n     [X_2=1, X_1=1] = 0.1\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_2) = P(X_1, X_2)\n   Table for P(X_1, X_2):\n     [X_2=0, X_1=0] = 0.5\n     [X_2=0, X_1=1] = 0.2\n     [X_2=1, X_1=0] = 0.2\n     [X_2=1, X_1=1] = 0.1\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_2) = ∑_{X_1} P(X_1, X_2)\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_2)):\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_2):\n     [X_2=0] = 0.7\n     [X_2=1] = 0.3", '_time': 1.290377140045166, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 4, 'max_domain_size': 3, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 1, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 764, '_cot_tokens': 3055}
+ ---Answer:{0: 0.4, 1: 0.3, 2: 0.3}
+ ---Metadata:{'target_var_values': [0, 1, 2], 'bif_description': "// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1, 2], 'X_0': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_3\n// state_names: {'X_3': [0, 1], 'X_1': [0, 1], 'X_2': [0, 1, 2]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_1 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_2 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_3 {\n    type discrete [ 2 ] { 0, 1 };\n}\nprobability ( X_0 ) {\n    table 0.3, 0.4, 0.3 ;\n}\nprobability ( X_1 ) {\n    table 0.7, 0.3 ;\n}\nprobability ( X_2 | X_0 ) {\n    ( 0 ) 0.0, 0.5, 0.5;\n    ( 1 ) 0.4, 0.3, 0.3;\n    ( 2 ) 0.4, 0.2, 0.4;\n\n}\nprobability ( X_3 | X_1, X_2 ) {\n    ( 0, 0 ) 0.4, 0.6;\n    ( 0, 1 ) 0.6, 0.4;\n    ( 0, 2 ) 0.2, 0.8;\n    ( 1, 0 ) 0.4, 0.6;\n    ( 1, 1 ) 0.4, 0.6;\n    ( 1, 2 ) 0.3, 0.7;\n\n}\n", 'scenario': 'Observing/Knowing that the state X_2 is equal to 2, and the state X_3 is equal to 0', 'target': 'X_0', 'variables': ['X_0', 'X_2', 'X_1', 'X_3'], 'n_round': 1, 'cot': 'Initialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2=2 | X_0):\n     [X_0=0] = 0.5\n     [X_0=1] = 0.3\n     [X_0=2] = 0.4\n   Table for P(X_0):\n     [X_0=0] = 0.3\n     [X_0=1] = 0.4\n     [X_0=2] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_0 | X_2=2)):\n   Table for P(X_0 | X_2=2):\n     [X_0=0] = 0.1\n     [X_0=1] = 0.1\n     [X_0=2] = 0.1\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0 | X_2=2):\n     [X_0=0] = 0.4\n     [X_0=1] = 0.3\n     [X_0=2] = 0.3\nInitialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2=2 | X_0):\n     [X_0=0] = 0.5\n     [X_0=1] = 0.3\n     [X_0=2] = 0.4\n   Table for P(X_0):\n     [X_0=0] = 0.3\n     [X_0=1] = 0.4\n     [X_0=2] = 0.3\n\n2. Compute Unnormalized Joint Distribution (P(X_0 | X_2=2)):\n   Table for P(X_0 | X_2=2):\n     [X_0=0] = 0.1\n     [X_0=1] = 0.1\n     [X_0=2] = 0.1\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0 | X_2=2):\n     [X_0=0] = 0.4\n     [X_0=1] = 0.3\n     [X_0=2] = 0.3', '_time': 0.6558628082275391, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 4, 'max_domain_size': 3, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 1, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 614, '_cot_tokens': 569}
  ---Task:bayesian_association,
  ---Prompt:System:
- The probability of X_0 = 0 is 0.7 and The probability of X_0 = 1 is 0.3. 
- If X_0 = 0, then The probability of X_1 = 0 is 0.3 and The probability of X_1 = 1 is 0.4 and The probability of X_1 = 2 is 0.3. 
- If X_0 = 1, then The probability of X_1 = 0 is 0.7 and The probability of X_1 = 1 is 0.1 and The probability of X_1 = 2 is 0.2. 
- If X_0 = 0 and X_1 = 0, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.6 and The probability of X_2 = 2 is 0.0. 
- If X_0 = 0 and X_1 = 1, then The probability of X_2 = 0 is 0.2 and The probability of X_2 = 1 is 0.4 and The probability of X_2 = 2 is 0.4. 
- If X_0 = 0 and X_1 = 2, then The probability of X_2 = 0 is 1.0 and The probability of X_2 = 1 is 0.0 and The probability of X_2 = 2 is 0.0. 
- If X_0 = 1 and X_1 = 0, then The probability of X_2 = 0 is 0.6 and The probability of X_2 = 1 is 0.3 and The probability of X_2 = 2 is 0.1. 
- If X_0 = 1 and X_1 = 1, then The probability of X_2 = 0 is 0.5 and The probability of X_2 = 1 is 0.2 and The probability of X_2 = 2 is 0.3. 
- If X_0 = 1 and X_1 = 2, then The probability of X_2 = 0 is 0.4 and The probability of X_2 = 1 is 0.3 and The probability of X_2 = 2 is 0.3. 
- If X_0 = 0 and X_1 = 0, then The probability of X_3 = 0 is 0.0 and The probability of X_3 = 1 is 0.2 and The probability of X_3 = 2 is 0.8. 
- If X_0 = 0 and X_1 = 1, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.3 and The probability of X_3 = 2 is 0.4. 
- If X_0 = 0 and X_1 = 2, then The probability of X_3 = 0 is 0.2 and The probability of X_3 = 1 is 0.4 and The probability of X_3 = 2 is 0.4. 
- If X_0 = 1 and X_1 = 0, then The probability of X_3 = 0 is 0.3 and The probability of X_3 = 1 is 0.4 and The probability of X_3 = 2 is 0.3. 
- If X_0 = 1 and X_1 = 1, then The probability of X_3 = 0 is 0.0 and The probability of X_3 = 1 is 0.4 and The probability of X_3 = 2 is 0.6. 
- If X_0 = 1 and X_1 = 2, then The probability of X_3 = 0 is 0.4 and The probability of X_3 = 1 is 0.2 and The probability of X_3 = 2 is 0.4.
+ The probability of X_0 = 0 is 0.72 and The probability of X_0 = 1 is 0.28. 
+ If X_0 = 0, then The probability of X_1 = 0 is 0.43 and The probability of X_1 = 1 is 0.57. 
+ If X_0 = 1, then The probability of X_1 = 0 is 0.4 and The probability of X_1 = 1 is 0.6. 
+ The probability of X_2 = 0 is 0.59 and The probability of X_2 = 1 is 0.41.
  Observed conditions:
- Observing/Knowing that the state X_3 is equal to 0
- Task: Compute probability distribution for X_2 (possible values: [0, 1, 2]).
+ Without further Observation/Knowledge of other variable.
+ Task: Compute probability distribution for X_0 (possible values: [0, 1]).
  
- Output: Python dict mapping each value to its probability, rounded to 1 decimals.
- Example: {0: 0.1, 1: 0.9}
- ---Answer:{0: 0.5, 1: 0.3, 2: 0.2}
- ---Metadata:{'target_var_values': [0, 1, 2], 'bif_description': "// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1, 2], 'X_0': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1, 2], 'X_0': [0, 1], 'X_1': [0, 1, 2]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_3\n// state_names: {'X_3': [0, 1, 2], 'X_0': [0, 1], 'X_1': [0, 1, 2]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_1 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_2 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nvariable X_3 {\n    type discrete [ 3 ] { 0, 1, 2 };\n}\nprobability ( X_0 ) {\n    table 0.7, 0.3 ;\n}\nprobability ( X_1 | X_0 ) {\n    ( 0 ) 0.3, 0.4, 0.3;\n    ( 1 ) 0.7, 0.1, 0.2;\n\n}\nprobability ( X_2 | X_0, X_1 ) {\n    ( 0, 0 ) 0.4, 0.6, 0.0;\n    ( 0, 1 ) 0.2, 0.4, 0.4;\n    ( 0, 2 ) 1.0, 0.0, 0.0;\n    ( 1, 0 ) 0.6, 0.3, 0.1;\n    ( 1, 1 ) 0.5, 0.2, 0.3;\n    ( 1, 2 ) 0.4, 0.3, 0.3;\n\n}\nprobability ( X_3 | X_0, X_1 ) {\n    ( 0, 0 ) 0.0, 0.2, 0.8;\n    ( 0, 1 ) 0.3, 0.3, 0.4;\n    ( 0, 2 ) 0.2, 0.4, 0.4;\n    ( 1, 0 ) 0.3, 0.4, 0.3;\n    ( 1, 1 ) 0.0, 0.4, 0.6;\n    ( 1, 2 ) 0.4, 0.2, 0.4;\n\n}\n", 'scenario': 'Observing/Knowing that the state X_3 is equal to 0', 'target': 'X_2', 'variables': ['X_0', 'X_1', 'X_2', 'X_3'], 'n_round': 1, 'cot': "Initialization: Selected Elimination Order = ['X_0', 'X_1']\n\n--- Step: Eliminate Variable 'X_0' ---\n1. Retrieve relevant factors containing 'X_0':\n   Table for P(X_2 | X_0, X_1):\n     [X_2=0, X_0=0, X_1=0] = 0.4\n     [X_2=0, X_0=0, X_1=1] = 0.2\n     [X_2=0, X_0=0, X_1=2] = 1\n     [X_2=0, X_0=1, X_1=0] = 0.6\n     [X_2=0, X_0=1, X_1=1] = 0.5\n     [X_2=0, X_0=1, X_1=2] = 0.4\n     [X_2=1, X_0=0, X_1=0] = 0.6\n     [X_2=1, X_0=0, X_1=1] = 0.4\n     [X_2=1, X_0=0, X_1=2] = 0\n     [X_2=1, X_0=1, X_1=0] = 0.3\n     [X_2=1, X_0=1, X_1=1] = 0.2\n     [X_2=1, X_0=1, X_1=2] = 0.3\n     [X_2=2, X_0=0, X_1=0] = 0\n     [X_2=2, X_0=0, X_1=1] = 0.4\n     [X_2=2, X_0=0, X_1=2] = 0\n     [X_2=2, X_0=1, X_1=0] = 0.1\n     [X_2=2, X_0=1, X_1=1] = 0.3\n     [X_2=2, X_0=1, X_1=2] = 0.3\n   Table for P(X_0):\n     [X_0=0] = 0.7\n     [X_0=1] = 0.3\n   Table for P(X_3=0 | X_0, X_1):\n     [X_0=0, X_1=0] = 0\n     [X_0=0, X_1=1] = 0.3\n     [X_0=0, X_1=2] = 0.2\n     [X_0=1, X_1=0] = 0.3\n     [X_0=1, X_1=1] = 0\n     [X_0=1, X_1=2] = 0.4\n   Table for P(X_1 | X_0):\n     [X_1=0, X_0=0] = 0.3\n     [X_1=0, X_0=1] = 0.7\n     [X_1=1, X_0=0] = 0.4\n     [X_1=1, X_0=1] = 0.1\n     [X_1=2, X_0=0] = 0.3\n     [X_1=2, X_0=1] = 0.2\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_0, X_1, X_2, X_3=0) = P(X_2 | X_0, X_1) * P(X_0) * P(X_3=0 | X_0, X_1) * P(X_1 | X_0)\n   Table for P(X_0, X_1, X_2, X_3=0):\n     [X_0=0, X_1=0, X_2=0] = 0\n     [X_0=0, X_1=0, X_2=1] = 0\n     [X_0=0, X_1=0, X_2=2] = 0\n     [X_0=0, X_1=1, X_2=0] = 0\n     [X_0=0, X_1=1, X_2=1] = 0\n     [X_0=0, X_1=1, X_2=2] = 0\n     [X_0=0, X_1=2, X_2=0] = 0\n     [X_0=0, X_1=2, X_2=1] = 0\n     [X_0=0, X_1=2, X_2=2] = 0\n     [X_0=1, X_1=0, X_2=0] = 0\n     [X_0=1, X_1=0, X_2=1] = 0\n     [X_0=1, X_1=0, X_2=2] = 0\n     [X_0=1, X_1=1, X_2=0] = 0\n     [X_0=1, X_1=1, X_2=1] = 0\n     [X_0=1, X_1=1, X_2=2] = 0\n     [X_0=1, X_1=2, X_2=0] = 0\n     [X_0=1, X_1=2, X_2=1] = 0\n     [X_0=1, X_1=2, X_2=2] = 0\n\n3. Marginalize (Sum) out variable 'X_0':\n   Formula: P(X_1, X_2, X_3=0) = ∑_{X_0} P(X_0, X_1, X_2, X_3=0)\n   Table for P(X_1, X_2, X_3=0):\n     [X_1=0, X_2=0] = 0\n     [X_1=0, X_2=1] = 0\n     [X_1=0, X_2=2] = 0\n     [X_1=1, X_2=0] = 0\n     [X_1=1, X_2=1] = 0\n     [X_1=1, X_2=2] = 0\n     [X_1=2, X_2=0] = 0.1\n     [X_1=2, X_2=1] = 0\n     [X_1=2, X_2=2] = 0\n\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1, X_2, X_3=0):\n     [X_1=0, X_2=0] = 0\n     [X_1=0, X_2=1] = 0\n     [X_1=0, X_2=2] = 0\n     [X_1=1, X_2=0] = 0\n     [X_1=1, X_2=1] = 0\n     [X_1=1, X_2=2] = 0\n     [X_1=2, X_2=0] = 0.1\n     [X_1=2, X_2=1] = 0\n     [X_1=2, X_2=2] = 0\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_2, X_3=0) = P(X_1, X_2, X_3=0)\n   Table for P(X_1, X_2, X_3=0):\n     [X_1=0, X_2=0] = 0\n     [X_1=0, X_2=1] = 0\n     [X_1=0, X_2=2] = 0\n     [X_1=1, X_2=0] = 0\n     [X_1=1, X_2=1] = 0\n     [X_1=1, X_2=2] = 0\n     [X_1=2, X_2=0] = 0.1\n     [X_1=2, X_2=1] = 0\n     [X_1=2, X_2=2] = 0\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_2, X_3=0) = ∑_{X_1} P(X_1, X_2, X_3=0)\n   Table for P(X_2, X_3=0):\n     [X_2=0] = 0.1\n     [X_2=1] = 0.1\n     [X_2=2] = 0\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2, X_3=0):\n     [X_2=0] = 0.1\n     [X_2=1] = 0.1\n     [X_2=2] = 0\n\n2. Compute Unnormalized Joint Distribution (P(X_2 | X_3=0)):\n   Table for P(X_2 | X_3=0):\n     [X_2=0] = 0.1\n     [X_2=1] = 0.1\n     [X_2=2] = 0\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_2 | X_3=0):\n     [X_2=0] = 0.5\n     [X_2=1] = 0.3\n     [X_2=2] = 0.2\nInitialization: Selected Elimination Order = ['X_0', 'X_1']\n\n--- Step: Eliminate Variable 'X_0' ---\n1. Retrieve relevant factors containing 'X_0':\n   Table for P(X_2 | X_0, X_1):\n     [X_2=0, X_0=0, X_1=0] = 0.4\n     [X_2=0, X_0=0, X_1=1] = 0.2\n     [X_2=0, X_0=0, X_1=2] = 1\n     [X_2=0, X_0=1, X_1=0] = 0.6\n     [X_2=0, X_0=1, X_1=1] = 0.5\n     [X_2=0, X_0=1, X_1=2] = 0.4\n     [X_2=1, X_0=0, X_1=0] = 0.6\n     [X_2=1, X_0=0, X_1=1] = 0.4\n     [X_2=1, X_0=0, X_1=2] = 0\n     [X_2=1, X_0=1, X_1=0] = 0.3\n     [X_2=1, X_0=1, X_1=1] = 0.2\n     [X_2=1, X_0=1, X_1=2] = 0.3\n     [X_2=2, X_0=0, X_1=0] = 0\n     [X_2=2, X_0=0, X_1=1] = 0.4\n     [X_2=2, X_0=0, X_1=2] = 0\n     [X_2=2, X_0=1, X_1=0] = 0.1\n     [X_2=2, X_0=1, X_1=1] = 0.3\n     [X_2=2, X_0=1, X_1=2] = 0.3\n   Table for P(X_0):\n     [X_0=0] = 0.7\n     [X_0=1] = 0.3\n   Table for P(X_3=0 | X_0, X_1):\n     [X_0=0, X_1=0] = 0\n     [X_0=0, X_1=1] = 0.3\n     [X_0=0, X_1=2] = 0.2\n     [X_0=1, X_1=0] = 0.3\n     [X_0=1, X_1=1] = 0\n     [X_0=1, X_1=2] = 0.4\n   Table for P(X_1 | X_0):\n     [X_1=0, X_0=0] = 0.3\n     [X_1=0, X_0=1] = 0.7\n     [X_1=1, X_0=0] = 0.4\n     [X_1=1, X_0=1] = 0.1\n     [X_1=2, X_0=0] = 0.3\n     [X_1=2, X_0=1] = 0.2\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_0, X_1, X_2, X_3=0) = P(X_2 | X_0, X_1) * P(X_0) * P(X_3=0 | X_0, X_1) * P(X_1 | X_0)\n   Table for P(X_0, X_1, X_2, X_3=0):\n     [X_0=0, X_1=0, X_2=0] = 0\n     [X_0=0, X_1=0, X_2=1] = 0\n     [X_0=0, X_1=0, X_2=2] = 0\n     [X_0=0, X_1=1, X_2=0] = 0\n     [X_0=0, X_1=1, X_2=1] = 0\n     [X_0=0, X_1=1, X_2=2] = 0\n     [X_0=0, X_1=2, X_2=0] = 0\n     [X_0=0, X_1=2, X_2=1] = 0\n     [X_0=0, X_1=2, X_2=2] = 0\n     [X_0=1, X_1=0, X_2=0] = 0\n     [X_0=1, X_1=0, X_2=1] = 0\n     [X_0=1, X_1=0, X_2=2] = 0\n     [X_0=1, X_1=1, X_2=0] = 0\n     [X_0=1, X_1=1, X_2=1] = 0\n     [X_0=1, X_1=1, X_2=2] = 0\n     [X_0=1, X_1=2, X_2=0] = 0\n     [X_0=1, X_1=2, X_2=1] = 0\n     [X_0=1, X_1=2, X_2=2] = 0\n\n3. Marginalize (Sum) out variable 'X_0':\n   Formula: P(X_1, X_2, X_3=0) = ∑_{X_0} P(X_0, X_1, X_2, X_3=0)\n   Table for P(X_1, X_2, X_3=0):\n     [X_1=0, X_2=0] = 0\n     [X_1=0, X_2=1] = 0\n     [X_1=0, X_2=2] = 0\n     [X_1=1, X_2=0] = 0\n     [X_1=1, X_2=1] = 0\n     [X_1=1, X_2=2] = 0\n     [X_1=2, X_2=0] = 0.1\n     [X_1=2, X_2=1] = 0\n     [X_1=2, X_2=2] = 0\n\n\n--- Step: Eliminate Variable 'X_1' ---\n1. Retrieve relevant factors containing 'X_1':\n   Table for P(X_1, X_2, X_3=0):\n     [X_1=0, X_2=0] = 0\n     [X_1=0, X_2=1] = 0\n     [X_1=0, X_2=2] = 0\n     [X_1=1, X_2=0] = 0\n     [X_1=1, X_2=1] = 0\n     [X_1=1, X_2=2] = 0\n     [X_1=2, X_2=0] = 0.1\n     [X_1=2, X_2=1] = 0\n     [X_1=2, X_2=2] = 0\n\n2. Compute the Intermediate Joint (Product):\n   Formula: P(X_1, X_2, X_3=0) = P(X_1, X_2, X_3=0)\n   Table for P(X_1, X_2, X_3=0):\n     [X_1=0, X_2=0] = 0\n     [X_1=0, X_2=1] = 0\n     [X_1=0, X_2=2] = 0\n     [X_1=1, X_2=0] = 0\n     [X_1=1, X_2=1] = 0\n     [X_1=1, X_2=2] = 0\n     [X_1=2, X_2=0] = 0.1\n     [X_1=2, X_2=1] = 0\n     [X_1=2, X_2=2] = 0\n\n3. Marginalize (Sum) out variable 'X_1':\n   Formula: P(X_2, X_3=0) = ∑_{X_1} P(X_1, X_2, X_3=0)\n   Table for P(X_2, X_3=0):\n     [X_2=0] = 0.1\n     [X_2=1] = 0.1\n     [X_2=2] = 0\n\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_2, X_3=0):\n     [X_2=0] = 0.1\n     [X_2=1] = 0.1\n     [X_2=2] = 0\n\n2. Compute Unnormalized Joint Distribution (P(X_2 | X_3=0)):\n   Table for P(X_2 | X_3=0):\n     [X_2=0] = 0.1\n     [X_2=1] = 0.1\n     [X_2=2] = 0\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_2 | X_3=0):\n     [X_2=0] = 0.5\n     [X_2=1] = 0.3\n     [X_2=2] = 0.2", '_time': 0.9843943119049072, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 4, 'max_domain_size': 3, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 1, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 963, '_cot_tokens': 4699}
+ Output: Python dict mapping each value to its probability, rounded to 2 decimals.
+ Example: {0: 0.12, 1: 0.88}
+ ---Answer:{0: 0.72, 1: 0.28}
+ ---Metadata:{'target_var_values': [0, 1], 'bif_description': "// CANONICAL\n// variable: X_0\n// state_names: {'X_0': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_1\n// state_names: {'X_1': [0, 1], 'X_0': [0, 1]}\n// type: TabularCPD\n// CANONICAL\n// variable: X_2\n// state_names: {'X_2': [0, 1]}\n// type: TabularCPD\n\nnetwork unknown {\n}\nvariable X_0 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_1 {\n    type discrete [ 2 ] { 0, 1 };\n}\nvariable X_2 {\n    type discrete [ 2 ] { 0, 1 };\n}\nprobability ( X_0 ) {\n    table 0.72, 0.28 ;\n}\nprobability ( X_1 | X_0 ) {\n    ( 0 ) 0.43, 0.57;\n    ( 1 ) 0.4, 0.6;\n\n}\nprobability ( X_2 ) {\n    table 0.59, 0.41 ;\n}\n", 'scenario': 'Without further Observation/Knowledge of other variable.', 'target': 'X_0', 'variables': ['X_0', 'X_1', 'X_2'], 'n_round': 2, 'cot': 'Initialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_0):\n     [X_0=0] = 0.72\n     [X_0=1] = 0.28\n\n2. Compute Unnormalized Joint Distribution (P(X_0)):\n   Table for P(X_0):\n     [X_0=0] = 0.72\n     [X_0=1] = 0.28\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0):\n     [X_0=0] = 0.72\n     [X_0=1] = 0.28\nInitialization: Selected Elimination Order = []\n\n--- Final Step: Normalization ---\n1. Gather all remaining factors (Query Variables + Priors):\n   Table for P(X_0):\n     [X_0=0] = 0.72\n     [X_0=1] = 0.28\n\n2. Compute Unnormalized Joint Distribution (P(X_0)):\n   Table for P(X_0):\n     [X_0=0] = 0.72\n     [X_0=1] = 0.28\n\n3. Normalize to obtain Probability Distribution:\n   Table for P(X_0):\n     [X_0=0] = 0.72\n     [X_0=1] = 0.28', '_time': 0.6241161823272705, '_task': 'bayesian_association', '_level': 1, '_config': {'c': 1.0, 'level': 1, 'seed': None, 'size': None, 'n_nodes': 3, 'max_domain_size': 2, 'edge_prob': 0.5, 'graph_generation_mode': 'erdos', 'n_round': 2, 'cpt_relative_threshold': 0.5, 'cot_scientific_notation': False}, '_prompt_tokens': 210, '_cot_tokens': 329}
  ---Task:bayesian_association]</pre>
 </div>
 </div>
@@ -3782,10 +3595,10 @@ Initialization: Selected Elimination Order = ['X_0']
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-20">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3812,7 +3625,7 @@ Initialization: Selected Elimination Order = ['X_0']
 <span class="n">dataset_dict</span> <span class="o">=</span> <span class="n">hf_dataset</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Dataset Structure:"</span><span class="p">,</span> <span class="n">dataset_dict</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-20">import datasets
+<div class="clipboard-copy-txt" id="cell-18">import datasets
 import pandas as pd
 
 # 1. Generate data, as a list of Problem
@@ -3866,37 +3679,37 @@ print("\nDataset Structure:", dataset_dict)</div>
 <tbody>
 <tr>
 <th>0</th>
-<td>{0: 0.82, 1: 0.18}</td>
-<td>{'target_var_values': [0, 1], 'bif_description...</td>
-<td>System:\nThe probability of X_0 = 0 is 0.69 an...</td>
+<td>{0: 0.0, 1: 0.1, 2: 0.9}</td>
+<td>{'target_var_values': [0, 1, 2], 'bif_descript...</td>
+<td>System:\nThe probability of X_1 = 0 is 0.6 and...</td>
 <td>bayesian_association</td>
 </tr>
 <tr>
 <th>1</th>
-<td>{0: 0.3, 1: 0.7}</td>
+<td>{0: 0.7, 1: 0.3}</td>
 <td>{'target_var_values': [0, 1], 'bif_description...</td>
-<td>System:\nThe probability of X_0 = 0 is 0.2 and...</td>
+<td>System:\nThe probability of X_0 = 0 is 0.4 and...</td>
 <td>bayesian_association</td>
 </tr>
 <tr>
 <th>2</th>
-<td>{0: 0.47, 1: 0.53}</td>
+<td>{0: 0.9, 1: 0.1}</td>
 <td>{'target_var_values': [0, 1], 'bif_description...</td>
-<td>System:\nThe probability of X_0 = 0 is 0.47 an...</td>
+<td>System:\nThe probability of X_0 = 0 is 0.3 and...</td>
 <td>bayesian_association</td>
 </tr>
 <tr>
 <th>3</th>
-<td>{0: 0.1, 1: 0.7, 2: 0.2}</td>
-<td>{'target_var_values': [0, 1, 2], 'bif_descript...</td>
-<td>System:\nThe probability of X_1 = 0 is 0.4 and...</td>
+<td>{0: 0.32, 1: 0.68}</td>
+<td>{'target_var_values': [0, 1], 'bif_description...</td>
+<td>System:\nThe probability of X_0 = 0 is 0.8 and...</td>
 <td>bayesian_association</td>
 </tr>
 <tr>
 <th>4</th>
-<td>{0: 0.37, 1: 0.63}</td>
+<td>{0: 0.8, 1: 0.2}</td>
 <td>{'target_var_values': [0, 1], 'bif_description...</td>
-<td>System:\nThe probability of X_0 = 0 is 0.37 an...</td>
+<td>System:\nThe probability of X_0 = 0 is 0.7 and...</td>
 <td>bayesian_association</td>
 </tr>
 </tbody>
@@ -3944,7 +3757,7 @@ Dataset Structure: DatasetDict({
 <div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-21">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3958,7 +3771,7 @@ Dataset Structure: DatasetDict({
 <span class="c1"># dataset_dict.push_to_hub(DATASET_NAME)</span>
 <span class="c1"># print(f"Dataset uploaded to https://huggingface.co/datasets/{DATASET_NAME}")</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-21"># DATASET_NAME = "your-username/causal-reasoning-curriculum"
+<div class="clipboard-copy-txt" id="cell-19"># DATASET_NAME = "your-username/causal-reasoning-curriculum"
 # dataset_dict.push_to_hub(DATASET_NAME)
 # print(f"Dataset uploaded to https://huggingface.co/datasets/{DATASET_NAME}")</div>
 </div>
