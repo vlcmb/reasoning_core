@@ -466,17 +466,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#0-install-the-library" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        0. Install the library
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#1-initialize-the-task" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1192,17 +1181,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#0-install-the-library" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        0. Install the library
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#1-initialize-the-task" class="md-nav__link">
@@ -2177,24 +2155,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f98b820d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="0-install-the-library">0. Install the library<a class="anchor-link" href="#0-install-the-library">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=50e9d386">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f0943d32">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -2207,648 +2174,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">reasoning_core</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-1">pip install reasoning_core</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: reasoning_core in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (0.2.1)
-Requirement already satisfied: appdirs in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.4.4)
-Requirement already satisfied: beautifulsoup4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (4.14.2)
-Requirement already satisfied: duckdb in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.4.3)
-Requirement already satisfied: easydict in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.13)
-Requirement already satisfied: exrex in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.12.0)
-Requirement already satisfied: faker in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (37.12.0)
-Requirement already satisfied: funcy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (2.0)
-Requirement already satisfied: gramforge in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.0.1)
-Requirement already satisfied: inflection in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.5.1)
-Requirement already satisfied: lazy-object-proxy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.12.0)
-Requirement already satisfied: multiprocess in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.70.18)
-Requirement already satisfied: networkx in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (3.5)
-Requirement already satisfied: nltk in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (3.9.2)
-Requirement already satisfied: num2words in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.5.14)
-Requirement already satisfied: numpy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (2.3.4)
-Requirement already satisfied: pandas in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (2.3.3)
-Requirement already satisfied: pgmpy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.0.0)
-Requirement already satisfied: pooch in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.8.2)
-Requirement already satisfied: prime in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.4.11)
-Requirement already satisfied: pyparsing in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (3.2.5)
-Requirement already satisfied: pyyaml in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (6.0.3)
-Requirement already satisfied: rapidfuzz in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (3.14.3)
-Requirement already satisfied: reasoning-gym in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.1.24)
-Requirement already satisfied: regex in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (2025.11.3)
-Requirement already satisfied: requests in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (2.32.5)
-Requirement already satisfied: sympy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.14.0)
-Requirement already satisfied: tabulate in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.9.0)
-Requirement already satisfied: tarski in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.8.2)
-Requirement already satisfied: tiktoken in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.12.0)
-Requirement already satisfied: timeout-decorator in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.5.0)
-Requirement already satisfied: timeoutcontext in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.2.0)
-Requirement already satisfied: tqdm in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (4.67.1)
-Requirement already satisfied: udocker in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.3.17)
-Requirement already satisfied: unified-planning[pyperplan] in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (1.2.0)
-Requirement already satisfied: verifiers in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.1.7)
-Requirement already satisfied: xpflow in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core) (0.8)
-Requirement already satisfied: soupsieve&gt;1.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from beautifulsoup4-&gt;reasoning_core) (2.8)
-Requirement already satisfied: typing-extensions&gt;=4.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from beautifulsoup4-&gt;reasoning_core) (4.15.0)
-Requirement already satisfied: tzdata in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from faker-&gt;reasoning_core) (2025.2)
-Requirement already satisfied: anytree&lt;3,&gt;=2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from gramforge-&gt;reasoning_core) (2.13.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: dill&gt;=0.4.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from multiprocess-&gt;reasoning_core) (0.4.0)
-Requirement already satisfied: click in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from nltk-&gt;reasoning_core) (8.3.0)
-Requirement already satisfied: joblib in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from nltk-&gt;reasoning_core) (1.5.2)
-Requirement already satisfied: docopt&gt;=0.6.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from num2words-&gt;reasoning_core) (0.6.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pandas-&gt;reasoning_core) (2.9.0.post0)
-Requirement already satisfied: pytz&gt;=2020.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pandas-&gt;reasoning_core) (2025.2)
-Requirement already satisfied: six&gt;=1.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas-&gt;reasoning_core) (1.17.0)
-Requirement already satisfied: scipy&gt;=1.10 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core) (1.15.3)
-Requirement already satisfied: scikit-learn&gt;=1.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core) (1.7.2)
-Requirement already satisfied: statsmodels&gt;=0.14.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core) (0.14.5)
-Requirement already satisfied: opt_einsum&gt;=3.3 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core) (3.4.0)
-Requirement already satisfied: scikit-base&gt;=0.12.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core) (0.13.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from scikit-learn&gt;=1.2-&gt;pgmpy-&gt;reasoning_core) (3.6.0)
-Requirement already satisfied: patsy&gt;=0.5.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from statsmodels&gt;=0.14.5-&gt;pgmpy-&gt;reasoning_core) (1.0.2)
-Requirement already satisfied: packaging&gt;=21.3 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from statsmodels&gt;=0.14.5-&gt;pgmpy-&gt;reasoning_core) (25.0)
-Requirement already satisfied: platformdirs&gt;=2.5.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pooch-&gt;reasoning_core) (4.5.0)
-Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core) (3.4.4)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core) (3.11)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core) (2.5.0)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core) (2025.10.5)
-Requirement already satisfied: build&gt;=1.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (1.3.0)
-Requirement already satisfied: cryptography&gt;=41.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (46.0.3)
-Requirement already satisfied: prime-evals&gt;=0.1.3 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (0.1.3)
-Requirement already satisfied: prime-sandboxes&gt;=0.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (0.2.2)
-Requirement already satisfied: rich&gt;=13.3.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (14.2.0)
-Requirement already satisfied: toml&gt;=0.10.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (0.10.2)
-Requirement already satisfied: typer&gt;=0.9.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core) (0.20.0)
-Requirement already satisfied: pyproject_hooks in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from build&gt;=1.0.0-&gt;prime-&gt;reasoning_core) (1.2.0)
-Requirement already satisfied: cffi&gt;=2.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from cryptography&gt;=41.0.0-&gt;prime-&gt;reasoning_core) (2.0.0)
-Requirement already satisfied: pycparser in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from cffi&gt;=2.0.0-&gt;cryptography&gt;=41.0.0-&gt;prime-&gt;reasoning_core) (2.23)
-Requirement already satisfied: httpx&gt;=0.25.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (0.28.1)
-Requirement already satisfied: pydantic&gt;=2.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (2.12.4)
-Requirement already satisfied: anyio in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from httpx&gt;=0.25.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (4.11.0)
-Requirement already satisfied: httpcore==1.* in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from httpx&gt;=0.25.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (1.0.9)
-Requirement already satisfied: h11&gt;=0.16 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from httpcore==1.*-&gt;httpx&gt;=0.25.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (0.16.0)
-Requirement already satisfied: aiofiles&gt;=23.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-sandboxes&gt;=0.1.0-&gt;prime-&gt;reasoning_core) (25.1.0)
-Requirement already satisfied: annotated-types&gt;=0.6.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic&gt;=2.0.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (0.7.0)
-Requirement already satisfied: pydantic-core==2.41.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic&gt;=2.0.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (2.41.5)
-Requirement already satisfied: typing-inspection&gt;=0.4.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic&gt;=2.0.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core) (0.4.2)
-Requirement already satisfied: markdown-it-py&gt;=2.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from rich&gt;=13.3.1-&gt;prime-&gt;reasoning_core) (4.0.0)
-Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from rich&gt;=13.3.1-&gt;prime-&gt;reasoning_core) (2.19.2)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: mdurl~=0.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=13.3.1-&gt;prime-&gt;reasoning_core) (0.1.2)
-Requirement already satisfied: shellingham&gt;=1.3.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from typer&gt;=0.9.0-&gt;prime-&gt;reasoning_core) (1.5.4)
-Requirement already satisfied: datasets in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (4.4.1)
-Requirement already satisfied: jinja2&gt;=3.1.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (3.1.6)
-Requirement already satisfied: nest-asyncio&gt;=1.6.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (1.6.0)
-Requirement already satisfied: openai-agents&gt;=0.0.7 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (0.5.0)
-Requirement already satisfied: openai&gt;=1.108.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (2.11.0)
-Requirement already satisfied: textual in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (6.5.0)
-Requirement already satisfied: wget&gt;=3.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core) (3.2)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jinja2&gt;=3.1.6-&gt;verifiers-&gt;reasoning_core) (3.0.3)
-Requirement already satisfied: distro&lt;2,&gt;=1.7.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai&gt;=1.108.1-&gt;verifiers-&gt;reasoning_core) (1.9.0)
-Requirement already satisfied: jiter&lt;1,&gt;=0.10.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai&gt;=1.108.1-&gt;verifiers-&gt;reasoning_core) (0.11.1)
-Requirement already satisfied: sniffio in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai&gt;=1.108.1-&gt;verifiers-&gt;reasoning_core) (1.3.1)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: griffe&lt;2,&gt;=1.5.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (1.14.0)
-Requirement already satisfied: mcp&lt;2,&gt;=1.11.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (1.21.0)
-Requirement already satisfied: types-requests&lt;3,&gt;=2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (2.32.4.20250913)
-Requirement already satisfied: colorama&gt;=0.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from griffe&lt;2,&gt;=1.5.6-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.4.6)
-Requirement already satisfied: httpx-sse&gt;=0.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.4.3)
-Requirement already satisfied: jsonschema&gt;=4.20.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (4.25.1)
-Requirement already satisfied: pydantic-settings&gt;=2.5.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (2.11.0)
-Requirement already satisfied: pyjwt&gt;=2.10.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pyjwt[crypto]&gt;=2.10.1-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (2.10.1)
-Requirement already satisfied: python-multipart&gt;=0.0.9 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.0.20)
-Requirement already satisfied: sse-starlette&gt;=1.6.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (3.0.3)
-Requirement already satisfied: starlette&gt;=0.27 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.50.0)
-Requirement already satisfied: uvicorn&gt;=0.31.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.38.0)
-Requirement already satisfied: attrs&gt;=22.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (25.4.0)
-Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (2025.9.1)
-Requirement already satisfied: referencing&gt;=0.28.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.37.0)
-Requirement already satisfied: rpds-py&gt;=0.7.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (0.28.0)
-Requirement already satisfied: python-dotenv&gt;=0.21.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic-settings&gt;=2.5.2-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core) (1.2.1)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: filelock in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core) (3.20.0)
-Requirement already satisfied: pyarrow&gt;=21.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core) (22.0.0)
-Requirement already satisfied: xxhash in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core) (3.6.0)
-Requirement already satisfied: fsspec&lt;=2025.10.0,&gt;=2023.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (2025.10.0)
-Requirement already satisfied: huggingface-hub&lt;2.0,&gt;=0.25.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core) (1.1.2)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (3.13.2)
-Requirement already satisfied: hf-xet&lt;2.0.0,&gt;=1.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from huggingface-hub&lt;2.0,&gt;=0.25.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (1.2.0)
-Requirement already satisfied: typer-slim in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from huggingface-hub&lt;2.0,&gt;=0.25.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (0.20.0)
-Requirement already satisfied: aiohappyeyeballs&gt;=2.5.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (2.6.1)
-Requirement already satisfied: aiosignal&gt;=1.4.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (1.4.0)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (1.8.0)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (6.7.0)
-Requirement already satisfied: propcache&gt;=0.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (0.4.1)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.17.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core) (1.22.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: arckit==0.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (0.1.0)
-Requirement already satisfied: bfi==1.0.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (1.0.4)
-Requirement already satisfied: cellpylib==2.4.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (2.4.0)
-Requirement already satisfied: magiccube==0.3.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (0.3.0)
-Requirement already satisfied: pycosat==0.6.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (0.6.6)
-Requirement already satisfied: pyfiglet==1.0.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (1.0.2)
-Requirement already satisfied: zss&gt;=1.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core) (1.2.0)
-Requirement already satisfied: drawsvg in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from arckit==0.1.0-&gt;reasoning-gym-&gt;reasoning_core) (2.4.0)
-Requirement already satisfied: matplotlib&gt;=3.0.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core) (3.10.7)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core) (1.3.3)
-Requirement already satisfied: cycler&gt;=0.10 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core) (4.60.1)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core) (1.4.9)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: pillow&gt;=8 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core) (12.0.0)
-Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sympy-&gt;reasoning_core) (1.3.0)
-Requirement already satisfied: multipledispatch in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from tarski-&gt;reasoning_core) (1.0.0)
-Requirement already satisfied: antlr4-python3-runtime==4.7.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from tarski-&gt;reasoning_core) (4.7.2)
-Requirement already satisfied: psutil in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from tarski-&gt;reasoning_core) (7.1.3)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: mdit-py-plugins in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from textual-&gt;verifiers-&gt;reasoning_core) (0.5.0)
-Requirement already satisfied: linkify-it-py&lt;3,&gt;=1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from markdown-it-py[linkify]&gt;=2.1.0-&gt;textual-&gt;verifiers-&gt;reasoning_core) (2.0.3)
-Requirement already satisfied: uc-micro-py in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from linkify-it-py&lt;3,&gt;=1-&gt;markdown-it-py[linkify]&gt;=2.1.0-&gt;textual-&gt;verifiers-&gt;reasoning_core) (1.0.3)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: ConfigSpace in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from unified-planning[pyperplan]-&gt;reasoning_core) (1.2.1)
-Requirement already satisfied: up-pyperplan~=1.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from unified-planning[pyperplan]-&gt;reasoning_core) (1.1.0)
-Requirement already satisfied: pyperplan==2.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from up-pyperplan~=1.1.0-&gt;unified-planning[pyperplan]-&gt;reasoning_core) (2.1)
-Requirement already satisfied: wheel in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pyperplan==2.1-&gt;up-pyperplan~=1.1.0-&gt;unified-planning[pyperplan]-&gt;reasoning_core) (0.45.1)
-Requirement already satisfied: more_itertools in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from ConfigSpace-&gt;unified-planning[pyperplan]-&gt;reasoning_core) (10.8.0)
-Requirement already satisfied: sorcery in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from xpflow-&gt;reasoning_core) (0.2.2)
-Requirement already satisfied: executing in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core) (2.2.1)
-Requirement already satisfied: littleutils&gt;=0.2.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core) (0.2.4)
-Requirement already satisfied: asttokens in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core) (3.0.0)
-Requirement already satisfied: wrapt in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core) (2.0.1)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Note: you may need to restart the kernel to use updated packages.
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7f4d0ac3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>or with the official github project</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=094ced34">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sileod</span><span class="o">/</span><span class="n">reasoning_core</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-2">pip install git+https://github.com/sileod/reasoning_core.git</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Collecting git+https://github.com/sileod/reasoning_core.git
-  Cloning https://github.com/sileod/reasoning_core.git to /tmp/pip-req-build-fysz6wf7
-  Running command git clone --filter=blob:none --quiet https://github.com/sileod/reasoning_core.git /tmp/pip-req-build-fysz6wf7
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Resolved https://github.com/sileod/reasoning_core.git to commit 34563b8f89b0c5619637452beade34aee7851e68
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Installing build dependencies ... -</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre> \</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre> |</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre> /</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre> done
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Getting requirements to build wheel ... done
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Preparing metadata (pyproject.toml) ... done
-Requirement already satisfied: appdirs in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.4.4)
-Requirement already satisfied: beautifulsoup4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (4.14.2)
-Requirement already satisfied: duckdb in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.4.3)
-Requirement already satisfied: easydict in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.13)
-Requirement already satisfied: exrex in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.12.0)
-Requirement already satisfied: faker in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (37.12.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: funcy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (2.0)
-Requirement already satisfied: gramforge in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.0.1)
-Requirement already satisfied: inflection in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.5.1)
-Requirement already satisfied: lazy-object-proxy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.12.0)
-Requirement already satisfied: multiprocess in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.70.18)
-Requirement already satisfied: networkx in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (3.5)
-Requirement already satisfied: nltk in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (3.9.2)
-Requirement already satisfied: num2words in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.5.14)
-Requirement already satisfied: numpy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (2.3.4)
-Requirement already satisfied: pandas in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (2.3.3)
-Requirement already satisfied: pgmpy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.0.0)
-Requirement already satisfied: pooch in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.8.2)
-Requirement already satisfied: prime in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.4.11)
-Requirement already satisfied: pyparsing in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (3.2.5)
-Requirement already satisfied: pyyaml in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (6.0.3)
-Requirement already satisfied: rapidfuzz in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (3.14.3)
-Requirement already satisfied: reasoning-gym in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.1.24)
-Requirement already satisfied: regex in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (2025.11.3)
-Requirement already satisfied: requests in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (2.32.5)
-Requirement already satisfied: sympy in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.14.0)
-Requirement already satisfied: tabulate in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.9.0)
-Requirement already satisfied: tarski in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.8.2)
-Requirement already satisfied: tiktoken in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.12.0)
-Requirement already satisfied: timeout-decorator in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.5.0)
-Requirement already satisfied: timeoutcontext in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.2.0)
-Requirement already satisfied: tqdm in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (4.67.1)
-Requirement already satisfied: udocker in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.3.17)
-Requirement already satisfied: unified-planning[pyperplan] in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (1.2.0)
-Requirement already satisfied: verifiers in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.1.7)
-Requirement already satisfied: xpflow in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning_core==0.1.17) (0.8)
-Requirement already satisfied: soupsieve&gt;1.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from beautifulsoup4-&gt;reasoning_core==0.1.17) (2.8)
-Requirement already satisfied: typing-extensions&gt;=4.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from beautifulsoup4-&gt;reasoning_core==0.1.17) (4.15.0)
-Requirement already satisfied: tzdata in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from faker-&gt;reasoning_core==0.1.17) (2025.2)
-Requirement already satisfied: anytree&lt;3,&gt;=2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from gramforge-&gt;reasoning_core==0.1.17) (2.13.0)
-Requirement already satisfied: dill&gt;=0.4.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from multiprocess-&gt;reasoning_core==0.1.17) (0.4.0)
-Requirement already satisfied: click in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from nltk-&gt;reasoning_core==0.1.17) (8.3.0)
-Requirement already satisfied: joblib in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from nltk-&gt;reasoning_core==0.1.17) (1.5.2)
-Requirement already satisfied: docopt&gt;=0.6.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from num2words-&gt;reasoning_core==0.1.17) (0.6.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pandas-&gt;reasoning_core==0.1.17) (2.9.0.post0)
-Requirement already satisfied: pytz&gt;=2020.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pandas-&gt;reasoning_core==0.1.17) (2025.2)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: six&gt;=1.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas-&gt;reasoning_core==0.1.17) (1.17.0)
-Requirement already satisfied: scipy&gt;=1.10 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core==0.1.17) (1.15.3)
-Requirement already satisfied: scikit-learn&gt;=1.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core==0.1.17) (1.7.2)
-Requirement already satisfied: statsmodels&gt;=0.14.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core==0.1.17) (0.14.5)
-Requirement already satisfied: opt_einsum&gt;=3.3 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core==0.1.17) (3.4.0)
-Requirement already satisfied: scikit-base&gt;=0.12.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pgmpy-&gt;reasoning_core==0.1.17) (0.13.0)
-Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from scikit-learn&gt;=1.2-&gt;pgmpy-&gt;reasoning_core==0.1.17) (3.6.0)
-Requirement already satisfied: patsy&gt;=0.5.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from statsmodels&gt;=0.14.5-&gt;pgmpy-&gt;reasoning_core==0.1.17) (1.0.2)
-Requirement already satisfied: packaging&gt;=21.3 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from statsmodels&gt;=0.14.5-&gt;pgmpy-&gt;reasoning_core==0.1.17) (25.0)
-Requirement already satisfied: platformdirs&gt;=2.5.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pooch-&gt;reasoning_core==0.1.17) (4.5.0)
-Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core==0.1.17) (3.4.4)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core==0.1.17) (3.11)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core==0.1.17) (2.5.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: certifi&gt;=2017.4.17 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from requests-&gt;reasoning_core==0.1.17) (2025.10.5)
-Requirement already satisfied: build&gt;=1.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (1.3.0)
-Requirement already satisfied: cryptography&gt;=41.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (46.0.3)
-Requirement already satisfied: prime-evals&gt;=0.1.3 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (0.1.3)
-Requirement already satisfied: prime-sandboxes&gt;=0.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (0.2.2)
-Requirement already satisfied: rich&gt;=13.3.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (14.2.0)
-Requirement already satisfied: toml&gt;=0.10.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (0.10.2)
-Requirement already satisfied: typer&gt;=0.9.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-&gt;reasoning_core==0.1.17) (0.20.0)
-Requirement already satisfied: pyproject_hooks in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from build&gt;=1.0.0-&gt;prime-&gt;reasoning_core==0.1.17) (1.2.0)
-Requirement already satisfied: cffi&gt;=2.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from cryptography&gt;=41.0.0-&gt;prime-&gt;reasoning_core==0.1.17) (2.0.0)
-Requirement already satisfied: pycparser in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from cffi&gt;=2.0.0-&gt;cryptography&gt;=41.0.0-&gt;prime-&gt;reasoning_core==0.1.17) (2.23)
-Requirement already satisfied: httpx&gt;=0.25.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (0.28.1)
-Requirement already satisfied: pydantic&gt;=2.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (2.12.4)
-Requirement already satisfied: anyio in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from httpx&gt;=0.25.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (4.11.0)
-Requirement already satisfied: httpcore==1.* in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from httpx&gt;=0.25.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (1.0.9)
-Requirement already satisfied: h11&gt;=0.16 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from httpcore==1.*-&gt;httpx&gt;=0.25.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (0.16.0)
-Requirement already satisfied: aiofiles&gt;=23.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from prime-sandboxes&gt;=0.1.0-&gt;prime-&gt;reasoning_core==0.1.17) (25.1.0)
-Requirement already satisfied: annotated-types&gt;=0.6.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic&gt;=2.0.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (0.7.0)
-Requirement already satisfied: pydantic-core==2.41.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic&gt;=2.0.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (2.41.5)
-Requirement already satisfied: typing-inspection&gt;=0.4.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic&gt;=2.0.0-&gt;prime-evals&gt;=0.1.3-&gt;prime-&gt;reasoning_core==0.1.17) (0.4.2)
-Requirement already satisfied: markdown-it-py&gt;=2.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from rich&gt;=13.3.1-&gt;prime-&gt;reasoning_core==0.1.17) (4.0.0)
-Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from rich&gt;=13.3.1-&gt;prime-&gt;reasoning_core==0.1.17) (2.19.2)
-Requirement already satisfied: mdurl~=0.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=13.3.1-&gt;prime-&gt;reasoning_core==0.1.17) (0.1.2)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: shellingham&gt;=1.3.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from typer&gt;=0.9.0-&gt;prime-&gt;reasoning_core==0.1.17) (1.5.4)
-Requirement already satisfied: datasets in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (4.4.1)
-Requirement already satisfied: jinja2&gt;=3.1.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (3.1.6)
-Requirement already satisfied: nest-asyncio&gt;=1.6.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (1.6.0)
-Requirement already satisfied: openai-agents&gt;=0.0.7 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (0.5.0)
-Requirement already satisfied: openai&gt;=1.108.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (2.11.0)
-Requirement already satisfied: textual in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (6.5.0)
-Requirement already satisfied: wget&gt;=3.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from verifiers-&gt;reasoning_core==0.1.17) (3.2)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jinja2&gt;=3.1.6-&gt;verifiers-&gt;reasoning_core==0.1.17) (3.0.3)
-Requirement already satisfied: distro&lt;2,&gt;=1.7.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai&gt;=1.108.1-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.9.0)
-Requirement already satisfied: jiter&lt;1,&gt;=0.10.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai&gt;=1.108.1-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.11.1)
-Requirement already satisfied: sniffio in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai&gt;=1.108.1-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.3.1)
-Requirement already satisfied: griffe&lt;2,&gt;=1.5.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.14.0)
-Requirement already satisfied: mcp&lt;2,&gt;=1.11.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.21.0)
-Requirement already satisfied: types-requests&lt;3,&gt;=2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (2.32.4.20250913)
-Requirement already satisfied: colorama&gt;=0.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from griffe&lt;2,&gt;=1.5.6-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.4.6)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: httpx-sse&gt;=0.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.4.3)
-Requirement already satisfied: jsonschema&gt;=4.20.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (4.25.1)
-Requirement already satisfied: pydantic-settings&gt;=2.5.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (2.11.0)
-Requirement already satisfied: pyjwt&gt;=2.10.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pyjwt[crypto]&gt;=2.10.1-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (2.10.1)
-Requirement already satisfied: python-multipart&gt;=0.0.9 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.0.20)
-Requirement already satisfied: sse-starlette&gt;=1.6.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (3.0.3)
-Requirement already satisfied: starlette&gt;=0.27 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.50.0)
-Requirement already satisfied: uvicorn&gt;=0.31.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.38.0)
-Requirement already satisfied: attrs&gt;=22.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (25.4.0)
-Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (2025.9.1)
-Requirement already satisfied: referencing&gt;=0.28.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.37.0)
-Requirement already satisfied: rpds-py&gt;=0.7.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from jsonschema&gt;=4.20.0-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.28.0)
-Requirement already satisfied: python-dotenv&gt;=0.21.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pydantic-settings&gt;=2.5.2-&gt;mcp&lt;2,&gt;=1.11.0-&gt;openai-agents&gt;=0.0.7-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.2.1)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: filelock in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (3.20.0)
-Requirement already satisfied: pyarrow&gt;=21.0.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (22.0.0)
-Requirement already satisfied: xxhash in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (3.6.0)
-Requirement already satisfied: fsspec&lt;=2025.10.0,&gt;=2023.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (2025.10.0)
-Requirement already satisfied: huggingface-hub&lt;2.0,&gt;=0.25.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.1.2)
-Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (3.13.2)
-Requirement already satisfied: hf-xet&lt;2.0.0,&gt;=1.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from huggingface-hub&lt;2.0,&gt;=0.25.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.2.0)
-Requirement already satisfied: typer-slim in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from huggingface-hub&lt;2.0,&gt;=0.25.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.20.0)
-Requirement already satisfied: aiohappyeyeballs&gt;=2.5.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (2.6.1)
-Requirement already satisfied: aiosignal&gt;=1.4.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.4.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: frozenlist&gt;=1.1.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.8.0)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (6.7.0)
-Requirement already satisfied: propcache&gt;=0.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.4.1)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.17.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1-&gt;fsspec[http]&lt;=2025.10.0,&gt;=2023.1.0-&gt;datasets-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.22.0)
-Requirement already satisfied: arckit==0.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (0.1.0)
-Requirement already satisfied: bfi==1.0.4 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (1.0.4)
-Requirement already satisfied: cellpylib==2.4.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (2.4.0)
-Requirement already satisfied: magiccube==0.3.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (0.3.0)
-Requirement already satisfied: pycosat==0.6.6 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (0.6.6)
-Requirement already satisfied: pyfiglet==1.0.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (1.0.2)
-Requirement already satisfied: zss&gt;=1.2.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from reasoning-gym-&gt;reasoning_core==0.1.17) (1.2.0)
-Requirement already satisfied: drawsvg in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from arckit==0.1.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (2.4.0)
-Requirement already satisfied: matplotlib&gt;=3.0.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (3.10.7)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: contourpy&gt;=1.0.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (1.3.3)
-Requirement already satisfied: cycler&gt;=0.10 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (4.60.1)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (1.4.9)
-Requirement already satisfied: pillow&gt;=8 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from matplotlib&gt;=3.0.2-&gt;cellpylib==2.4.0-&gt;reasoning-gym-&gt;reasoning_core==0.1.17) (12.0.0)
-Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sympy-&gt;reasoning_core==0.1.17) (1.3.0)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: multipledispatch in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from tarski-&gt;reasoning_core==0.1.17) (1.0.0)
-Requirement already satisfied: antlr4-python3-runtime==4.7.2 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from tarski-&gt;reasoning_core==0.1.17) (4.7.2)
-Requirement already satisfied: psutil in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from tarski-&gt;reasoning_core==0.1.17) (7.1.3)
-Requirement already satisfied: mdit-py-plugins in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from textual-&gt;verifiers-&gt;reasoning_core==0.1.17) (0.5.0)
-Requirement already satisfied: linkify-it-py&lt;3,&gt;=1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from markdown-it-py[linkify]&gt;=2.1.0-&gt;textual-&gt;verifiers-&gt;reasoning_core==0.1.17) (2.0.3)
-Requirement already satisfied: uc-micro-py in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from linkify-it-py&lt;3,&gt;=1-&gt;markdown-it-py[linkify]&gt;=2.1.0-&gt;textual-&gt;verifiers-&gt;reasoning_core==0.1.17) (1.0.3)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: ConfigSpace in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from unified-planning[pyperplan]-&gt;reasoning_core==0.1.17) (1.2.1)
-Requirement already satisfied: up-pyperplan~=1.1.0 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from unified-planning[pyperplan]-&gt;reasoning_core==0.1.17) (1.1.0)
-Requirement already satisfied: pyperplan==2.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from up-pyperplan~=1.1.0-&gt;unified-planning[pyperplan]-&gt;reasoning_core==0.1.17) (2.1)
-Requirement already satisfied: wheel in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from pyperplan==2.1-&gt;up-pyperplan~=1.1.0-&gt;unified-planning[pyperplan]-&gt;reasoning_core==0.1.17) (0.45.1)
-Requirement already satisfied: more_itertools in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from ConfigSpace-&gt;unified-planning[pyperplan]-&gt;reasoning_core==0.1.17) (10.8.0)
-Requirement already satisfied: sorcery in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from xpflow-&gt;reasoning_core==0.1.17) (0.2.2)
-Requirement already satisfied: executing in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core==0.1.17) (2.2.1)
-Requirement already satisfied: littleutils&gt;=0.2.1 in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core==0.1.17) (0.2.4)
-Requirement already satisfied: asttokens in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core==0.1.17) (3.0.0)
-Requirement already satisfied: wrapt in /home/valentin/micromamba/envs/pgm_rcr_env/lib/python3.12/site-packages (from sorcery-&gt;xpflow-&gt;reasoning_core==0.1.17) (2.0.1)
-Building wheels for collected packages: reasoning_core
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Building wheel for reasoning_core (pyproject.toml) ... done
-  Created wheel for reasoning_core: filename=reasoning_core-0.1.17-py2.py3-none-any.whl size=218553 sha256=363e7f8088ada54a76c11eaa883cc4120a8e625b83550fc6449a9b5744ec56cd
-  Stored in directory: /tmp/pip-ephem-wheel-cache-cdq5j4g_/wheels/2f/b1/05/2f2b0f0fcde22deed214cab1429c7f0faf0d3acbc71e3523dd
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Successfully built reasoning_core
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Installing collected packages: reasoning_core
-  Attempting uninstall: reasoning_core
-    Found existing installation: reasoning_core 0.2.1
-    Uninstalling reasoning_core-0.2.1:
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>      Successfully uninstalled reasoning_core-0.2.1
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Successfully installed reasoning_core-0.1.17
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Note: you may need to restart the kernel to use updated packages.
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f0943d32">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">reasoning_core</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rcr</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">import pandas as pd
+<div class="clipboard-copy-txt" id="cell-1">import pandas as pd
 import reasoning_core as rcr</div>
 </div>
 </div>
@@ -2875,7 +2204,7 @@ import reasoning_core as rcr</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2888,7 +2217,7 @@ import reasoning_core as rcr</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span> <span class="o">=</span> <span class="n">rcr</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="s2">"BayesianAssociation"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Task initialized:"</span><span class="p">,</span> <span class="n">task_r1</span><span class="o">.</span><span class="n">task_name</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">task_r1 = rcr.get_task("BayesianAssociation")
+<div class="clipboard-copy-txt" id="cell-2">task_r1 = rcr.get_task("BayesianAssociation")
 print("Task initialized:", task_r1.task_name)</div>
 </div>
 </div>
@@ -2928,7 +2257,7 @@ print("Task initialized:", task_r1.task_name)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2941,7 +2270,7 @@ print("Task initialized:", task_r1.task_name)</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r2</span> <span class="o">=</span> <span class="n">rcr</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="s2">"BayesianIntervention"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Task initialized:"</span><span class="p">,</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">task_name</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">task_r2 = rcr.get_task("BayesianIntervention")
+<div class="clipboard-copy-txt" id="cell-3">task_r2 = rcr.get_task("BayesianIntervention")
 print("Task initialized:", task_r2.task_name)</div>
 </div>
 </div>
@@ -2992,7 +2321,7 @@ print("Task initialized:", task_r2.task_name)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3008,7 +2337,7 @@ print("Task initialized:", task_r2.task_name)</div>
 <span class="n">example_l0</span> <span class="o">=</span> <span class="n">task_r1</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Level 0 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">example_l0</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">example_l0</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6"># Demonstrate Level 0
+<div class="clipboard-copy-txt" id="cell-4"># Demonstrate Level 0
 task_r1.config.set_level(0)
 print(f"Level 0 Config:\n {task_r1.config}\n")
 example_l0 = task_r1.generate_example()
@@ -3061,7 +2390,7 @@ Answer:  {0: 0.3, 1: 0.7}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3077,7 +2406,7 @@ Answer:  {0: 0.3, 1: 0.7}
 <span class="n">example_l3</span> <span class="o">=</span> <span class="n">task_r1</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Level 3 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">example_l3</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7"># Demonstrate Level 3
+<div class="clipboard-copy-txt" id="cell-5"># Demonstrate Level 3
 task_r1.config.set_level(3)
 print(f"\nLevel 3 Config:\n {task_r1.config}\n")
 example_l3 = task_r1.generate_example()
@@ -3148,7 +2477,7 @@ Answer:  {0: 0.478, 1: 0.158, 2: 0.364}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3162,7 +2491,7 @@ Answer:  {0: 0.478, 1: 0.158, 2: 0.364}
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Level 3 Cot example: </span><span class="se">\n</span><span class="si">{</span><span class="n">example_l3</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">print(f"Level 0 Cot example: \n{example_l0.metadata.cot}\n")
+<div class="clipboard-copy-txt" id="cell-6">print(f"Level 0 Cot example: \n{example_l0.metadata.cot}\n")
 
 print(f"Level 3 Cot example: \n{example_l3.metadata.cot}\n")</div>
 </div>
@@ -3210,7 +2539,7 @@ Result: P(X_0) = {0: 0.478, 1: 0.158, 2: 0.364}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3222,7 +2551,7 @@ Result: P(X_0) = {0: 0.478, 1: 0.158, 2: 0.364}
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of the ground truth:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">(</span><span class="n">example_l3</span><span class="o">.</span><span class="n">answer</span><span class="p">,</span> <span class="n">example_l3</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">print("""\nScore of the ground truth:\n""", rcr.score_answer(example_l3.answer, example_l3))</div>
+<div class="clipboard-copy-txt" id="cell-7">print("""\nScore of the ground truth:\n""", rcr.score_answer(example_l3.answer, example_l3))</div>
 </div>
 </div>
 </div>
@@ -3252,7 +2581,7 @@ Score of the ground truth:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3264,7 +2593,7 @@ Score of the ground truth:
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of a close distribution:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">},</span> <span class="n">example_l3</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10">print("""\nScore of a close distribution:\n""", rcr.score_answer({0: 0.35, 1: 0.4, 2: 0.25}, example_l3))</div>
+<div class="clipboard-copy-txt" id="cell-8">print("""\nScore of a close distribution:\n""", rcr.score_answer({0: 0.35, 1: 0.4, 2: 0.25}, example_l3))</div>
 </div>
 </div>
 </div>
@@ -3294,7 +2623,7 @@ Score of a close distribution:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3306,7 +2635,7 @@ Score of a close distribution:
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of a middly shifted distribution:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">},</span> <span class="n">example_l3</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">print("""\nScore of a middly shifted distribution:\n""", rcr.score_answer({0: 0.3, 1: 0.4, 2: 0.3}, example_l3))</div>
+<div class="clipboard-copy-txt" id="cell-9">print("""\nScore of a middly shifted distribution:\n""", rcr.score_answer({0: 0.3, 1: 0.4, 2: 0.3}, example_l3))</div>
 </div>
 </div>
 </div>
@@ -3336,7 +2665,7 @@ Score of a middly shifted distribution:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3348,7 +2677,7 @@ Score of a middly shifted distribution:
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\n</span><span class="s2">Score of a shifted distribution:</span><span class="se">\n</span><span class="s2">"""</span><span class="p">,</span> <span class="n">rcr</span><span class="o">.</span><span class="n">score_answer</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">},</span> <span class="n">example_l3</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12">print("""\nScore of a shifted distribution:\n""", rcr.score_answer({0: 0.5, 1: 0.1, 2: 0.4}, example_l3))</div>
+<div class="clipboard-copy-txt" id="cell-10">print("""\nScore of a shifted distribution:\n""", rcr.score_answer({0: 0.5, 1: 0.1, 2: 0.4}, example_l3))</div>
 </div>
 </div>
 </div>
@@ -3400,7 +2729,7 @@ Score of a shifted distribution:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3425,7 +2754,7 @@ Score of a shifted distribution:
 <span class="n">twin_r2_example</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Rung2 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">#set tasks to level 2
+<div class="clipboard-copy-txt" id="cell-11">#set tasks to level 2
 task_r1.config.set_level(2)
 task_r2.config.set_level(2)
 
@@ -3535,7 +2864,7 @@ Answer:  {0: 0.42424242424242425, 1: 0.22222222222222224, 2: 0.35353535353535354
 <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3555,7 +2884,7 @@ Answer:  {0: 0.42424242424242425, 1: 0.22222222222222224, 2: 0.35353535353535354
 <span class="n">twin_r2_example</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Rung2 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14">task_r1.config.Noisy_mode, task_r2.config.Noisy_mode = False , False #disable Noisy interaction
+<div class="clipboard-copy-txt" id="cell-12">task_r1.config.Noisy_mode, task_r2.config.Noisy_mode = False , False #disable Noisy interaction
 
 twin_r1_example = task_r1.generate_example()
 print("Rung1 Question excerpt: \n", twin_r1_example.prompt,"\n\nAnswer: ", twin_r1_example.answer)
@@ -3682,7 +3011,7 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3702,7 +3031,7 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <span class="n">twin_r2_example</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Rung2 Question excerpt: </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Answer: "</span><span class="p">,</span> <span class="n">twin_r2_example</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15">task_r1.config.edge_prob, task_r2.config.edge_prob = 0.25 , 0.25 #reduce the connectivity of the graph
+<div class="clipboard-copy-txt" id="cell-13">task_r1.config.edge_prob, task_r2.config.edge_prob = 0.25 , 0.25 #reduce the connectivity of the graph
 
 twin_r1_example = task_r1.generate_example()
 print("Rung1 Question excerpt: \n", twin_r1_example.prompt,"\n\nAnswer: ", twin_r1_example.answer)
@@ -3851,7 +3180,7 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3864,7 +3193,7 @@ Answer:  {0: 0.494949494949495, 1: 0.27272727272727276, 2: 0.23232323232323235}
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_seed</span><span class="p">(),</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_seed</span><span class="p">()</span>
 <span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-16">task_r1.config.set_seed(), task_r2.config.set_seed()
+<div class="clipboard-copy-txt" id="cell-14">task_r1.config.set_seed(), task_r2.config.set_seed()
 task_r1.config.set_level(1), task_r2.config.set_level(1)
 </div>
 </div>
@@ -3905,7 +3234,7 @@ task_r1.config.set_level(1), task_r2.config.set_level(1)
 <div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3918,7 +3247,7 @@ task_r1.config.set_level(1), task_r2.config.set_level(1)
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">is_verbose</span><span class="p">,</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">is_verbose</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span><span class="kc">True</span>
 <span class="n">task_r1</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">concise_cot</span><span class="p">,</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">concise_cot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-17">task_r1.config.is_verbose, task_r2.config.is_verbose = True,True
+<div class="clipboard-copy-txt" id="cell-15">task_r1.config.is_verbose, task_r2.config.is_verbose = True,True
 task_r1.config.concise_cot, task_r2.config.concise_cot = False, False</div>
 </div>
 </div>
@@ -3945,7 +3274,7 @@ task_r1.config.concise_cot, task_r2.config.concise_cot = False, False</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3961,7 +3290,7 @@ task_r1.config.concise_cot, task_r2.config.concise_cot = False, False</div>
 <span class="n">verbose_example_2</span> <span class="o">=</span> <span class="n">task_r2</span><span class="o">.</span><span class="n">generate_example</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Verbose rung2 example: </span><span class="se">\n</span><span class="si">{</span><span class="n">verbose_example_2</span><span class="o">.</span><span class="n">prompt</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-18">verbose_example_1 = task_r1.generate_example()
+<div class="clipboard-copy-txt" id="cell-16">verbose_example_1 = task_r1.generate_example()
 print(f"Verbose rung1 example: \n{verbose_example_1.prompt} \n")
 
 verbose_example_2 = task_r2.generate_example()
@@ -4041,7 +3370,7 @@ Example: {0: 0.12, 1: 0.88}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4055,7 +3384,7 @@ Example: {0: 0.12, 1: 0.88}
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Verbose rung2 example: </span><span class="se">\n</span><span class="si">{</span><span class="n">verbose_example_2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cot</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-19">print(f"Verbose rung1 example: \n{verbose_example_1.metadata.cot} \n")
+<div class="clipboard-copy-txt" id="cell-17">print(f"Verbose rung1 example: \n{verbose_example_1.metadata.cot} \n")
 
 print(f"Verbose rung2 example: \n{verbose_example_2.metadata.cot} \n")</div>
 </div>
@@ -4263,7 +3592,7 @@ Initialization: Selected Elimination Order = ['X_0']
 <div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-20">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4275,7 +3604,7 @@ Initialization: Selected Elimination Order = ['X_0']
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">generate_balanced_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-20">task_r1.generate_balanced_batch(batch_size=2)</div>
+<div class="clipboard-copy-txt" id="cell-18">task_r1.generate_balanced_batch(batch_size=2)</div>
 </div>
 </div>
 </div>
@@ -4358,7 +3687,7 @@ Initialization: Selected Elimination Order = ['X_0']
 <div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-21">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4370,7 +3699,7 @@ Initialization: Selected Elimination Order = ['X_0']
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">task_r1</span><span class="o">.</span><span class="n">generate_balanced_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-21">task_r1.generate_balanced_batch(batch_size=2, level=1)</div>
+<div class="clipboard-copy-txt" id="cell-19">task_r1.generate_balanced_batch(batch_size=2, level=1)</div>
 </div>
 </div>
 </div>
@@ -4456,7 +3785,7 @@ Initialization: Selected Elimination Order = ['X_0']
 <div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-22">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-20">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4483,7 +3812,7 @@ Initialization: Selected Elimination Order = ['X_0']
 <span class="n">dataset_dict</span> <span class="o">=</span> <span class="n">hf_dataset</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Dataset Structure:"</span><span class="p">,</span> <span class="n">dataset_dict</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-22">import datasets
+<div class="clipboard-copy-txt" id="cell-20">import datasets
 import pandas as pd
 
 # 1. Generate data, as a list of Problem
@@ -4615,7 +3944,7 @@ Dataset Structure: DatasetDict({
 <div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-23">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-21">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4629,7 +3958,7 @@ Dataset Structure: DatasetDict({
 <span class="c1"># dataset_dict.push_to_hub(DATASET_NAME)</span>
 <span class="c1"># print(f"Dataset uploaded to https://huggingface.co/datasets/{DATASET_NAME}")</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-23"># DATASET_NAME = "your-username/causal-reasoning-curriculum"
+<div class="clipboard-copy-txt" id="cell-21"># DATASET_NAME = "your-username/causal-reasoning-curriculum"
 # dataset_dict.push_to_hub(DATASET_NAME)
 # print(f"Dataset uploaded to https://huggingface.co/datasets/{DATASET_NAME}")</div>
 </div>
