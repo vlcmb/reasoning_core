@@ -1268,8 +1268,10 @@
 
 
 
-        <p>Task responsible for generic theorem provability analysis.</p>
-<p>Given a list of formal hypothesis formulas alongside domain axioms, the model must output either <code>True</code> or <code>False</code> determining if the targeted theorem is logically deducible from the dataset premises utilizing a prover system abstraction like Vampire.</p>
+        <p>Decide if a conjecture is provable from a set of first-order premises.</p>
+<p>Samples axioms from TPTP domains, derives theorems via a derivation
+graph, and optionally perturbs the hypothesis set. The answer is
+True (provable) or False (not provable), verified by Vampire.</p>
 
 
 

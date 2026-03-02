@@ -1208,8 +1208,10 @@
 
 
 
-        <p>Task responsible for generic numeric arithmetic evaluation.</p>
-<p>This task procedurally generates a mathematical expression (including addition, subtraction, division, multiplication, absolute value, minimum, maximum, rounding, and powers) and requires evaluating it to a single numeric value. It also generates the step-by-step intermediate Chain of Thought (CoT).</p>
+        <p>Evaluate a numerical arithmetic expression.</p>
+<p>Generates expressions mixing +, -, <em>, /, </em>*, abs, min, max, round
+via a context-free grammar, then asks for the final numeric result.
+A step-by-step chain-of-thought is built by walking the AST.</p>
 
 
 
@@ -1329,8 +1331,10 @@
 
 
 
-        <p>Task responsible for symbolic algebraic simplification.</p>
-<p>This task procedurally generates an unsimplified algebraic equation containing defined string variables (e.g., x, y). The model must output the most strictly simplified version of the mathematical expression using symbolic reasoning.</p>
+        <p>Simplify a symbolic algebraic expression.</p>
+<p>Generates an unsimplified expression containing variables (e.g. x, y)
+from a grammar, then asks for its simplified form.
+Scoring uses SymPy to check symbolic equivalence.</p>
 
 
 

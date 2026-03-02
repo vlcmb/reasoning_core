@@ -1164,8 +1164,10 @@
 
 
 
-        <p>Task responsible for generating procedural sequential action plans.</p>
-<p>The model receives a fully parameterized logic-state domain (objects, actions, init, goals) and must sequentially output valid state-mutating actions (e.g. <code>action(obj1, obj2)</code>) to mathematically bridge the initial world state to the complete goal condition.</p>
+        <p>Produce an action plan that reaches a goal state from an initial state.</p>
+<p>Generates a PDDL-style planning domain (objects, actions, init, goals),
+solves it with an automated planner, and asks for a valid sequence of
+grounded actions. Scoring validates the plan against the PDDL semantics.</p>
 
 
 

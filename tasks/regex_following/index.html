@@ -1144,8 +1144,10 @@
 
 
 
-        <p>Task responsible for producing strings obeying defined Regex structures.</p>
-<p>The model receives a constructed Regular Expression and must creatively output a valid, full-matching exact string instance compliant with that specific pattern constraint.</p>
+        <p>Generate a string that matches a given regular expression.</p>
+<p>Samples a random regex from a grammar, then asks for any string
+that fully matches it. Scoring uses fuzzy regex matching with
+increasing edit-distance tolerance.</p>
 
 
 
@@ -1191,8 +1193,10 @@
 
 
 
-        <p>Task responsible for generic string-pattern reverse engineering.</p>
-<p>The model is provided with an explicit list of POSITIVE string matches alongside NEGATIVE non-matches. It must reverse-engineer them and logically deduce the most parsimonious Regular Expression that strictly captures all positive examples while rejecting all negative ones.</p>
+        <p>Infer a regex from positive and negative examples.</p>
+<p>Given lists of strings that should and should not match, find a
+regular expression that accepts all positives and rejects all
+negatives. Shorter correct regexes score higher.</p>
 
 
 

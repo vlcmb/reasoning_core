@@ -1296,8 +1296,11 @@
 
 
 
-        <p>Task responsible for numerical recursion pattern discovery.</p>
-<p>The model receives a finite consecutive list of integer evaluations (e.g. <code>[U_0, U_1, ..., U__n]</code>) representing a sequence. It must algebraically reverse-engineer the underlying generating recurrence relation formula.</p>
+        <p>Infer the recurrence relation behind an integer sequence.</p>
+<p>Generates a recursive formula from a grammar, computes its first
+N terms, and asks for the underlying recurrence (e.g. <code>U[n-1] + 3*n</code>).
+Scoring checks whether the predicted formula reproduces the same terms,
+with bonuses for conciseness and minimal recurrence depth.</p>
 
 
 

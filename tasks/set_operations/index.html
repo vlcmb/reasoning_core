@@ -1244,8 +1244,10 @@
 
 
 
-        <p>Task responsible for calculating discrete subset intersections.</p>
-<p>The model receives two implicitly rendered string arrays (<code>Set1</code>, <code>Set2</code>). It must logically formulate and return pythonic notation <code>{element1, element2}</code> representing the exact intersection overlap values.</p>
+        <p>Compute the intersection of two sets.</p>
+<p>Generates two sets drawn from a shared domain (colors, months,
+animals, etc.) with guaranteed partial overlap, then asks for
+their common elements as a Python set literal.</p>
 
 
 
@@ -1365,8 +1367,10 @@
 
 
 
-        <p>Task responsible for complementary subset identification.</p>
-<p>The model is provided an implicitly ordered sub-sequence spanning a distinct semantic context (like alphabetical dates or numbers). It must logically deduce elements arbitrarily missing/stripped from the underlying sequence format.</p>
+        <p>Spot the missing elements in an ordered sequence.</p>
+<p>Picks a contiguous sub-range from a known domain (e.g. months,
+letters), removes a few interior items, and asks which ones are
+missing. The answer is a Python set.</p>
 
 
 
@@ -1492,8 +1496,9 @@
 
 
 
-        <p>Task responsible for discrete list element aggregation scoring.</p>
-<p>The model receives a flat sequence iteration and an explicit target subset query. It must mathematically output the correct integer occurrence count enumerating the number of times the target sequence strictly appears in the list.</p>
+        <p>Count occurrences of an element in a list.</p>
+<p>Generates a list with a random number of copies of a target element
+mixed with other items, then asks how many times the target appears.</p>
 
 
 
@@ -1543,8 +1548,9 @@
 
 
 
-        <p>Task responsible for Boolean bipartite sequence equivalence deduction.</p>
-<p>The model receives two discretely sampled random sub-domains. It must mathematically and structurally deduce whether the two implicit configurations are strictly equivalent, outputting True or False.</p>
+        <p>Decide whether two sets contain exactly the same elements.</p>
+<p>Generates two representations of a subset (possibly with
+small perturbations), then asks for True/False.</p>
 
 
 

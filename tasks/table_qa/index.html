@@ -1136,8 +1136,10 @@
 
 
 
-        <p>Task responsible for data-structure textual SQL querying.</p>
-<p>The model receives an explicitly rendered tabular schema (e.g. CSV, Markdown) alongside an operational SQL string. It must computationally parse the structure and return the correct evaluation/row results to answering the target SQL expression accurately.</p>
+        <p>Answer a SQL query against a procedurally generated table.</p>
+<p>Creates a random dataframe, renders it in a random format (CSV,
+Markdown, HTML, etc.), picks a SQL query, and executes it with
+DuckDB. The expected answer is the query result.</p>
 
 
 
@@ -1183,8 +1185,10 @@
 
 
 
-        <p>Task responsible for semantic tabular protocol alignment translation.</p>
-<p>The model receives a contextual semantic string structure (e.g. valid html representation). It must accurately parse and reconstruct exactly the initial topology within the target explicitly requested protocol rendering framework (e.g. valid json).</p>
+        <p>Convert a table from one text format to another.</p>
+<p>Renders the same dataframe in two different formats (e.g. HTML
+to JSON, CSV to Markdown) and asks for the target rendering.
+Scoring uses normalized Levenshtein similarity.</p>
 
 
 

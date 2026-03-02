@@ -1334,8 +1334,9 @@ conditionning_seed : int, optional
 
 
 
-        <p>Task responsible for Rung 1 Bayesian Association queries.</p>
-<p>This task procedurally generates observational scenarios (e.g., purely observational probability given conditions) across a generated Bayesian Network.</p>
+        <p>Compute an observational conditional probability (Rung 1 — "seeing").</p>
+<p>Generates a random Bayesian Network, sets observed evidence on
+some variables, and asks for the posterior distribution P(target | evidence).</p>
 
 
 
@@ -1381,8 +1382,10 @@ conditionning_seed : int, optional
 
 
 
-        <p>Task responsible for Rung 2 Bayesian Intervention causal queries.</p>
-<p>This task procedurally generates interventional scenarios where specific variables in the graph are forcefully modified (a 'do' operation) and models the resulting distribution.</p>
+        <p>Compute an interventional probability (Rung 2 — "doing").</p>
+<p>Same setup as BayesianAssociation, but one or more variables are
+forcibly set via do-calculus (do(X=x)), breaking their incoming edges
+before computing the resulting distribution.</p>
 
 
 

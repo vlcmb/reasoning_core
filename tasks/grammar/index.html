@@ -1208,8 +1208,10 @@
 
 
 
-        <p>Task responsible for generic string parsability analysis.</p>
-<p>The model receives a contextual CFG and a flat string of tokens, and must determine whether the string formulation is <code>unambiguous</code> (one valid parse tree), <code>ambiguous</code> (multiple valid parse trees), or completely <code>unparsable</code>.</p>
+        <p>Classify a string's parsability under a context-free grammar.</p>
+<p>Given a CFG and a token string, decide whether the string is
+<code>unambiguous</code> (exactly one parse tree), <code>ambiguous</code> (multiple
+parse trees), or <code>unparsable</code>.</p>
 
 
 
@@ -1255,8 +1257,10 @@
 
 
 
-        <p>Task responsible for full CFG structural parsing.</p>
-<p>The model receives a contextual CFG and a valid unambiguous string. It must either output the exact Lisp-style parse tree configuration <code>(S (NP (N token)))</code>, or the specific depths/Part-of-Speech tags <code>token&lt;POS:depth&gt;</code> depending on the generated config constraint.</p>
+        <p>Parse an unambiguous string under a context-free grammar.</p>
+<p>Given a CFG and a parsable string, produce either its Lisp-style
+parse tree <code>(S (NP (N token)))</code> or POS-depth tags <code>token&lt;POS:depth&gt;</code>,
+depending on randomly selected mode.</p>
 
 
 
@@ -1302,8 +1306,10 @@
 
 
 
-        <p>Task responsible for CFG prefix-continuation logic.</p>
-<p>The model receives a contextual CFG and an incomplete sentence prefix. It must deduce and output the exact set of valid tokens that could legally follow the prefix according to the EarleyChartParser state.</p>
+        <p>List the valid next tokens for a prefix under a context-free grammar.</p>
+<p>Given a CFG and an incomplete token sequence, return every terminal
+that could legally continue the prefix (plus STOP if the prefix
+is already a complete sentence). Uses Earley parsing.</p>
 
 
 

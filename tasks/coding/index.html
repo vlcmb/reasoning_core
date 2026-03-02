@@ -1216,8 +1216,10 @@
 
 
 
-        <p>Task responsible for generic Python code tracing.</p>
-<p>This task procedurally generates syntactically valid subset-Python code (tinypy) through a CFG. The model is asked to mentally execute the code and strictly predict the exact resulting console print output.</p>
+        <p>Predict the printed output of a Python snippet.</p>
+<p>Generates a small program from the <code>tinypy</code> grammar (a subset of
+Python), executes it in a sandbox, and asks for the exact console
+output. Scoring uses edit-distance.</p>
 
 
 
@@ -1393,8 +1395,10 @@
 
 
 
-        <p>Task responsible for producing Git-diff chunks.</p>
-<p>Given a sequence of file histories and versions, the model must output the exact Unified Git Diff snippet to mathematically translate the src_id document into the tgt_id document.</p>
+        <p>Produce the unified diff between two file versions.</p>
+<p>Given a file's version history, pick a source and target version
+and ask for the exact unified-diff output that transforms one into
+the other.</p>
 
 
 
@@ -1440,8 +1444,9 @@
 
 
 
-        <p>Task responsible for applying Git-diff chunks to existing text.</p>
-<p>Given an original structured text object and a generated Unified Git Diff patch, perform string-level integration to exactly re-create the final patched string target.</p>
+        <p>Apply a unified diff patch to a text.</p>
+<p>Given original text and a unified diff, reproduce the resulting
+patched text. Inverse of DiffPrediction.</p>
 
 
 
