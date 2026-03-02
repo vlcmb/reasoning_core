@@ -602,6 +602,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arithmetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--arithmetics-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetics Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arithmetics Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1024,6 +1080,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arithmetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--arithmetics-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetics Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arithmetics Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.Arithmetics--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1208,10 +1320,22 @@
 
 
 
-        <p>Evaluate a numerical arithmetic expression.</p>
-<p>Generates expressions mixing +, -, <em>, /, </em>*, abs, min, max, round
-via a context-free grammar, then asks for the final numeric result.
-A step-by-step chain-of-thought is built by walking the AST.</p>
+        <h3 id="reasoning_core.tasks.arithmetics.Arithmetics--arithmetics-task">Arithmetics Task</h3>
+<h4 id="reasoning_core.tasks.arithmetics.Arithmetics--overview">Overview</h4>
+<p>Generates arithmetic expressions involving addition, subtraction, multiplication, and potentially division.
+The task is to evaluate these expressions to a specified precision.</p>
+<h4 id="reasoning_core.tasks.arithmetics.Arithmetics--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:</p>
+<ol>
+<li><strong>Formula Generation</strong>: A random arithmetic expression is generated using a grammar (e.g., <code>(3 + 5) * 2</code>).</li>
+<li><strong>Number Filling</strong>: The template slots (<code>{0}, {1}, ...</code>) are filled with random numbers (integers or floats) based on the configuration.</li>
+<li><strong>Evaluation</strong>: The expression is evaluated using Python's <code>decimal</code> library to ensure high precision.</li>
+<li><strong>Formatting</strong>: The answer is formatted to the specified number of decimal places.</li>
+<li><strong>CoT Generation</strong>: A step-by-step Chain-of-Thought (CoT) is generated, breaking down the evaluation order.</li>
+</ol>
+<h4 id="reasoning_core.tasks.arithmetics.Arithmetics--example">Example</h4>
+<p><strong>Input</strong>: <code>Evaluate (3.5 + 2) * 4.</code> 
+<strong>Output</strong>: <code>22</code></p>
 
 
 
