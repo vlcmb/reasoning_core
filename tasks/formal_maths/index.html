@@ -807,6 +807,56 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--proof-reconstruction-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof Reconstruction Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proof Reconstruction Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1218,6 +1268,56 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--proof-reconstruction-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof Reconstruction Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proof Reconstruction Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reasoning_core.tasks.formal_maths.ProofReconstruction-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1607,8 +1707,21 @@ The task leverages automated theorem provers (Vampire) to verify entailment.</p>
 
 
 
-        <p>Task responsible for generating deductive Proof network graphs.</p>
-<p>The model is tasked with receiving a flat, numbered, shuffled array of derived theorem clauses. It must manually reconstruct the derivation directed graph logic by outputting dependency mappings iteratively formatting exact parents of discrete children computations (e.g. <code>CHILD &lt;- PARENT1, PARENT2</code>).</p>
+        <h3 id="reasoning_core.tasks.formal_maths.ProofReconstruction--proof-reconstruction-task">Proof Reconstruction Task</h3>
+<h4 id="reasoning_core.tasks.formal_maths.ProofReconstruction--overview">Overview</h4>
+<p>Given a shuffled, numbered list of derived theorem clauses, reconstruct the derivation graph by identifying the parent-child dependencies.</p>
+<h4 id="reasoning_core.tasks.formal_maths.ProofReconstruction--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:</p>
+<ol>
+<li><strong>Derivation Graph</strong>: A derivation graph is built from TPTP axioms via the E-prover (shared with Conjecture Entailment).</li>
+<li><strong>Subgraph Extraction</strong>: A binary proof subgraph rooted at an interesting theorem is selected, pruned of redundant axiom nodes.</li>
+<li><strong>Clause Shuffling</strong>: All clauses in the proof are shuffled and numbered, hiding the original derivation order.</li>
+<li><strong>Answer Format</strong>: The model must output dependency lines <code>CHILD &lt;- PARENT1, PARENT2</code> using the shuffled indices.</li>
+<li><strong>CoT Generation</strong>: A forward-derivation trace through the proof graph serves as chain-of-thought.</li>
+</ol>
+<h4 id="reasoning_core.tasks.formal_maths.ProofReconstruction--example">Example</h4>
+<p><strong>Input</strong>: Numbered list of 7 clauses + target conjecture<br />
+<strong>Output</strong>: <code>3 &lt;- 1, 5\n7 &lt;- 3, 4</code></p>
 
 
 

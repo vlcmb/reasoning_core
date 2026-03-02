@@ -948,50 +948,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.one_shot_sympy_generate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        one_shot_sympy_generate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        verify
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.score_answer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        score_answer
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        prompt
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.deduplication_key" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1196,50 +1152,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.one_shot_sympy_generate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        one_shot_sympy_generate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        verify
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.score_answer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        score_answer
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        prompt
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction.deduplication_key" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1431,100 +1343,6 @@
 
 
 <h3 id="reasoning_core.tasks.sequential_induction.SequentialInduction-functions">Functions</h3>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction.one_shot_sympy_generate" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">one_shot_sympy_generate</span><span class="p">()</span></code>
-
-</h4>
-
-
-    <div class="doc doc-contents ">
-
-        <p>generate a formula (instance of the defined cfg) and simplify it with sympy</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction.verify" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">verify</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_truth</span><span class="p">,</span> <span class="n">initial_element</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-</h4>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Check if the guessed formula match with the true one (for the n_visible term)</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction.score_answer" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">score_answer</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span></code>
-
-</h4>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Score the predicted recursive formula (y_pred) against the true one (y_truth).</p>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-<th>Name</th>          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-<td><code>float</code></td>            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A score between 0 and 1 based on correctness, simplicity, and efficiency.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction.prompt" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">prompt</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span></code>
-
-</h4>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Build a concise prompt for inferring a recurrence from first terms.</p>
-
-
-    </div>
-
-</div>
 
 <div class="doc doc-object doc-function">
 

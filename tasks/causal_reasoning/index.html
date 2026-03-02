@@ -1518,17 +1518,13 @@
 
     <div class="doc doc-contents ">
 
-        <p>Sets the random seeds for reproducibility of the graph structure and the specific query.</p>
+        <p>Method: set_random_seeds</p>
+<p>Sets the random seeds for reproducibility of the graph structure and the specific query.</p>
 <h6 id="reasoning_core.tasks.causal_reasoning.Rung12Config.set_seed--parameters">Parameters:</h6>
-<p>Graph_seed : int, optional
-    The seed used to control the generation of the Bayesian Network structure 
-    (topology, edges) and the parameters (CPDs). If provided, it ensures 
-    the "laws of the world" are consistent across runs.
-conditionning_seed : int, optional
-    The seed used to control the selection of the target variable, 
-    evidence variables, and intervention values (the "scenario"). 
-    Allows generating different questions/conditions on the exact same graph.
-    Morever, the conditionning accross rungs (association/intervention) are twined.</p>
+<p>Graph_seed (int, optional):</p>
+<p>The seed used to control the generation of the Bayesian Network structure (topology, edges) and the parameters (CPDs). If provided, it ensures the "laws of the world" are consistent across runs.</p>
+<p>conditionning_seed (int, optional):</p>
+<p>The seed used to control the selection of the target variable, evidence variables, and intervention values (the "scenario"). Allows generating different questions/conditions on the exact same graph. Moreover, the conditioning across runs (association/intervention) are twined.</p>
 
 
     </div>
