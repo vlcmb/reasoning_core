@@ -886,6 +886,56 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--sequential-induction-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequential Induction Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequential Induction Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1082,6 +1132,56 @@
   
     <nav class="md-nav" aria-label="SequentialInduction">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--sequential-induction-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequential Induction Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequential Induction Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#reasoning_core.tasks.sequential_induction.SequentialInduction-functions" class="md-nav__link">
@@ -1296,11 +1396,20 @@
 
 
 
-        <p>Infer the recurrence relation behind an integer sequence.</p>
-<p>Generates a recursive formula from a grammar, computes its first
-N terms, and asks for the underlying recurrence (e.g. <code>U[n-1] + 3*n</code>).
-Scoring checks whether the predicted formula reproduces the same terms,
-with bonuses for conciseness and minimal recurrence depth.</p>
+        <h3 id="reasoning_core.tasks.sequential_induction.SequentialInduction--sequential-induction-task">Sequential Induction Task</h3>
+<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction--overview">Overview</h4>
+<p>Given the first N terms of an integer sequence, infer the underlying recurrence relation.</p>
+<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:</p>
+<ol>
+<li><strong>Formula Generation</strong>: A recursive formula is sampled from a grammar (e.g. <code>U[n-1] + 3*n</code>) and simplified with SymPy.</li>
+<li><strong>Sequence Computation</strong>: The first <code>n_visible_terms</code> values are computed from the formula.</li>
+<li><strong>Filtering</strong>: Sequences with excessively large terms or degenerate patterns (constant, all-zero) are discarded.</li>
+<li><strong>Scoring</strong>: The predicted formula is evaluated on the same initial terms. Score considers correctness, recurrence depth, and operator conciseness.</li>
+</ol>
+<h4 id="reasoning_core.tasks.sequential_induction.SequentialInduction--example">Example</h4>
+<p><strong>Input</strong>: <code>[0, 1, 3, 6, 10]</code> with max recurrence degree 1<br />
+<strong>Output</strong>: <code>U[n-1] + n</code></p>
 
 
 

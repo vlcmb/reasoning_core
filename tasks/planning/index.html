@@ -826,6 +826,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--planning-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1002,6 +1058,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--planning-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.planning.Planning--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1164,10 +1276,22 @@
 
 
 
-        <p>Produce an action plan that reaches a goal state from an initial state.</p>
-<p>Generates a PDDL-style planning domain (objects, actions, init, goals),
-solves it with an automated planner, and asks for a valid sequence of
-grounded actions. Scoring validates the plan against the PDDL semantics.</p>
+        <h3 id="reasoning_core.tasks.planning.Planning--planning-task">Planning Task</h3>
+<h4 id="reasoning_core.tasks.planning.Planning--overview">Overview</h4>
+<p>Generates AI planning problems in PDDL and asks for a valid action plan.
+The domain describes objects, actions with preconditions/effects, an initial state, and goal conditions.</p>
+<h4 id="reasoning_core.tasks.planning.Planning--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:</p>
+<ol>
+<li><strong>Domain Generation</strong>: A random PDDL domain is generated (or fetched from a known domain) with typed objects and parameterized actions.</li>
+<li><strong>Problem Generation</strong>: A specific problem instance is created with an initial state and goal conditions.</li>
+<li><strong>Solving</strong>: An automated planner computes a valid plan. Only problems producing plans of sufficient length are kept.</li>
+<li><strong>NL Translation</strong>: The PDDL problem is translated into a human-readable natural language description.</li>
+<li><strong>CoT Generation</strong>: A step-by-step trace shows how each action transforms the world state.</li>
+</ol>
+<h4 id="reasoning_core.tasks.planning.Planning--example">Example</h4>
+<p><strong>Input</strong>: Description of objects, actions, initial state, and goals.<br />
+<strong>Output</strong>: <code>pick(block_a, table)\nstack(block_a, block_b)</code></p>
 
 
 

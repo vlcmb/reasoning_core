@@ -680,6 +680,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="SymbolicArithmetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--symbolic-arithmetics-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbolic Arithmetics Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symbolic Arithmetics Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1158,6 +1214,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="SymbolicArithmetics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--symbolic-arithmetics-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbolic Arithmetics Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symbolic Arithmetics Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.arithmetics.SymbolicArithmetics--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1455,10 +1567,19 @@ The task is to evaluate these expressions to a specified precision.</p>
 
 
 
-        <p>Simplify a symbolic algebraic expression.</p>
-<p>Generates an unsimplified expression containing variables (e.g. x, y)
-from a grammar, then asks for its simplified form.
-Scoring uses SymPy to check symbolic equivalence.</p>
+        <h3 id="reasoning_core.tasks.arithmetics.SymbolicArithmetics--symbolic-arithmetics-task">Symbolic Arithmetics Task</h3>
+<h4 id="reasoning_core.tasks.arithmetics.SymbolicArithmetics--overview">Overview</h4>
+<p>Generates algebraic simplification problems.
+The task is to simplify expressions involving variables (e.g., <code>x</code>, <code>y</code>) and integers.</p>
+<h4 id="reasoning_core.tasks.arithmetics.SymbolicArithmetics--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:
+1. <strong>Symbolic Grammar</strong>: Uses a grammar that includes variables (<code>VAR</code>) alongside numbers.
+2. <strong>Variable/Number Filling</strong>: <code>VAR</code> slots are filled with variable names from a pool; <code>NUM</code> slots with small integers.
+3. <strong>Validation</strong>: The expression is parsed and simplified using <code>sympy</code>. If the expression is trivial (already simplified) or simplifies to a plain number, it is regenerated to ensure complexity.
+4. <strong>CoT Generation</strong>: A step-by-step simplification trace is constructed by expanding and simplifying sub-expressions bottom-up.</p>
+<h4 id="reasoning_core.tasks.arithmetics.SymbolicArithmetics--example">Example</h4>
+<p><strong>Input</strong>: <code>Simplify 2*x + 3*x + 5.</code> 
+<strong>Output</strong>: <code>5*x + 5</code></p>
 
 
 

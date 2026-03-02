@@ -714,6 +714,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="ConjectureEntailment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--conjecture-entailment-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conjecture Entailment Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conjecture Entailment Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1069,6 +1125,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="ConjectureEntailment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--conjecture-entailment-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conjecture Entailment Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conjecture Entailment Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.formal_maths.ConjectureEntailment--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1268,10 +1380,22 @@
 
 
 
-        <p>Decide if a conjecture is provable from a set of first-order premises.</p>
-<p>Samples axioms from TPTP domains, derives theorems via a derivation
-graph, and optionally perturbs the hypothesis set. The answer is
-True (provable) or False (not provable), verified by Vampire.</p>
+        <h3 id="reasoning_core.tasks.formal_maths.ConjectureEntailment--conjecture-entailment-task">Conjecture Entailment Task</h3>
+<h4 id="reasoning_core.tasks.formal_maths.ConjectureEntailment--overview">Overview</h4>
+<p>Determines whether a conjecture is provable from a set of first-order logic premises.
+The task leverages automated theorem provers (Vampire) to verify entailment.</p>
+<h4 id="reasoning_core.tasks.formal_maths.ConjectureEntailment--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:</p>
+<ol>
+<li><strong>Axiom Sampling</strong>: A set of axioms is loaded from a TPTP domain (e.g. algebra, topology, set theory).</li>
+<li><strong>Derivation Graph</strong>: A derivation graph is built by running the E-prover, identifying interesting theorems.</li>
+<li><strong>Problem Construction</strong>: A theorem and its supporting hypotheses are extracted at a configurable depth.</li>
+<li><strong>Perturbation</strong> (negative cases): Some correct hypotheses are replaced with distractors from the axiom pool.</li>
+<li><strong>Verification</strong>: The Vampire prover confirms whether the (possibly perturbed) premise set entails the conjecture.</li>
+</ol>
+<h4 id="reasoning_core.tasks.formal_maths.ConjectureEntailment--example">Example</h4>
+<p><strong>Input</strong>: Premises + Conjecture in first-order logic notation<br />
+<strong>Output</strong>: <code>True</code> (provable) or <code>False</code> (not provable)</p>
 
 
 

@@ -686,6 +686,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="EquationSystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--equation-system-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equation System Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equation System Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1002,6 +1058,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="EquationSystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--equation-system-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equation System Task
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equation System Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generation Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoning_core.tasks.equation_system.EquationSystem--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1152,10 +1264,22 @@
 
 
 
-        <p>Solve a system of linear equations for a given variable.</p>
-<p>Builds a system with a known unique solution, then optionally makes
-it inconsistent or underdetermined. The expected answer is the numeric
-value, or "No solution" / "Multiple solutions" when applicable.</p>
+        <h3 id="reasoning_core.tasks.equation_system.EquationSystem--equation-system-task">Equation System Task</h3>
+<h4 id="reasoning_core.tasks.equation_system.EquationSystem--overview">Overview</h4>
+<p>Generates systems of linear equations and asks for the value of a specific variable.
+The system may be uniquely solvable, inconsistent, or underdetermined.</p>
+<h4 id="reasoning_core.tasks.equation_system.EquationSystem--generation-process">Generation Process</h4>
+<p>The problem generation follows these steps:</p>
+<ol>
+<li><strong>Base System Construction</strong>: A system with a known unique solution is built by picking random variable values and constructing equations via row-mixing.</li>
+<li><strong>Obfuscation</strong>: The coefficient matrix is scrambled through linear combinations to hide the solution.</li>
+<li><strong>System Modification</strong>: With configurable probability, the system is made inconsistent (contradictory equations) or underdetermined (equation removed).</li>
+<li><strong>Verification</strong>: SymPy verifies the system's solvability class (unique / inconsistent / underdetermined).</li>
+<li><strong>CoT Generation</strong>: A step-by-step Gaussian elimination trace is produced.</li>
+</ol>
+<h4 id="reasoning_core.tasks.equation_system.EquationSystem--example">Example</h4>
+<p><strong>Input</strong>: <code>Solve for X2: X1 + 2*X2 = 5, 3*X1 - X2 = 1</code><br />
+<strong>Output</strong>: <code>2</code></p>
 
 
 
